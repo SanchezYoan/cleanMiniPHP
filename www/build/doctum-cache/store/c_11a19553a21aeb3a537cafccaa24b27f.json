@@ -1,0 +1,254 @@
+{
+    "name": "MailManager",
+    "line": 12,
+    "short_desc": "Orchestrer l'envoi d'emails via PHPMailer.",
+    "long_desc": "Pr\u00e9pare les sujets, formatages HTML et ajoute les destinataires selon\ndiff\u00e9rents types d'utilisateurs\/structures.",
+    "hint": null,
+    "tags": [],
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/managers\/MailManager.php",
+    "relative_file": null,
+    "hash": "2bc11fc8f1a255120ad2d918b6151783d1748f31",
+    "parent": "Manager",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb",
+        "JsonResponseHandler": "Whoops\\Handler\\JsonResponseHandler",
+        "Run": "Whoops\\Run",
+        "ImageResize": "Gumlet\\ImageResize",
+        "ImageResizeException": "Gumlet\\ImageResizeException",
+        "UploadException": "ManagerException\\UploadException"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "formateSubject": {
+            "name": "formateSubject",
+            "line": 40,
+            "short_desc": "Pr\u00e9fixer le sujet par l'environnement courant si n\u00e9cessaire.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Sujet pr\u00eat \u00e0 \u00eatre envoy\u00e9.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "subject": {
+                    "name": "subject",
+                    "line": 40,
+                    "short_desc": "Sujet original.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "''",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "sendMail": {
+            "name": "sendMail",
+            "line": 56,
+            "short_desc": "Envoyer un email HTML \u00e0 une liste de destinataires.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si l'envoi est r\u00e9ussi.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "subject": {
+                    "name": "subject",
+                    "line": 56,
+                    "short_desc": "Sujet du message.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "body": {
+                    "name": "body",
+                    "line": 56,
+                    "short_desc": "Corps HTML.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "destinataires": {
+                    "name": "destinataires",
+                    "line": 56,
+                    "short_desc": "Destinataires.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "duplicateSubjet": {
+                    "name": "duplicateSubjet",
+                    "line": 56,
+                    "short_desc": "Ajoute le sujet en en-t\u00eate du body.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "true",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "createMailer": {
+            "name": "createMailer",
+            "line": 109,
+            "short_desc": "Fournir une instance PHPMailer (point d'extension pour tests).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\PHPMailer\\PHPMailer\\PHPMailer",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance configur\u00e9e.",
+            "tags": [],
+            "see": [],
+            "modifiers": 2,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "sendForgotPassword": {
+            "name": "sendForgotPassword",
+            "line": 122,
+            "short_desc": "Envoyer un email de r\u00e9initialisation du mot de passe.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si l'email est envoy\u00e9.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "user": {
+                    "name": "user",
+                    "line": 122,
+                    "short_desc": "Utilisateur cible.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\User",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "token": {
+                    "name": "token",
+                    "line": 122,
+                    "short_desc": "Jeton de r\u00e9initialisation.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

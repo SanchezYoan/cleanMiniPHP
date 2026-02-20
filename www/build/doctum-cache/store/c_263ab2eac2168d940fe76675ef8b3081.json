@@ -1,0 +1,139 @@
+{
+    "name": "Lang",
+    "line": 9,
+    "short_desc": "Gestion simple de la langue courante de l'application.",
+    "long_desc": "Ce service expose la langue active et offre une validation \u00e9l\u00e9mentaire\nsur un jeu restreint de codes langue autoris\u00e9s.",
+    "hint": null,
+    "tags": [],
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/core\/Lang.php",
+    "relative_file": null,
+    "hash": "c1f12944019cb3d106e4b32f44262c853bc91071",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "getInstance": {
+            "name": "getInstance",
+            "line": 39,
+            "short_desc": "R\u00e9cup\u00e9rer l'instance unique du gestionnaire de langue.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Lang",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "set": {
+            "name": "set",
+            "line": 53,
+            "short_desc": "D\u00e9finir la langue si elle fait partie des codes autoris\u00e9s.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "lang": {
+                    "name": "lang",
+                    "line": 53,
+                    "short_desc": "Code langue (ex. \"fr\", \"en\").",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "current": {
+            "name": "current",
+            "line": 67,
+            "short_desc": "R\u00e9cup\u00e9rer la langue courante ou tester l'\u00e9galit\u00e9 avec un code fourni.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "Code langue actif, ou bool\u00e9en si comparaison fournie.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "lang": {
+                    "name": "lang",
+                    "line": 67,
+                    "short_desc": "Code \u00e0 comparer (optionnel).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "null",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

@@ -1,0 +1,239 @@
+{
+    "name": "NGine\\Html\\Html",
+    "line": 13,
+    "short_desc": "Agr\u00e8ge des balises HTML de type meta, link et script.",
+    "long_desc": "",
+    "hint": null,
+    "tags": [],
+    "namespace": "NGine\\Html",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/libraries\/NGine\/Html\/Html.php",
+    "relative_file": null,
+    "hash": "ad4a7f7196248351d8ab0467630d30ec567cf1c8",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Link": "NGine\\Html\\Link",
+        "Meta": "NGine\\Html\\Meta",
+        "Script": "NGine\\Html\\Script"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "reset": {
+            "name": "reset",
+            "line": 33,
+            "short_desc": "R\u00e9initialiser les balises accumul\u00e9es.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Html",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "addMeta": {
+            "name": "addMeta",
+            "line": 50,
+            "short_desc": "Ajouter une balise meta.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Html",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "meta": {
+                    "name": "meta",
+                    "line": 50,
+                    "short_desc": "Meta \u00e0 ajouter.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\NGine\\Html\\Meta",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "addLink": {
+            "name": "addLink",
+            "line": 65,
+            "short_desc": "Ajouter une balise link.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Html",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "link": {
+                    "name": "link",
+                    "line": 65,
+                    "short_desc": "Lien \u00e0 ajouter.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\NGine\\Html\\Link",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "addScript": {
+            "name": "addScript",
+            "line": 80,
+            "short_desc": "Ajouter une balise script.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Html",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "script": {
+                    "name": "script",
+                    "line": 80,
+                    "short_desc": "Script \u00e0 ajouter.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\NGine\\Html\\Script",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "output": {
+            "name": "output",
+            "line": 93,
+            "short_desc": "G\u00e9n\u00e9rer le HTML des balises enregistr\u00e9es.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "HTML concat\u00e9n\u00e9.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "get": {
+            "name": "get",
+            "line": 179,
+            "short_desc": "R\u00e9cup\u00e9rer le contenu d'une meta par nom ou propri\u00e9t\u00e9.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Contenu trouv\u00e9 ou null.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "var": {
+                    "name": "var",
+                    "line": 179,
+                    "short_desc": "Nom ou propri\u00e9t\u00e9 recherch\u00e9e.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

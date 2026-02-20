@@ -1,0 +1,43 @@
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Headers "*"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirection https
+#    RewriteCond %{HTTPS} off
+#    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Vérifie si l'URL correspond au format attendu pour le partage des messages
+    # RewriteCond %{REQUEST_URI} ^/([^/]+)/([^/]+)/m([0-9]+)$ [NC]
+    RewriteCond %{REQUEST_URI} ^/data/share-msg/([^/]+)/([^/]+)/([0-9]+)$ [NC]
+    # Redirige vers la nouvelle URL en conservant les paramètres
+    RewriteRule ^ /message/%1/%2/m%3 [R=301,L]
+
+    # Redirection appel de download des attachments
+    RewriteRule ^data/attachment/([^/]+)/([^/]+)/(\d+)-(\d+)$ /download?editor=$1&channel=$2&message=$3&attachment=$4 [L,R=301]
+
+    # Vérifie si l'URL correspond au format attendu pour les logos editeurs
+    RewriteCond %{REQUEST_URI} ^/data/picture/([^/]+)/logo.png$ [NC]
+    # Redirige vers la nouvelle URL en conservant les paramètres
+    RewriteRule ^ /image/editor/%1/logo.png [R=301,L]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

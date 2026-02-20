@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Request | Template App – API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="doctum.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script async defer src="js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Request" data-root-path="" data-search-index-url="doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Rechercher"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Afficher le menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Template App – API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="namespaces.html">Namespaces</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Sommaire</a></li>
+                    <li><a href="search.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+    <div class="page-header">
+        <h1>Request    
+            </h1>
+    </div>
+
+    
+    <p>        classe
+    <strong>Request</strong>
+</p>
+
+        
+        
+    
+        
+
+            <div class="description">
+            <p><p>Encapsuler les données de requête HTTP.</p>
+</p>            <p><p>La classe centralise les superglobales PHP, les en-têtes, le corps de
+requête (formulaire, fichiers, flux JSON/url-encoded) et expose des
+helpers de lecture sûrs pour les contrôleurs.</p>
+</p>        </div>
+            
+        
+    
+            <h2>Propriétés</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_params">
+                                                                                array{controller: mixed, action: mixed, args: mixed}
+                                                                                
+                                    </td>
+                <td>$params</td>
+                <td class="last"><p>Paramètres déduits du routage (contrôleur, action, arguments).</p>
+</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_type">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$type</td>
+                <td class="last"><p>Valeur brute de l'en-tête Content-Type.</p>
+</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_data">
+                                                                                array&lt;string,mixed&gt;
+                                                                                
+                                    </td>
+                <td>$data</td>
+                <td class="last"><p>Données POST fusionnées avec les fichiers uploadés et le flux brut.</p>
+</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_query">
+                                                                                array&lt;string,mixed&gt;
+                                                                                
+                                    </td>
+                <td>$query</td>
+                <td class="last"><p>Paramètres de chaîne de requête.</p>
+</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_url">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$url</td>
+                <td class="last"><p>URL complète de la requête (avec host mais sans protocole explicite).</p>
+</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Méthodes</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(array $config = [])
+        
+                                            <p><p>Construire une requête depuis les superglobales PHP.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasHeader">hasHeader</a>(string $name)
+        
+                                            <p><p>Vérifier la présence d'un en-tête HTTP par son nom exact.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHeaders">getHeaders</a>(string|null $key = null)
+        
+                                            <p><p>Récupérer tous les en-têtes ou une clé spécifique.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Request.html">Request</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setHeaders">setHeaders</a>(array $headers)
+        
+                                            <p><p>Remplacer les en-têtes HTTP connus pour la requête.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_countData">countData</a>(array $exclude = [])
+        
+                                            <p><p>Compter les champs dans $this-&gt;data en excluant certaines clés.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_data">data</a>(string $key)
+        
+                                            <p><p>Accéder à une clé du corps de requête en toute sécurité.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_query">query</a>(int|string $key)
+        
+                                            <p><p>Accéder à une clé de la querystring.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_param">param</a>(string $key)
+        
+                                            <p><p>Accéder à un paramètre de routage.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isAjax">isAjax</a>()
+        
+                                            <p><p>Détecter une requête Ajax (en-tête X-Requested-With).</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isGet">isGet</a>()
+        
+                                            <p><p>Détecter une requête HTTP GET ou HEAD.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isPost">isPost</a>()
+        
+                                            <p><p>Détecter une requête HTTP POST.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isPut">isPut</a>()
+        
+                                            <p><p>Détecter une requête HTTP PUT.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isDelete">isDelete</a>()
+        
+                                            <p><p>Détecter une requête HTTP DELETE.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isPatch">isPatch</a>()
+        
+                                            <p><p>Détecter une requête HTTP PATCH.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isOptions">isOptions</a>()
+        
+                                            <p><p>Détecter une requête HTTP OPTIONS.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isSSL">isSSL</a>()
+        
+                                            <p><p>Détecter une connexion sécurisée (HTTPS activé).</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Request.html">Request</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addParams">addParams</a>(array $params)
+        
+                                            <p><p>Ajouter des paramètres supplémentaires à $this-&gt;params.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_contentLength">contentLength</a>()
+        
+                                            <p><p>Obtenir la longueur de contenu annoncée par le client.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_dataSizeOverflow">dataSizeOverflow</a>()
+        
+                                            <p><p>Vérifier une éventuelle troncature des données POST/FILES.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_uri">uri</a>()
+        
+                                            <p><p>Obtenir l'URI courante (chemin + query brute).</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_host">host</a>()
+        
+                                            <p><p>Obtenir l'hôte HTTP actuel.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_name">name</a>()
+        
+                                            <p><p>Obtenir le nom du serveur (SERVER_NAME).</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_referer">referer</a>()
+        
+                                            <p><p>Obtenir le référent HTTP de la requête.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_clientIp">clientIp</a>()
+        
+                                            <p><p>Obtenir l'adresse IP cliente la plus fiable.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_userAgent">userAgent</a>()
+        
+                                            <p><p>Obtenir l'agent utilisateur communiqué par le client.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_currentUrl">currentUrl</a>()
+        
+                                            <p><p>Construire l'URL courante sans le protocole.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validateUrl">validateUrl</a>(string $url)
+        
+                                            <p><p>Valider une URL externe à partir du protocole et de l'hôte.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIP">getIP</a>()
+        
+                                            <p><p>Obtenir l'IP distante capturée à la construction.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Détails</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">à la ligne 69</div>
+        <code>                    
+    <strong>__construct</strong>(array $config = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Construire une requête depuis les superglobales PHP.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td><p>Configuration utilisateur (params forcés, etc.).</p>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasHeader">
+        <div class="location">à la ligne 85</div>
+        <code>                    bool
+    <strong>hasHeader</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Vérifier la présence d'un en-tête HTTP par son nom exact.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeaders">
+        <div class="location">à la ligne 97</div>
+        <code>                    array|string
+    <strong>getHeaders</strong>(string|null $key = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer tous les en-têtes ou une clé spécifique.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$key</td>
+                <td><p>Nom d'en-tête recherché (respecte la casse reçue).</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|string</td>
+            <td><p>Tableau complet ou valeur de l'en-tête, chaîne vide si absent.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHeaders">
+        <div class="location">à la ligne 112</div>
+        <code>                    <a href="Request.html">Request</a>
+    <strong>setHeaders</strong>(array $headers)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remplacer les en-têtes HTTP connus pour la requête.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td><p>Tableau d'en-têtes fourni par le serveur.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Request.html">Request</a></td>
+            <td><p>Instance courante (fluide).</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_countData">
+        <div class="location">à la ligne 165</div>
+        <code>                    int
+    <strong>countData</strong>(array $exclude = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Compter les champs dans $this-&gt;data en excluant certaines clés.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$exclude</td>
+                <td><p>Liste de clés à ignorer.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>Nombre de champs restants après exclusion.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_data">
+        <div class="location">à la ligne 184</div>
+        <code>                    mixed
+    <strong>data</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Accéder à une clé du corps de requête en toute sécurité.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Clé du champ recherché.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Valeur du champ ou null si absent.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_query">
+        <div class="location">à la ligne 196</div>
+        <code>                    mixed
+    <strong>query</strong>(int|string $key)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Accéder à une clé de la querystring.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|string</td>
+                <td>$key</td>
+                <td><p>Clé ou index de paramètre.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Valeur du paramètre ou null si absent.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_param">
+        <div class="location">à la ligne 208</div>
+        <code>                    mixed
+    <strong>param</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Accéder à un paramètre de routage.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Nom du paramètre.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Valeur ou null si non définie.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAjax">
+        <div class="location">à la ligne 218</div>
+        <code>                    bool
+    <strong>isAjax</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Détecter une requête Ajax (en-tête X-Requested-With).</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true si l'en-tête indique XMLHttpRequest.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isGet">
+        <div class="location">à la ligne 232</div>
+        <code>                    bool
+    <strong>isGet</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Détecter une requête HTTP GET ou HEAD.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true si la méthode est GET ou HEAD.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isPost">
+        <div class="location">à la ligne 245</div>
+        <code>                    bool
+    <strong>isPost</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Détecter une requête HTTP POST.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true si la méthode est POST.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isPut">
+        <div class="location">à la ligne 259</div>
+        <code>                    bool
+    <strong>isPut</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Détecter une requête HTTP PUT.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDelete">
+        <div class="location">à la ligne 267</div>
+        <code>                    bool
+    <strong>isDelete</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Détecter une requête HTTP DELETE.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isPatch">
+        <div class="location">à la ligne 275</div>
+        <code>                    bool
+    <strong>isPatch</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Détecter une requête HTTP PATCH.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isOptions">
+        <div class="location">à la ligne 283</div>
+        <code>                    bool
+    <strong>isOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Détecter une requête HTTP OPTIONS.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSSL">
+        <div class="location">à la ligne 295</div>
+        <code>                    bool
+    <strong>isSSL</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Détecter une connexion sécurisée (HTTPS activé).</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true si HTTPS est actif et non désactivé.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addParams">
+        <div class="location">à la ligne 307</div>
+        <code>                    <a href="Request.html">Request</a>
+    <strong>addParams</strong>(array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Ajouter des paramètres supplémentaires à $this-&gt;params.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Paires clé/valeur à fusionner.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Request.html">Request</a></td>
+            <td><p>Instance courante (fluide).</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_contentLength">
+        <div class="location">à la ligne 319</div>
+        <code>                    int
+    <strong>contentLength</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Obtenir la longueur de contenu annoncée par le client.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>Taille en octets (0 si non renseignée).</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dataSizeOverflow">
+        <div class="location">à la ligne 330</div>
+        <code>                    bool
+    <strong>dataSizeOverflow</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Vérifier une éventuelle troncature des données POST/FILES.</p>
+</p>                <p><p>Cette situation se produit lorsque les superglobales sont vides malgré un Content-Length.</p>
+</p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true si un débordement est suspecté.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_uri">
+        <div class="location">à la ligne 342</div>
+        <code>                    string|null
+    <strong>uri</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Obtenir l'URI courante (chemin + query brute).</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td><p>URI transmise par le serveur.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_host">
+        <div class="location">à la ligne 352</div>
+        <code>                    string|null
+    <strong>host</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Obtenir l'hôte HTTP actuel.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td><p>Nom d'hôte envoyé par le client.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_name">
+        <div class="location">à la ligne 362</div>
+        <code>                    string|null
+    <strong>name</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Obtenir le nom du serveur (SERVER_NAME).</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td><p>Nom de serveur configuré.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_referer">
+        <div class="location">à la ligne 372</div>
+        <code>                    string|null
+    <strong>referer</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Obtenir le référent HTTP de la requête.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td><p>URL référente ou null si absente.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clientIp">
+        <div class="location">à la ligne 384</div>
+        <code>                    string|null
+    <strong>clientIp</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Obtenir l'adresse IP cliente la plus fiable.</p>
+</p>                <p><p>'REMOTE_ADDR' est privilégié ; les autres en-têtes ne sont pas utilisés ici.</p>
+</p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td><p>Adresse IP ou null si inconnue.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userAgent">
+        <div class="location">à la ligne 394</div>
+        <code>                    string
+    <strong>userAgent</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Obtenir l'agent utilisateur communiqué par le client.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Valeur brute de l'en-tête User-Agent.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_currentUrl">
+        <div class="location">à la ligne 407</div>
+        <code>                    string
+    <strong>currentUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Construire l'URL courante sans le protocole.</p>
+</p>                <p><p>Les paramètres <code>url</code> et <code>redirect</code> sont exclus pour éviter les doublons
+lors de redirections internes.</p>
+</p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Hostname + chemin + query string filtrée.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateUrl">
+        <div class="location">à la ligne 435</div>
+        <code>                    bool
+    <strong>validateUrl</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Valider une URL externe à partir du protocole et de l'hôte.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL à vérifier.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true si le protocole est http/https et l'hôte correspond au serveur.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIP">
+        <div class="location">à la ligne 463</div>
+        <code>                    string|null
+    <strong>getIP</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Obtenir l'IP distante capturée à la construction.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td><p>Adresse IP initiale ou null.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Généré par <a href="https://github.com/code-lts/doctum">Doctum, un générateur de documentation d'API, successeur de Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

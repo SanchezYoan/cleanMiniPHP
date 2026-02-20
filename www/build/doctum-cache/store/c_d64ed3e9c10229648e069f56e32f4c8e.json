@@ -1,0 +1,704 @@
+{
+    "name": "Response",
+    "line": 13,
+    "short_desc": "Construire et envoyer une r\u00e9ponse HTTP.",
+    "long_desc": "La classe g\u00e8re le contenu, les en-t\u00eates, les statuts et les t\u00e9l\u00e9chargements\nde fichiers ou flux binaires pour les contr\u00f4leurs.",
+    "hint": null,
+    "tags": {
+        "license": [
+            [
+                "http:\/\/opensource.org\/licenses\/MIT",
+                "The",
+                "MIT",
+                "License",
+                "(MIT)"
+            ]
+        ],
+        "author": [
+            [
+                "Omar",
+                "El",
+                "Gabry",
+                "<omar.elgabry.93@gmail.com>"
+            ]
+        ]
+    },
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/core\/Response.php",
+    "relative_file": null,
+    "hash": "237c9afe6b1dd8d2873a80af69740057a3376c96",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb",
+        "JsonResponseHandler": "Whoops\\Handler\\JsonResponseHandler",
+        "Run": "Whoops\\Run"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": {
+        "headers": {
+            "name": "headers",
+            "line": 21,
+            "short_desc": "En-t\u00eates HTTP \u00e0 envoyer au client.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\array<string,string",
+                    false
+                ],
+                [
+                    "\\int>",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        }
+    },
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 100,
+            "short_desc": "Construire une r\u00e9ponse HTTP initialis\u00e9e.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "content": {
+                    "name": "content",
+                    "line": 100,
+                    "short_desc": "Contenu initial.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "''",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "status": {
+                    "name": "status",
+                    "line": 100,
+                    "short_desc": "Code HTTP initial.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "200",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "headers": {
+                    "name": "headers",
+                    "line": 100,
+                    "short_desc": "En-t\u00eates suppl\u00e9mentaires \u00e0 appliquer.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "[]",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "send": {
+            "name": "send",
+            "line": 118,
+            "short_desc": "Envoyer les en-t\u00eates et le contenu vers le client.",
+            "long_desc": "D\u00e9clenche la lecture de fichier si n\u00e9cessaire puis flush la sortie pour\nclore la requ\u00eate (fastcgi_finish_request si disponible).",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "json": {
+            "name": "json",
+            "line": 206,
+            "short_desc": "Configurer une r\u00e9ponse JSON avec statut HTTP.",
+            "long_desc": "Journalise les erreurs pour les codes non 200, puis s\u00e9rialise le corps.",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "code": {
+                    "name": "code",
+                    "line": 206,
+                    "short_desc": "Code HTTP retourn\u00e9.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "body": {
+                    "name": "body",
+                    "line": 206,
+                    "short_desc": "Corps de r\u00e9ponse \u00e0 encoder en JSON.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "setContent": {
+            "name": "setContent",
+            "line": 224,
+            "short_desc": "D\u00e9finit le contenu textuel de la r\u00e9ponse.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "content": {
+                    "name": "content",
+                    "line": 224,
+                    "short_desc": "The response content",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "\"\"",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "setStatusCode": {
+            "name": "setStatusCode",
+            "line": 236,
+            "short_desc": "D\u00e9finir le code HTTP et son libell\u00e9 associ\u00e9.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "code": {
+                    "name": "code",
+                    "line": 236,
+                    "short_desc": "HTTP status code",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "setType": {
+            "name": "setType",
+            "line": 251,
+            "short_desc": "D\u00e9finir le Content-Type de la r\u00e9ponse.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "contentType": {
+                    "name": "contentType",
+                    "line": 251,
+                    "short_desc": "Mime type (null pour supprimer).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "null",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "error": {
+            "name": "error",
+            "line": 271,
+            "short_desc": "Construire une r\u00e9ponse d'erreur standardis\u00e9e.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ],
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Objet Response configur\u00e9 (pas encore envoy\u00e9).",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "code": {
+                    "name": "code",
+                    "line": 271,
+                    "short_desc": "Code HTTP\/cl\u00e9 d'erreur attendue.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ],
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "message": {
+                    "name": "message",
+                    "line": 271,
+                    "short_desc": "Message compl\u00e9mentaire optionnel.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "\"\"",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "clearBuffer": {
+            "name": "clearBuffer",
+            "line": 305,
+            "short_desc": "Effacer le buffer de sortie courant.",
+            "long_desc": "Utile avant l'envoi d'un fichier ou d'une r\u00e9ponse JSON pour \u00e9viter tout\ncontenu parasite.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "image": {
+            "name": "image",
+            "line": 322,
+            "short_desc": "Pr\u00e9parer l'envoi d'une image avec d\u00e9tection du mime type.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "path": {
+                    "name": "path",
+                    "line": 322,
+                    "short_desc": "Chemin absolu du fichier \u00e0 diffuser.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "headers": {
+                    "name": "headers",
+                    "line": 322,
+                    "short_desc": "En-t\u00eates personnalis\u00e9s (facultatif).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "[]",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "yaml": {
+            "name": "yaml",
+            "line": 370,
+            "short_desc": "Servir un fichier YAML (ou \u00e9quivalent) en t\u00e9l\u00e9chargement simple.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "file": {
+                    "name": "file",
+                    "line": 370,
+                    "short_desc": "Chemin du fichier \u00e0 retourner.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "download": {
+            "name": "download",
+            "line": 391,
+            "short_desc": "Pr\u00e9parer un t\u00e9l\u00e9chargement de fichier binaire.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "path": {
+                    "name": "path",
+                    "line": 391,
+                    "short_desc": "Chemin absolu du fichier.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "file": {
+                    "name": "file",
+                    "line": 391,
+                    "short_desc": "M\u00e9tadonn\u00e9es du fichier (basename, extension).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "headers": {
+                    "name": "headers",
+                    "line": 391,
+                    "short_desc": "En-t\u00eates personnalis\u00e9s (facultatif).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "[]",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "display": {
+            "name": "display",
+            "line": 427,
+            "short_desc": "Pr\u00e9parer l'affichage inline d'un fichier (image\/PDF\/etc.).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "path": {
+                    "name": "path",
+                    "line": 427,
+                    "short_desc": "Chemin absolu du fichier.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "file": {
+                    "name": "file",
+                    "line": 427,
+                    "short_desc": "M\u00e9tadonn\u00e9es du fichier (basename, extension).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "headers": {
+                    "name": "headers",
+                    "line": 427,
+                    "short_desc": "En-t\u00eates personnalis\u00e9s (facultatif).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "[]",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

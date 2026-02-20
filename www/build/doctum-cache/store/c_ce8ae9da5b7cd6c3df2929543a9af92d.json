@@ -1,0 +1,157 @@
+{
+    "name": "Email",
+    "line": 13,
+    "short_desc": "Envoyer des emails via PHPMailer.",
+    "long_desc": "Fournit un helper statique pour l'envoi SMTP et la gestion d'\u00e9ventuelles pi\u00e8ces jointes.",
+    "hint": null,
+    "tags": {
+        "license": [
+            [
+                "http:\/\/opensource.org\/licenses\/MIT",
+                "The",
+                "MIT",
+                "License",
+                "(MIT)"
+            ]
+        ],
+        "author": [
+            [
+                "Omar",
+                "El",
+                "Gabry",
+                "<omar.elgabry.93@gmail.com>"
+            ]
+        ]
+    },
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/core\/Email.php",
+    "relative_file": null,
+    "hash": "a269f3ddec5ecbeb63b0ae3142531f5ea3c9b71e",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "sendEmail": {
+            "name": "sendEmail",
+            "line": 37,
+            "short_desc": "Envoyer un email HTML.",
+            "long_desc": "Effets de bord : envoi d'email et \u00e9ventuelle pi\u00e8ce jointe.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "Aucune valeur de retour.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\PHPMailer\\PHPMailer\\Exception",
+                    "Si l'envoi \u00e9choue."
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "destinataire": {
+                    "name": "destinataire",
+                    "line": 37,
+                    "short_desc": "Adresse(s) email cible(s).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "\\array<int,string>",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "subject": {
+                    "name": "subject",
+                    "line": 37,
+                    "short_desc": "Sujet du message.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "html": {
+                    "name": "html",
+                    "line": 37,
+                    "short_desc": "Corps HTML du message.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "uploadedFile": {
+                    "name": "uploadedFile",
+                    "line": 37,
+                    "short_desc": "Fichier upload\u00e9 (structure $_FILES) ou null.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\array<string,mixed>",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

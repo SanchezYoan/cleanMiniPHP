@@ -1,0 +1,859 @@
+{
+    "name": "View",
+    "line": 10,
+    "short_desc": "Rendre les vues HTML\/JSON.",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "license": [
+            [
+                "http:\/\/opensource.org\/licenses\/MIT",
+                "The",
+                "MIT",
+                "License",
+                "(MIT)"
+            ]
+        ],
+        "author": [
+            [
+                "Omar",
+                "El",
+                "Gabry",
+                "<omar.elgabry.93@gmail.com>"
+            ]
+        ]
+    },
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/core\/View.php",
+    "relative_file": null,
+    "hash": "633ab54f71a34419d141c30094ddc7841063dfce",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": {
+        "admin": {
+            "name": "admin",
+            "line": 15,
+            "short_desc": "Administrateur courant.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": {
+                "nodeType": "Expr_ConstFetch",
+                "attributes": {
+                    "startLine": 15,
+                    "startTokenPos": 21,
+                    "startFilePos": 264,
+                    "endLine": 15,
+                    "endTokenPos": 21,
+                    "endFilePos": 267
+                },
+                "name": {
+                    "nodeType": "Name_FullyQualified",
+                    "attributes": {
+                        "startLine": 15,
+                        "startTokenPos": 21,
+                        "startFilePos": 264,
+                        "endLine": 15,
+                        "endTokenPos": 21,
+                        "endFilePos": 267
+                    },
+                    "name": "null"
+                }
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "controller": {
+            "name": "controller",
+            "line": 19,
+            "short_desc": "Contr\u00f4leur associ\u00e9.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Controller",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "html": {
+            "name": "html",
+            "line": 23,
+            "short_desc": "Helper HTML.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Html",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": {
+                "nodeType": "Expr_ConstFetch",
+                "attributes": {
+                    "startLine": 23,
+                    "startTokenPos": 44,
+                    "startFilePos": 423,
+                    "endLine": 23,
+                    "endTokenPos": 44,
+                    "endFilePos": 426
+                },
+                "name": {
+                    "nodeType": "Name_FullyQualified",
+                    "attributes": {
+                        "startLine": 23,
+                        "startTokenPos": 44,
+                        "startFilePos": 423,
+                        "endLine": 23,
+                        "endTokenPos": 44,
+                        "endFilePos": 426
+                    },
+                    "name": "null"
+                }
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "isMobile": {
+            "name": "isMobile",
+            "line": 27,
+            "short_desc": "Indique si le client est mobile.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "referencementSEO": {
+            "name": "referencementSEO",
+            "line": 31,
+            "short_desc": "Contenu SEO additionnel.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": {
+                "nodeType": "Scalar_String",
+                "attributes": {
+                    "startLine": 31,
+                    "startTokenPos": 66,
+                    "startFilePos": 598,
+                    "endLine": 31,
+                    "endTokenPos": 66,
+                    "endFilePos": 599,
+                    "kind": 1,
+                    "rawValue": "''"
+                },
+                "value": ""
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        }
+    },
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 58,
+            "short_desc": "Construire une vue.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "controller": {
+                    "name": "controller",
+                    "line": 58,
+                    "short_desc": "Contr\u00f4leur associ\u00e9.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Controller",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "renderFile": {
+            "name": "renderFile",
+            "line": 94,
+            "short_desc": "Rendre un fichier PHP en HTML.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "HTML rendu.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "filePath": {
+                    "name": "filePath",
+                    "line": 94,
+                    "short_desc": "Chemin du fichier.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "data": {
+                    "name": "data",
+                    "line": 94,
+                    "short_desc": "Donn\u00e9es extraites dans la vue.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "null",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "setHeaders": {
+            "name": "setHeaders",
+            "line": 115,
+            "short_desc": "D\u00e9finir les en-t\u00eates de rendu.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "headers": {
+                    "name": "headers",
+                    "line": 115,
+                    "short_desc": "En-t\u00eates \u00e0 injecter.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "addJS": {
+            "name": "addJS",
+            "line": 128,
+            "short_desc": "Ajouter des scripts JS optionnels.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "links": {
+                    "name": "links",
+                    "line": 128,
+                    "short_desc": "Scripts \u00e0 ajouter.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "addCSS": {
+            "name": "addCSS",
+            "line": 142,
+            "short_desc": "Ajouter des feuilles CSS optionnelles.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "links": {
+                    "name": "links",
+                    "line": 142,
+                    "short_desc": "Liens CSS.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "renderCSS": {
+            "name": "renderCSS",
+            "line": 155,
+            "short_desc": "G\u00e9n\u00e9rer les balises CSS optionnelles.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "HTML des balises.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "renderJS": {
+            "name": "renderJS",
+            "line": 179,
+            "short_desc": "G\u00e9n\u00e9rer les balises JS optionnelles.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "HTML des scripts.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "renderWithLayouts": {
+            "name": "renderWithLayouts",
+            "line": 211,
+            "short_desc": "Rendre une vue avec layout (header\/footer).",
+            "long_desc": "Effets de bord : \u00e9crit le contenu dans Response.",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "HTML rendu.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "layoutDir": {
+                    "name": "layoutDir",
+                    "line": 211,
+                    "short_desc": "R\u00e9pertoire de layout.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "filePath": {
+                    "name": "filePath",
+                    "line": 211,
+                    "short_desc": "Vue \u00e0 rendre.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "data": {
+                    "name": "data",
+                    "line": 211,
+                    "short_desc": "Donn\u00e9es inject\u00e9es.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\array<string,mixed>",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "null",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "renderRedirect": {
+            "name": "renderRedirect",
+            "line": 241,
+            "short_desc": "Renvoyer un JSON de redirection.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "JSON rendu.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "url": {
+                    "name": "url",
+                    "line": 241,
+                    "short_desc": "URL cible.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "renderJson": {
+            "name": "renderJson",
+            "line": 253,
+            "short_desc": "Rendre un JSON et l'injecter dans Response.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "JSON rendu.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "data": {
+                    "name": "data",
+                    "line": 253,
+                    "short_desc": "Donn\u00e9es.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "null",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "jsonEncode": {
+            "name": "jsonEncode",
+            "line": 269,
+            "short_desc": "S\u00e9rialiser un tableau en JSON.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "JSON rendu.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "data": {
+                    "name": "data",
+                    "line": 269,
+                    "short_desc": "Donn\u00e9es.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "renderErrors": {
+            "name": "renderErrors",
+            "line": 284,
+            "short_desc": "Rendre une erreur (HTML ou JSON selon contexte).",
+            "long_desc": "Effets de bord : modifie le statut de Response.",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "HTML ou JSON rendu.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "errors": {
+                    "name": "errors",
+                    "line": 284,
+                    "short_desc": "Erreurs \u00e0 afficher.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "\\array<int,string>",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "status": {
+                    "name": "status",
+                    "line": 284,
+                    "short_desc": "Code HTTP.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "200",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "render": {
+            "name": "render",
+            "line": 312,
+            "short_desc": "Rendre un fichier PHP en HTML.",
+            "long_desc": "Effets de bord : \u00e9crit le contenu dans Response.",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "HTML rendu.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "filePath": {
+                    "name": "filePath",
+                    "line": 312,
+                    "short_desc": "Chemin du fichier.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "data": {
+                    "name": "data",
+                    "line": 312,
+                    "short_desc": "Donn\u00e9es inject\u00e9es.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "null",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "renderSuccess": {
+            "name": "renderSuccess",
+            "line": 338,
+            "short_desc": "Rendre un message de succ\u00e8s.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "HTML ou JSON rendu.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "message": {
+                    "name": "message",
+                    "line": 338,
+                    "short_desc": "Message \u00e0 afficher.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "\\array<int,string>",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

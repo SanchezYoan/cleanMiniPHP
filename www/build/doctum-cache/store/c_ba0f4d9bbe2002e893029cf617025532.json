@@ -1,0 +1,459 @@
+{
+    "name": "NGine\\Breadcrumb\\Link",
+    "line": 9,
+    "short_desc": "D\u00e9crit un lien d'un fil d'Ariane",
+    "long_desc": "",
+    "hint": null,
+    "tags": [],
+    "namespace": "NGine\\Breadcrumb",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/libraries\/NGine\/Breadcrumb\/Link.php",
+    "relative_file": null,
+    "hash": "39cbdeea0fe1e53fe9821617dd73920b4c420f87",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": [],
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "getIcon": {
+            "name": "getIcon",
+            "line": 60,
+            "short_desc": "R\u00e9cup\u00e9rer l'ic\u00f4ne associ\u00e9e",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Ic\u00f4ne.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setIcon": {
+            "name": "setIcon",
+            "line": 72,
+            "short_desc": "D\u00e9finir l'ic\u00f4ne associ\u00e9e",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Breadcrumb\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "icon": {
+                    "name": "icon",
+                    "line": 72,
+                    "short_desc": "Ic\u00f4ne (nom)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getHref": {
+            "name": "getHref",
+            "line": 86,
+            "short_desc": "R\u00e9cup\u00e9rer l'URL du lien",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "URL",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setHref": {
+            "name": "setHref",
+            "line": 98,
+            "short_desc": "D\u00e9finir l'URL du lien",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Breadcrumb\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "href": {
+                    "name": "href",
+                    "line": 98,
+                    "short_desc": "URL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getTitle": {
+            "name": "getTitle",
+            "line": 110,
+            "short_desc": "R\u00e9cup\u00e9rer le titre du lien",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Titre",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setTitle": {
+            "name": "setTitle",
+            "line": 122,
+            "short_desc": "D\u00e9finir le titre du lien",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Breadcrumb\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "title": {
+                    "name": "title",
+                    "line": 122,
+                    "short_desc": "Titre",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getText": {
+            "name": "getText",
+            "line": 134,
+            "short_desc": "R\u00e9cup\u00e9rer le texte affich\u00e9",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Texte",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setText": {
+            "name": "setText",
+            "line": 146,
+            "short_desc": "D\u00e9finir le texte affich\u00e9",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Breadcrumb\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "text": {
+                    "name": "text",
+                    "line": 146,
+                    "short_desc": "Texte",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getTarget": {
+            "name": "getTarget",
+            "line": 158,
+            "short_desc": "R\u00e9cup\u00e9rer la cible du lien.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Cible (ex: _blank).",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setTarget": {
+            "name": "setTarget",
+            "line": 170,
+            "short_desc": "D\u00e9finir la cible du lien",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Breadcrumb\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "target": {
+                    "name": "target",
+                    "line": 170,
+                    "short_desc": "Cible (ex: _blank)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getClass": {
+            "name": "getClass",
+            "line": 182,
+            "short_desc": "R\u00e9cup\u00e9rer la classe CSS",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Classe CSS",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setClass": {
+            "name": "setClass",
+            "line": 194,
+            "short_desc": "D\u00e9finir la classe CSS",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Breadcrumb\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "class": {
+                    "name": "class",
+                    "line": 194,
+                    "short_desc": "Classe CSS",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getExtend": {
+            "name": "getExtend",
+            "line": 206,
+            "short_desc": "R\u00e9cup\u00e9rer la m\u00e9tadonn\u00e9e extend",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "M\u00e9tadonn\u00e9e",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setExtend": {
+            "name": "setExtend",
+            "line": 218,
+            "short_desc": "D\u00e9finir la m\u00e9tadonn\u00e9e extend",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Breadcrumb\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "extend": {
+                    "name": "extend",
+                    "line": 218,
+                    "short_desc": "M\u00e9tadonn\u00e9e",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

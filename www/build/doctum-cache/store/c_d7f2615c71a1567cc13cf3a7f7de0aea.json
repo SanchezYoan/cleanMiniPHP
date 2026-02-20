@@ -1,0 +1,657 @@
+{
+    "name": "Encryption",
+    "line": 10,
+    "short_desc": "Chiffrer et d\u00e9chiffrer des donn\u00e9es applicatives.",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "license": [
+            [
+                "http:\/\/opensource.org\/licenses\/MIT",
+                "The",
+                "MIT",
+                "License",
+                "(MIT)"
+            ]
+        ],
+        "author": [
+            [
+                "Omar",
+                "El",
+                "Gabry",
+                "<omar.elgabry.93@gmail.com>"
+            ]
+        ]
+    },
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/core\/Encryption.php",
+    "relative_file": null,
+    "hash": "59c241714c2f5e430bd31d92eeb046e85c36dce4",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 45,
+            "short_desc": "Initialiser les cl\u00e9s publique\/priv\u00e9e \u00e0 partir du syst\u00e8me de fichiers.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "encryptId": {
+            "name": "encryptId",
+            "line": 60,
+            "short_desc": "Chiffrer un identifiant en base courte.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Identifiant chiffr\u00e9.",
+            "tags": {
+                "see": [
+                    [
+                        "http:\/\/kvz.io\/blog\/2009\/06\/10\/create-short-ids-with-php-like-youtube-or-tinyurl\/"
+                    ]
+                ]
+            },
+            "see": [
+                [
+                    "http:\/\/kvz.io\/blog\/2009\/06\/10\/create-short-ids-with-php-like-youtube-or-tinyurl\/",
+                    "",
+                    false,
+                    false,
+                    "http:\/\/kvz.io\/blog\/2009\/06\/10\/create-short-ids-with-php-like-youtube-or-tinyurl\/"
+                ]
+            ],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\PHPMailer\\PHPMailer\\Exception",
+                    "Si la g\u00e9n\u00e9ration de caract\u00e8res \u00e9choue."
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 60,
+                    "short_desc": "Identifiant num\u00e9rique.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ],
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "decryptId": {
+            "name": "decryptId",
+            "line": 112,
+            "short_desc": "D\u00e9chiffrer un identifiant chiffr\u00e9.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Identifiant num\u00e9rique.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\PHPMailer\\PHPMailer\\Exception",
+                    "Si la g\u00e9n\u00e9ration de caract\u00e8res \u00e9choue."
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 112,
+                    "short_desc": "Identifiant chiffr\u00e9.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "null",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "encrypt": {
+            "name": "encrypt",
+            "line": 143,
+            "short_desc": "Chiffrer une cha\u00eene via AES + HMAC.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Cha\u00eene chiffr\u00e9e (hex) ou null si entr\u00e9e vide.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\RuntimeException",
+                    "Si les fonctions OpenSSL manquent."
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "plain": {
+                    "name": "plain",
+                    "line": 143,
+                    "short_desc": "Texte en clair.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "null",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "decrypt": {
+            "name": "decrypt",
+            "line": 180,
+            "short_desc": "D\u00e9chiffrer une cha\u00eene chiffr\u00e9e.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "false",
+                    false
+                ]
+            ],
+            "hint_desc": "Cha\u00eene d\u00e9chiffr\u00e9e ou false si HMAC invalide.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "ciphertext": {
+                    "name": "ciphertext",
+                    "line": 180,
+                    "short_desc": "Cha\u00eene chiffr\u00e9e hexad\u00e9cimale.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "passwordCheck": {
+            "name": "passwordCheck",
+            "line": 264,
+            "short_desc": "Comparer un mot de passe en clair avec un hash SHA-256.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si identique.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "pwd1": {
+                    "name": "pwd1",
+                    "line": 264,
+                    "short_desc": "Mot de passe en clair.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "databaseHash": {
+                    "name": "databaseHash",
+                    "line": 264,
+                    "short_desc": "Hash stock\u00e9 en base.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "passwordHash": {
+            "name": "passwordHash",
+            "line": 278,
+            "short_desc": "Hacher un mot de passe via SHA-256.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Hash SHA-256 ou null si vide.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "password": {
+                    "name": "password",
+                    "line": 278,
+                    "short_desc": "Mot de passe en clair.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "passwordCheck2": {
+            "name": "passwordCheck2",
+            "line": 291,
+            "short_desc": "V\u00e9rifier un mot de passe via hash Bcrypt peppered.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si valide.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "pwd1": {
+                    "name": "pwd1",
+                    "line": 291,
+                    "short_desc": "Mot de passe en clair.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "databaseHash": {
+                    "name": "databaseHash",
+                    "line": 291,
+                    "short_desc": "Hash Bcrypt stock\u00e9.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "passwordHash2": {
+            "name": "passwordHash2",
+            "line": 304,
+            "short_desc": "G\u00e9n\u00e9rer un hash Bcrypt peppered.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Hash Bcrypt.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "password": {
+                    "name": "password",
+                    "line": 304,
+                    "short_desc": "Mot de passe en clair.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "createKeyPairs": {
+            "name": "createKeyPairs",
+            "line": 318,
+            "short_desc": "Cr\u00e9er la paire de cl\u00e9s et la stocker sur disque.",
+            "long_desc": "Effets de bord : \u00e9crit des fichiers dans \/app\/keys.",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si la paire est cr\u00e9\u00e9e.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getPublicKey": {
+            "name": "getPublicKey",
+            "line": 368,
+            "short_desc": "R\u00e9cup\u00e9rer la cl\u00e9 publique.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Cl\u00e9 publique.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "publicKeyEncrypt": {
+            "name": "publicKeyEncrypt",
+            "line": 381,
+            "short_desc": "Chiffrer un message avec une cl\u00e9 publique tierce.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Donn\u00e9es chiffr\u00e9es (hex).",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "data": {
+                    "name": "data",
+                    "line": 381,
+                    "short_desc": "Donn\u00e9es en clair.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "publicKey": {
+                    "name": "publicKey",
+                    "line": 381,
+                    "short_desc": "Cl\u00e9 publique de destination.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "publicKeyDecrypt": {
+            "name": "publicKeyDecrypt",
+            "line": 397,
+            "short_desc": "D\u00e9chiffrer un message chiffr\u00e9 via notre cl\u00e9 priv\u00e9e.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Donn\u00e9es en clair.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "data": {
+                    "name": "data",
+                    "line": 397,
+                    "short_desc": "Donn\u00e9es chiffr\u00e9es (hex).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": {
+        "CIPHER": {
+            "name": "CIPHER",
+            "line": 16,
+            "short_desc": "Algorithme de chiffrement sym\u00e9trique.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "HASH_FUNCTION": {
+            "name": "HASH_FUNCTION",
+            "line": 21,
+            "short_desc": "Fonction de hachage pour HMAC.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        }
+    }
+}

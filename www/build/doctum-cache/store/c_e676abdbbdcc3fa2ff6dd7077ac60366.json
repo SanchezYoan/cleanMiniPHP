@@ -1,0 +1,487 @@
+{
+    "name": "NGine\\Image\\Image",
+    "line": 11,
+    "short_desc": "Fournit des m\u00e9tadonn\u00e9es sur une image locale.",
+    "long_desc": "",
+    "hint": null,
+    "tags": [],
+    "namespace": "NGine\\Image",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/libraries\/NGine\/Image\/Image.php",
+    "relative_file": null,
+    "hash": "dc2284c99f5675e08ea8bf92d06bf03bcdc91ec8",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "DateTime": "DateTime",
+        "Logger": "Logger"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 52,
+            "short_desc": "Initialiser l'image \u00e0 partir d'un chemin complet.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "fullPath": {
+                    "name": "fullPath",
+                    "line": 52,
+                    "short_desc": "Chemin complet vers l'image.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getWidth": {
+            "name": "getWidth",
+            "line": 77,
+            "short_desc": "R\u00e9cup\u00e9rer la largeur de l'image.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "Largeur en pixels.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setWidth": {
+            "name": "setWidth",
+            "line": 89,
+            "short_desc": "D\u00e9finir la largeur de l'image.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Image\\Image",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "width": {
+                    "name": "width",
+                    "line": 89,
+                    "short_desc": "Largeur en pixels.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getHeight": {
+            "name": "getHeight",
+            "line": 101,
+            "short_desc": "R\u00e9cup\u00e9rer la hauteur de l'image.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "Hauteur en pixels.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setHeight": {
+            "name": "setHeight",
+            "line": 113,
+            "short_desc": "D\u00e9finir la hauteur de l'image.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Image\\Image",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "height": {
+                    "name": "height",
+                    "line": 113,
+                    "short_desc": "Hauteur en pixels.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getExtension": {
+            "name": "getExtension",
+            "line": 125,
+            "short_desc": "R\u00e9cup\u00e9rer l'extension du fichier.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Extension.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setExtension": {
+            "name": "setExtension",
+            "line": 137,
+            "short_desc": "D\u00e9finir l'extension du fichier.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Image\\Image",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "extension": {
+                    "name": "extension",
+                    "line": 137,
+                    "short_desc": "Extension.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getPath": {
+            "name": "getPath",
+            "line": 149,
+            "short_desc": "R\u00e9cup\u00e9rer le chemin du fichier.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Chemin.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setPath": {
+            "name": "setPath",
+            "line": 161,
+            "short_desc": "D\u00e9finir le chemin du fichier.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Image\\Image",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "path": {
+                    "name": "path",
+                    "line": 161,
+                    "short_desc": "Chemin.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getUrl": {
+            "name": "getUrl",
+            "line": 173,
+            "short_desc": "R\u00e9cup\u00e9rer l'URL de l'image.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "URL.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setUrl": {
+            "name": "setUrl",
+            "line": 185,
+            "short_desc": "D\u00e9finir l'URL de l'image.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Image\\Image",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "url": {
+                    "name": "url",
+                    "line": 185,
+                    "short_desc": "URL.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getDateDerniereModification": {
+            "name": "getDateDerniereModification",
+            "line": 197,
+            "short_desc": "R\u00e9cup\u00e9rer la date de derni\u00e8re modification.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\DateTime",
+                    false
+                ]
+            ],
+            "hint_desc": "Date de modification.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setDateDerniereModification": {
+            "name": "setDateDerniereModification",
+            "line": 209,
+            "short_desc": "D\u00e9finir la date de derni\u00e8re modification.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Image\\Image",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "dateDerniereModification": {
+                    "name": "dateDerniereModification",
+                    "line": 209,
+                    "short_desc": "Date de modification.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "jsonSerialize": {
+            "name": "jsonSerialize",
+            "line": 224,
+            "short_desc": "Pr\u00e9parer l'objet pour un export JSON.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Donn\u00e9es s\u00e9rialis\u00e9es.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "isMissing": {
+            "name": "isMissing",
+            "line": 241,
+            "short_desc": "Indiquer si le fichier est manquant.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si l'image est manquante, false sinon.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": {
+        "NO_IMAGE": {
+            "name": "NO_IMAGE",
+            "line": 45,
+            "short_desc": "Chemin par d\u00e9faut pour image absente.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        }
+    }
+}

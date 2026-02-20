@@ -1,0 +1,524 @@
+{
+    "name": "Google2FaManager",
+    "line": 16,
+    "short_desc": "Encapsuler la logique de double authentification Google Authenticator.",
+    "long_desc": "Centralise la g\u00e9n\u00e9ration de secrets\/QR codes et la v\u00e9rification de codes TOTP\nen s'appuyant sur la configuration et l'\u00e9tat utilisateur.",
+    "hint": null,
+    "tags": [],
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/managers\/Google2FaManager.php",
+    "relative_file": null,
+    "hash": "8dce535b0a9ef5024377adad0fd4d24b294c02f8",
+    "parent": "Manager",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb",
+        "JsonResponseHandler": "Whoops\\Handler\\JsonResponseHandler",
+        "Run": "Whoops\\Run",
+        "ImageResize": "Gumlet\\ImageResize",
+        "ImageResizeException": "Gumlet\\ImageResizeException",
+        "UploadException": "ManagerException\\UploadException",
+        "Google2FA": "PragmaRX\\Google2FA\\Google2FA",
+        "Writer": "BaconQrCode\\Writer",
+        "SvgImageBackEnd": "BaconQrCode\\Renderer\\Image\\SvgImageBackEnd",
+        "RendererStyle": "BaconQrCode\\Renderer\\RendererStyle\\RendererStyle",
+        "ImageRenderer": "BaconQrCode\\Renderer\\ImageRenderer"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 23,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "is2faAllowedForUser": {
+            "name": "is2faAllowedForUser",
+            "line": 35,
+            "short_desc": "D\u00e9terminer si la 2FA est autoris\u00e9e pour le r\u00f4le d'un utilisateur.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si la configuration active la 2FA pour ce r\u00f4le.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "user": {
+                    "name": "user",
+                    "line": 35,
+                    "short_desc": "Utilisateur \u00e0 \u00e9valuer.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\User",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "is2faEnabledForUser": {
+            "name": "is2faEnabledForUser",
+            "line": 52,
+            "short_desc": "V\u00e9rifier si la 2FA est activ\u00e9e pour un utilisateur.",
+            "long_desc": "Combine la configuration de r\u00f4le et les indicateurs persist\u00e9s c\u00f4t\u00e9 utilisateur.",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si la 2FA est activ\u00e9e et autoris\u00e9e pour ce r\u00f4le.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "user": {
+                    "name": "user",
+                    "line": 52,
+                    "short_desc": "Utilisateur \u00e0 contr\u00f4ler.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\User",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "enable2faForUser": {
+            "name": "enable2faForUser",
+            "line": 73,
+            "short_desc": "Activer la 2FA pour un utilisateur autoris\u00e9.",
+            "long_desc": "G\u00e9n\u00e8re un secret si n\u00e9cessaire, active le flag utilisateur et persiste en base.",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Secret 2FA actif.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\RuntimeException",
+                    "Si la 2FA est d\u00e9sactiv\u00e9e pour ce r\u00f4le."
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "user": {
+                    "name": "user",
+                    "line": 73,
+                    "short_desc": "Utilisateur \u00e0 activer.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\User",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "disable2faForUser": {
+            "name": "disable2faForUser",
+            "line": 101,
+            "short_desc": "D\u00e9sactiver la 2FA pour un utilisateur.",
+            "long_desc": "R\u00e9voque le secret, d\u00e9sactive le flag utilisateur et persiste en base.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "user": {
+                    "name": "user",
+                    "line": 101,
+                    "short_desc": "Utilisateur cibl\u00e9.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\User",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getOrCreateSecretForUser": {
+            "name": "getOrCreateSecretForUser",
+            "line": 117,
+            "short_desc": "Obtenir ou cr\u00e9er le secret 2FA d'un utilisateur.",
+            "long_desc": "Si la 2FA n'est pas autoris\u00e9e pour ce r\u00f4le, renvoie une cha\u00eene vide.",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Secret 2FA ou cha\u00eene vide si non autoris\u00e9e.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "user": {
+                    "name": "user",
+                    "line": 117,
+                    "short_desc": "Utilisateur cible.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\User",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getOtpAuthUrlForUser": {
+            "name": "getOtpAuthUrlForUser",
+            "line": 143,
+            "short_desc": "G\u00e9n\u00e9rer l'URL otpauth:\/\/ utilis\u00e9e par Google Authenticator.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "URL otpauth:\/\/ pr\u00eate pour un QR code.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "companyName": {
+                    "name": "companyName",
+                    "line": 143,
+                    "short_desc": "Nom d'affichage de l'\u00e9metteur.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "userEmail": {
+                    "name": "userEmail",
+                    "line": 143,
+                    "short_desc": "Email de l'utilisateur.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "secret": {
+                    "name": "secret",
+                    "line": 143,
+                    "short_desc": "Secret 2FA.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "generateInlineQrCode": {
+            "name": "generateInlineQrCode",
+            "line": 160,
+            "short_desc": "G\u00e9n\u00e9rer un QR code SVG inline \u00e0 partir d'une URL otpauth:\/\/.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Data URI SVG base64.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "otpAuthUrl": {
+                    "name": "otpAuthUrl",
+                    "line": 160,
+                    "short_desc": "URL otpauth:\/\/.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "size": {
+                    "name": "size",
+                    "line": 160,
+                    "short_desc": "Taille du rendu en pixels.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "220",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "verifyCodeForUser": {
+            "name": "verifyCodeForUser",
+            "line": 183,
+            "short_desc": "V\u00e9rifier un code TOTP pour un utilisateur.",
+            "long_desc": "La validation ne s'ex\u00e9cute que si la 2FA est autoris\u00e9e pour ce r\u00f4le et activ\u00e9e.",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si le code est valide.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "user": {
+                    "name": "user",
+                    "line": 183,
+                    "short_desc": "Utilisateur cible.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\User",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "code": {
+                    "name": "code",
+                    "line": 183,
+                    "short_desc": "Code TOTP saisi.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "verifyCode": {
+            "name": "verifyCode",
+            "line": 205,
+            "short_desc": "V\u00e9rifier un code TOTP \u00e0 partir d'un secret.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si le code est valide.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "secret": {
+                    "name": "secret",
+                    "line": 205,
+                    "short_desc": "Secret 2FA.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "code": {
+                    "name": "code",
+                    "line": 205,
+                    "short_desc": "Code TOTP saisi.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

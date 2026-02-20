@@ -1,0 +1,321 @@
+{
+    "name": "Validation",
+    "line": 10,
+    "short_desc": "Valider des donn\u00e9es via un ensemble de r\u00e8gles.",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "license": [
+            [
+                "http:\/\/opensource.org\/licenses\/MIT",
+                "The",
+                "MIT",
+                "License",
+                "(MIT)"
+            ]
+        ],
+        "author": [
+            [
+                "Omar",
+                "El",
+                "Gabry",
+                "<omar.elgabry.93@gmail.com>"
+            ]
+        ]
+    },
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/core\/Validation.php",
+    "relative_file": null,
+    "hash": "6613dd90452cb4ca7be80c529d2eca6d3184bb94",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb",
+        "JsonResponseHandler": "Whoops\\Handler\\JsonResponseHandler",
+        "Run": "Whoops\\Run",
+        "ImageResize": "Gumlet\\ImageResize",
+        "ImageResizeException": "Gumlet\\ImageResizeException",
+        "UploadException": "ManagerException\\UploadException"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 41,
+            "short_desc": "Initialiser le validateur.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "lang": {
+                    "name": "lang",
+                    "line": 41,
+                    "short_desc": "Langue (FR\/EN).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "null",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "setLang": {
+            "name": "setLang",
+            "line": 59,
+            "short_desc": "D\u00e9finir la langue du validateur.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Validation",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "lang": {
+                    "name": "lang",
+                    "line": 59,
+                    "short_desc": "Langue (FR\/EN).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "validate": {
+            "name": "validate",
+            "line": 75,
+            "short_desc": "Lancer la validation d'un jeu de donn\u00e9es.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si toutes les r\u00e8gles passent.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\PHPMailer\\PHPMailer\\Exception",
+                    "Si une r\u00e8gle n'existe pas."
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "data": {
+                    "name": "data",
+                    "line": 75,
+                    "short_desc": "Tableau valeur + r\u00e8gles.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "skip": {
+                    "name": "skip",
+                    "line": 75,
+                    "short_desc": "Stopper \u00e0 la premi\u00e8re erreur.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "false",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "addRuleMessage": {
+            "name": "addRuleMessage",
+            "line": 364,
+            "short_desc": "Ajouter un message personnalis\u00e9 pour une r\u00e8gle.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "rule": {
+                    "name": "rule",
+                    "line": 364,
+                    "short_desc": "Nom de r\u00e8gle.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "message": {
+                    "name": "message",
+                    "line": 364,
+                    "short_desc": "Message personnalis\u00e9.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "passes": {
+            "name": "passes",
+            "line": 374,
+            "short_desc": "V\u00e9rifier si la validation a r\u00e9ussi.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si aucune erreur.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "errors": {
+            "name": "errors",
+            "line": 384,
+            "short_desc": "R\u00e9cup\u00e9rer toutes les erreurs.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Erreurs.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "clearErrors": {
+            "name": "clearErrors",
+            "line": 394,
+            "short_desc": "R\u00e9initialiser les erreurs.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

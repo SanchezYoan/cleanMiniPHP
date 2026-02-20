@@ -1,0 +1,1185 @@
+{
+    "name": "Request",
+    "line": 14,
+    "short_desc": "Encapsuler les donn\u00e9es de requ\u00eate HTTP.",
+    "long_desc": "La classe centralise les superglobales PHP, les en-t\u00eates, le corps de\nrequ\u00eate (formulaire, fichiers, flux JSON\/url-encoded) et expose des\nhelpers de lecture s\u00fbrs pour les contr\u00f4leurs.",
+    "hint": null,
+    "tags": {
+        "license": [
+            [
+                "http:\/\/opensource.org\/licenses\/MIT",
+                "The",
+                "MIT",
+                "License",
+                "(MIT)"
+            ]
+        ],
+        "author": [
+            [
+                "Omar",
+                "El",
+                "Gabry",
+                "<omar.elgabry.93@gmail.com>"
+            ]
+        ]
+    },
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/core\/Request.php",
+    "relative_file": null,
+    "hash": "2def9d36f03f3b48b17eff346631aa77d64cc0aa",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb",
+        "JsonResponseHandler": "Whoops\\Handler\\JsonResponseHandler",
+        "Run": "Whoops\\Run",
+        "ImageResize": "Gumlet\\ImageResize",
+        "ImageResizeException": "Gumlet\\ImageResizeException",
+        "UploadException": "ManagerException\\UploadException"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": {
+        "params": {
+            "name": "params",
+            "line": 22,
+            "short_desc": "Param\u00e8tres d\u00e9duits du routage (contr\u00f4leur, action, arguments).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\array{controller: mixed, action: mixed, args: mixed}",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 22,
+                    "startTokenPos": 20,
+                    "startFilePos": 599,
+                    "endLine": 24,
+                    "endTokenPos": 43,
+                    "endFilePos": 669,
+                    "kind": 2
+                },
+                "items": [
+                    {
+                        "nodeType": "ArrayItem",
+                        "attributes": {
+                            "startLine": 23,
+                            "startTokenPos": 22,
+                            "startFilePos": 609,
+                            "endLine": 23,
+                            "endTokenPos": 26,
+                            "endFilePos": 628
+                        },
+                        "key": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 23,
+                                "startTokenPos": 22,
+                                "startFilePos": 609,
+                                "endLine": 23,
+                                "endTokenPos": 22,
+                                "endFilePos": 620,
+                                "kind": 2,
+                                "rawValue": "\"controller\""
+                            },
+                            "value": "controller"
+                        },
+                        "value": {
+                            "nodeType": "Expr_ConstFetch",
+                            "attributes": {
+                                "startLine": 23,
+                                "startTokenPos": 26,
+                                "startFilePos": 625,
+                                "endLine": 23,
+                                "endTokenPos": 26,
+                                "endFilePos": 628
+                            },
+                            "name": {
+                                "nodeType": "Name_FullyQualified",
+                                "attributes": {
+                                    "startLine": 23,
+                                    "startTokenPos": 26,
+                                    "startFilePos": 625,
+                                    "endLine": 23,
+                                    "endTokenPos": 26,
+                                    "endFilePos": 628
+                                },
+                                "name": "null"
+                            }
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "ArrayItem",
+                        "attributes": {
+                            "startLine": 23,
+                            "startTokenPos": 29,
+                            "startFilePos": 631,
+                            "endLine": 23,
+                            "endTokenPos": 33,
+                            "endFilePos": 646
+                        },
+                        "key": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 23,
+                                "startTokenPos": 29,
+                                "startFilePos": 631,
+                                "endLine": 23,
+                                "endTokenPos": 29,
+                                "endFilePos": 638,
+                                "kind": 2,
+                                "rawValue": "\"action\""
+                            },
+                            "value": "action"
+                        },
+                        "value": {
+                            "nodeType": "Expr_ConstFetch",
+                            "attributes": {
+                                "startLine": 23,
+                                "startTokenPos": 33,
+                                "startFilePos": 643,
+                                "endLine": 23,
+                                "endTokenPos": 33,
+                                "endFilePos": 646
+                            },
+                            "name": {
+                                "nodeType": "Name_FullyQualified",
+                                "attributes": {
+                                    "startLine": 23,
+                                    "startTokenPos": 33,
+                                    "startFilePos": 643,
+                                    "endLine": 23,
+                                    "endTokenPos": 33,
+                                    "endFilePos": 646
+                                },
+                                "name": "null"
+                            }
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "ArrayItem",
+                        "attributes": {
+                            "startLine": 23,
+                            "startTokenPos": 36,
+                            "startFilePos": 649,
+                            "endLine": 23,
+                            "endTokenPos": 40,
+                            "endFilePos": 662
+                        },
+                        "key": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 23,
+                                "startTokenPos": 36,
+                                "startFilePos": 649,
+                                "endLine": 23,
+                                "endTokenPos": 36,
+                                "endFilePos": 654,
+                                "kind": 2,
+                                "rawValue": "\"args\""
+                            },
+                            "value": "args"
+                        },
+                        "value": {
+                            "nodeType": "Expr_ConstFetch",
+                            "attributes": {
+                                "startLine": 23,
+                                "startTokenPos": 40,
+                                "startFilePos": 659,
+                                "endLine": 23,
+                                "endTokenPos": 40,
+                                "endFilePos": 662
+                            },
+                            "name": {
+                                "nodeType": "Name_FullyQualified",
+                                "attributes": {
+                                    "startLine": 23,
+                                    "startTokenPos": 40,
+                                    "startFilePos": 659,
+                                    "endLine": 23,
+                                    "endTokenPos": 40,
+                                    "endFilePos": 662
+                                },
+                                "name": "null"
+                            }
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    }
+                ]
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "type": {
+            "name": "type",
+            "line": 29,
+            "short_desc": "Valeur brute de l'en-t\u00eate Content-Type.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": {
+                "nodeType": "Scalar_String",
+                "attributes": {
+                    "startLine": 29,
+                    "startTokenPos": 56,
+                    "startFilePos": 767,
+                    "endLine": 29,
+                    "endTokenPos": 56,
+                    "endFilePos": 768,
+                    "kind": 2,
+                    "rawValue": "\"\""
+                },
+                "value": ""
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "data": {
+            "name": "data",
+            "line": 36,
+            "short_desc": "Donn\u00e9es POST fusionn\u00e9es avec les fichiers upload\u00e9s et le flux brut.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\array<string,mixed>",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 36,
+                    "startTokenPos": 69,
+                    "startFilePos": 935,
+                    "endLine": 36,
+                    "endTokenPos": 70,
+                    "endFilePos": 936,
+                    "kind": 2
+                },
+                "items": []
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "query": {
+            "name": "query",
+            "line": 43,
+            "short_desc": "Param\u00e8tres de cha\u00eene de requ\u00eate.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\array<string,mixed>",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 43,
+                    "startTokenPos": 83,
+                    "startFilePos": 1069,
+                    "endLine": 43,
+                    "endTokenPos": 84,
+                    "endFilePos": 1070,
+                    "kind": 2
+                },
+                "items": []
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "url": {
+            "name": "url",
+            "line": 48,
+            "short_desc": "URL compl\u00e8te de la requ\u00eate (avec host mais sans protocole explicite).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": {
+                "nodeType": "Scalar_String",
+                "attributes": {
+                    "startLine": 48,
+                    "startTokenPos": 97,
+                    "startFilePos": 1198,
+                    "endLine": 48,
+                    "endTokenPos": 97,
+                    "endFilePos": 1199,
+                    "kind": 2,
+                    "rawValue": "\"\""
+                },
+                "value": ""
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        }
+    },
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 69,
+            "short_desc": "Construire une requ\u00eate depuis les superglobales PHP.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "config": {
+                    "name": "config",
+                    "line": 69,
+                    "short_desc": "Configuration utilisateur (params forc\u00e9s, etc.).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "[]",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "hasHeader": {
+            "name": "hasHeader",
+            "line": 85,
+            "short_desc": "V\u00e9rifier la pr\u00e9sence d'un en-t\u00eate HTTP par son nom exact.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "name": {
+                    "name": "name",
+                    "line": 85,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getHeaders": {
+            "name": "getHeaders",
+            "line": 97,
+            "short_desc": "R\u00e9cup\u00e9rer tous les en-t\u00eates ou une cl\u00e9 sp\u00e9cifique.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Tableau complet ou valeur de l'en-t\u00eate, cha\u00eene vide si absent.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 97,
+                    "short_desc": "Nom d'en-t\u00eate recherch\u00e9 (respecte la casse re\u00e7ue).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "null",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "setHeaders": {
+            "name": "setHeaders",
+            "line": 112,
+            "short_desc": "Remplacer les en-t\u00eates HTTP connus pour la requ\u00eate.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Request",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante (fluide).",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "headers": {
+                    "name": "headers",
+                    "line": 112,
+                    "short_desc": "Tableau d'en-t\u00eates fourni par le serveur.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "countData": {
+            "name": "countData",
+            "line": 165,
+            "short_desc": "Compter les champs dans $this->data en excluant certaines cl\u00e9s.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "Nombre de champs restants apr\u00e8s exclusion.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "exclude": {
+                    "name": "exclude",
+                    "line": 165,
+                    "short_desc": "Liste de cl\u00e9s \u00e0 ignorer.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "[]",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "data": {
+            "name": "data",
+            "line": 184,
+            "short_desc": "Acc\u00e9der \u00e0 une cl\u00e9 du corps de requ\u00eate en toute s\u00e9curit\u00e9.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur du champ ou null si absent.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 184,
+                    "short_desc": "Cl\u00e9 du champ recherch\u00e9.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "query": {
+            "name": "query",
+            "line": 196,
+            "short_desc": "Acc\u00e9der \u00e0 une cl\u00e9 de la querystring.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur du param\u00e8tre ou null si absent.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 196,
+                    "short_desc": "Cl\u00e9 ou index de param\u00e8tre.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ],
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "param": {
+            "name": "param",
+            "line": 208,
+            "short_desc": "Acc\u00e9der \u00e0 un param\u00e8tre de routage.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur ou null si non d\u00e9finie.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 208,
+                    "short_desc": "Nom du param\u00e8tre.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "isAjax": {
+            "name": "isAjax",
+            "line": 218,
+            "short_desc": "D\u00e9tecter une requ\u00eate Ajax (en-t\u00eate X-Requested-With).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si l'en-t\u00eate indique XMLHttpRequest.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "isGet": {
+            "name": "isGet",
+            "line": 232,
+            "short_desc": "D\u00e9tecter une requ\u00eate HTTP GET ou HEAD.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si la m\u00e9thode est GET ou HEAD.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "isPost": {
+            "name": "isPost",
+            "line": 245,
+            "short_desc": "D\u00e9tecter une requ\u00eate HTTP POST.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si la m\u00e9thode est POST.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "isPut": {
+            "name": "isPut",
+            "line": 259,
+            "short_desc": "D\u00e9tecter une requ\u00eate HTTP PUT.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "isDelete": {
+            "name": "isDelete",
+            "line": 267,
+            "short_desc": "D\u00e9tecter une requ\u00eate HTTP DELETE.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "isPatch": {
+            "name": "isPatch",
+            "line": 275,
+            "short_desc": "D\u00e9tecter une requ\u00eate HTTP PATCH.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "isOptions": {
+            "name": "isOptions",
+            "line": 283,
+            "short_desc": "D\u00e9tecter une requ\u00eate HTTP OPTIONS.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "isSSL": {
+            "name": "isSSL",
+            "line": 295,
+            "short_desc": "D\u00e9tecter une connexion s\u00e9curis\u00e9e (HTTPS activ\u00e9).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si HTTPS est actif et non d\u00e9sactiv\u00e9.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "addParams": {
+            "name": "addParams",
+            "line": 307,
+            "short_desc": "Ajouter des param\u00e8tres suppl\u00e9mentaires \u00e0 $this->params.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Request",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante (fluide).",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "params": {
+                    "name": "params",
+                    "line": 307,
+                    "short_desc": "Paires cl\u00e9\/valeur \u00e0 fusionner.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "contentLength": {
+            "name": "contentLength",
+            "line": 319,
+            "short_desc": "Obtenir la longueur de contenu annonc\u00e9e par le client.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "Taille en octets (0 si non renseign\u00e9e).",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "dataSizeOverflow": {
+            "name": "dataSizeOverflow",
+            "line": 330,
+            "short_desc": "V\u00e9rifier une \u00e9ventuelle troncature des donn\u00e9es POST\/FILES.",
+            "long_desc": "Cette situation se produit lorsque les superglobales sont vides malgr\u00e9 un Content-Length.",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si un d\u00e9bordement est suspect\u00e9.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "uri": {
+            "name": "uri",
+            "line": 342,
+            "short_desc": "Obtenir l'URI courante (chemin + query brute).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "URI transmise par le serveur.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "host": {
+            "name": "host",
+            "line": 352,
+            "short_desc": "Obtenir l'h\u00f4te HTTP actuel.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Nom d'h\u00f4te envoy\u00e9 par le client.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "name": {
+            "name": "name",
+            "line": 362,
+            "short_desc": "Obtenir le nom du serveur (SERVER_NAME).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Nom de serveur configur\u00e9.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "referer": {
+            "name": "referer",
+            "line": 372,
+            "short_desc": "Obtenir le r\u00e9f\u00e9rent HTTP de la requ\u00eate.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "URL r\u00e9f\u00e9rente ou null si absente.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "clientIp": {
+            "name": "clientIp",
+            "line": 384,
+            "short_desc": "Obtenir l'adresse IP cliente la plus fiable.",
+            "long_desc": "'REMOTE_ADDR' est privil\u00e9gi\u00e9 ; les autres en-t\u00eates ne sont pas utilis\u00e9s ici.",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Adresse IP ou null si inconnue.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "userAgent": {
+            "name": "userAgent",
+            "line": 394,
+            "short_desc": "Obtenir l'agent utilisateur communiqu\u00e9 par le client.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur brute de l'en-t\u00eate User-Agent.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "currentUrl": {
+            "name": "currentUrl",
+            "line": 407,
+            "short_desc": "Construire l'URL courante sans le protocole.",
+            "long_desc": "Les param\u00e8tres `url` et `redirect` sont exclus pour \u00e9viter les doublons\nlors de redirections internes.",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Hostname + chemin + query string filtr\u00e9e.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "validateUrl": {
+            "name": "validateUrl",
+            "line": 435,
+            "short_desc": "Valider une URL externe \u00e0 partir du protocole et de l'h\u00f4te.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si le protocole est http\/https et l'h\u00f4te correspond au serveur.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "url": {
+                    "name": "url",
+                    "line": 435,
+                    "short_desc": "URL \u00e0 v\u00e9rifier.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getIP": {
+            "name": "getIP",
+            "line": 463,
+            "short_desc": "Obtenir l'IP distante captur\u00e9e \u00e0 la construction.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Adresse IP initiale ou null.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

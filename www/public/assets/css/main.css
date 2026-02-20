@@ -1,0 +1,2420 @@
+:root {
+  /* === Brand Core === */
+  --lf-blue: #2FA4FF;        /* Progression / XP / Life */
+  --lf-orange: #FF8A2A;      /* Action / Forge / Quests */
+
+  /* === Gameplay / Lore === */
+  --lf-steel: #3A3F46;       /* Structure / Equipment */
+  --lf-gold: #FFD36A;        /* Knowledge */
+  --lf-diamond: #3BE4FF;     /* Work / Finance */
+  --lf-green: #4CAF50;       /* Physical / Health */
+
+  /* === Backgrounds === */
+  --lf-bg-dark: #0E1116;     /* Main background */
+  --lf-bg-card: #151A21;     /* Cards / Panels */
+  --lf-bg-hover: #1C2330;    /* Hover states */
+
+  /* === Text === */
+  --lf-text-main: #EAEAEA;   /* Primary text */
+  --lf-text-muted: #A0A6B1;  /* Secondary text */
+  --lf-text-dark: #0E1116;   /* Text on light backgrounds */
+
+  /* === States === */
+  --lf-success: #4CAF50;
+  --lf-warning: #FFD36A;
+  --lf-danger: #FF4D4D;
+
+  /* === Effects === */
+  --lf-glow-blue: 0 0 12px rgba(47, 164, 255, 0.6);
+  --lf-glow-orange: 0 0 12px rgba(255, 138, 42, 0.6);
+}
+
+
+#dropzoneContainer {
+  display: block;
+  margin-bottom: 1em;
+  min-height: auto;
+  border: 1px dashed #bdbdbd;
+  border-radius: 5px;
+  padding: 0.4em;
+  background-color: rgba(0, 0, 0, 0.07);
+  width: 100%;
+  background-image: url("/assets/img/upload.png");
+  background-repeat: no-repeat;
+  background-size: 60px;
+}
+#dropzoneContainer:not(.dz-started) {
+  background-position: center 80%;
+}
+#dropzoneContainer:not(.dz-started):hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+#dropzoneContainer.dz-started {
+  padding-top: 4em;
+  background-position: center 5px;
+}
+#dropzoneContainer > .dz-file-preview > .dz-image {
+  display: none;
+}
+#dropzoneContainer > .dz-preview {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow-wrap: anywhere;
+  margin: 0;
+  padding: 0.5em;
+  min-height: 0;
+  justify-content: center;
+}
+#dropzoneContainer > .dz-preview:not(:last-child) {
+  border-bottom: 1px solid #dedede;
+}
+#dropzoneContainer > .dz-preview .dz-details {
+  position: relative;
+  min-width: 100%;
+  max-width: 100%;
+  padding: 0;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.2;
+  top: inherit;
+  left: inherit;
+  right: inherit;
+  z-index: inherit;
+  display: flex;
+  justify-content: flex-start;
+}
+#dropzoneContainer > .dz-preview .dz-details .dz-filename span {
+  background: transparent;
+}
+#dropzoneContainer > .dz-preview .dz-details .dz-size {
+  margin-bottom: 0;
+  font-size: 0.8em;
+  line-height: 1.5;
+  color: #007fc2;
+  width: 5em;
+  white-space: nowrap;
+}
+#dropzoneContainer > .dz-preview .dz-details .dz-size span {
+  background: transparent;
+}
+#dropzoneContainer > .dz-preview .progress-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin: 0 auto 0 auto;
+  opacity: 1;
+  top: inherit;
+  left: inherit;
+  right: inherit;
+  z-index: inherit;
+  animation: none;
+}
+#dropzoneContainer > .dz-preview .progress-wrapper.animated {
+  opacity: 1;
+}
+#dropzoneContainer > .dz-preview .progress-wrapper .progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #afafaf;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 20px;
+}
+#dropzoneContainer > .dz-preview .progress-wrapper .progress-number {
+  position: absolute;
+  font-weight: bold;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 20px;
+  color: white;
+}
+#dropzoneContainer > .dz-preview .dz-error-message {
+  pointer-events: none;
+  position: relative;
+  display: none;
+  opacity: 1;
+  transition: none;
+  border-radius: 0;
+  border: 1px solid #b10606;
+  font-size: 13px;
+  top: inherit;
+  left: inherit;
+  width: 100%;
+  background: #ffeded;
+  padding: 0.5em;
+  color: #b10606;
+  margin-top: 0.5em;
+}
+#dropzoneContainer > .dz-preview .dz-error-message:after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 4.5em;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #b10606;
+}
+#dropzoneContainer > .dz-preview .dz-error-mark,
+#dropzoneContainer > .dz-preview .dz-success-mark {
+  display: none;
+}
+#dropzoneContainer > .dz-preview .dz-success-mark {
+  pointer-events: none;
+  display: none;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: inherit;
+  right: 1rem;
+  border-radius: 0;
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  background: transparent;
+  opacity: 1;
+  transform: translateY(-50%);
+}
+#dropzoneContainer > .dz-preview .dz-success-mark svg {
+  width: 100%;
+  height: 100%;
+}
+#dropzoneContainer > .dz-preview.dz-complete .dz-error-mark {
+  opacity: 1;
+}
+#dropzoneContainer > .dz-preview.dz-complete .dz-progress {
+  display: none;
+}
+#dropzoneContainer .dz-message {
+  text-align: center;
+  margin: 0;
+  padding: 1em 0 5em 0;
+  color: #575757;
+}
+#dropzoneContainer .dz-message em {
+  font-size: 0.8em;
+  color: #7c7c7c;
+}
+
+:root,
+[data-bs-theme=light] {
+  --tblr-red: #e20c19;
+  --tblr-danger: #e20c19;
+  --tblr-primary-bg-subtle: #ccdded;
+  --tblr-secondary-bg-subtle: #e0e3e6;
+  --tblr-success-bg-subtle: #d5f0da;
+  --tblr-info-bg-subtle: #d9ebf9;
+  --tblr-warning-bg-subtle: #fde1cd;
+  --tblr-danger-bg-subtle: #f7d7d7;
+  --tblr-light-bg-subtle: #fbfcfd;
+  --tblr-dark-bg-subtle: #bbc3cd;
+  --tblr-navbar-bg: rgb(226.8284671533, 233.1897810219, 241.6715328467);
+}
+
+[data-bs-theme=dark], body[data-bs-theme=dark] [data-bs-theme=light] {
+  color-scheme: dark;
+  --tblr-body-bg: #131313;
+  --tblr-bg-surface: rgb(29.2, 29.2, 29.2);
+  --tblr-dark-mode-border-color: rgb(44.5, 44.5, 44.5);
+  --tblr-border-color: rgb(44.5, 44.5, 44.5);
+  --tblr-bg-forms: rgb(24.1, 24.1, 24.1);
+  --tblr-bg-surface-tertiary: rgb(24.1, 24.1, 24.1);
+  --tblr-bg-surface-secondary: #131313;
+  --tblr-avatar-bg: #464646;
+  --tblr-body-color: #fcfdfe;
+  --tblr-body-color-rgb: 252, 253, 254;
+  --tblr-body-bg-rgb: 4, 10, 17;
+  --tblr-emphasis-color: #ffffff;
+  --tblr-emphasis-color-rgb: 255, 255, 255;
+  --tblr-secondary-color: rgba(252, 253, 254, 0.75);
+  --tblr-secondary-color-rgb: 252, 253, 254;
+  --tblr-secondary-bg: #182433;
+  --tblr-dark-mode-border-color-translucent: rgba(72, 110, 149, 0.14);
+  --tblr-dark-mode-border-color-active: #2c415d;
+  --tblr-dark-mode-border-dark-color: #1f2e41;
+  --tblr-secondary-bg-rgb: 24, 36, 51;
+  --tblr-tertiary-color: rgba(252, 253, 254, 0.5);
+  --tblr-tertiary-color-rgb: 252, 253, 254;
+  --tblr-tertiary-bg: #0e1722;
+  --tblr-tertiary-bg-rgb: 14, 23, 34;
+  --tblr-primary-text-emphasis: #6698ca;
+  --tblr-secondary-text-emphasis: #a3abb4;
+  --tblr-success-text-emphasis: #82d18f;
+  --tblr-info-text-emphasis: #8ec2ed;
+  --tblr-warning-text-emphasis: #faa46a;
+  --tblr-danger-text-emphasis: #e68888;
+  --tblr-light-text-emphasis: #f6f8fb;
+  --tblr-dark-text-emphasis: #dadfe5;
+  --tblr-primary-bg-subtle: #001121;
+  --tblr-secondary-bg-subtle: #14171a;
+  --tblr-success-bg-subtle: #09240e;
+  --tblr-info-bg-subtle: #0d1f2d;
+  --tblr-warning-bg-subtle: #311501;
+  --tblr-danger-bg-subtle: #2b0b0b;
+  --tblr-light-bg-subtle: #182433;
+  --tblr-dark-bg-subtle: #0c121a;
+  --tblr-primary-border-subtle: #003264;
+  --tblr-secondary-border-subtle: #3d454e;
+  --tblr-success-border-subtle: #1c6b29;
+  --tblr-info-border-subtle: #285c87;
+  --tblr-warning-border-subtle: #943e04;
+  --tblr-danger-border-subtle: #802222;
+  --tblr-light-border-subtle: #3a4859;
+  --tblr-dark-border-subtle: #182433;
+  --tblr-heading-color: inherit;
+  --tblr-link-color: #6698ca;
+  --tblr-link-hover-color: #85add5;
+  --tblr-link-color-rgb: 102, 152, 202;
+  --tblr-link-hover-color-rgb: 133, 173, 213;
+  --tblr-code-color: var(--tblr-gray-300);
+  --tblr-border-color-translucent: rgba(72, 110, 149, 0.14);
+  --tblr-form-valid-color: #82d18f;
+  --tblr-form-valid-border-color: #82d18f;
+  --tblr-form-invalid-color: #e68888;
+  --tblr-form-invalid-border-color: #e68888;
+}
+[data-bs-theme=dark] .btn-outline-danger, body[data-bs-theme=dark] [data-bs-theme=light] .btn-outline-danger {
+  --tblr-btn-color: var(--tblr-danger);
+  --tblr-btn-bg: transparent;
+  --tblr-btn-border-color: var(--tblr-danger);
+  --tblr-btn-hover-color: var(--tblr-danger-fg);
+  --tblr-btn-hover-border-color: transparent;
+  --tblr-btn-hover-bg: var(--tblr-danger);
+  --tblr-btn-active-color: var(--tblr-danger-fg);
+  --tblr-btn-active-bg: var(--tblr-danger);
+  --tblr-btn-disabled-color: var(--tblr-danger);
+  --tblr-btn-disabled-border-color: var(--tblr-danger);
+}
+
+body {
+  /* creating css loader */
+}
+body [data-bs-theme=dark] .navbar-brand-autodark .navbar-brand-image {
+  filter: none;
+}
+body .hidden {
+  display: none;
+}
+body .alert {
+  background-color: white;
+}
+@media screen and (max-width: 460px) {
+  body .m-xs-auto {
+    margin: 0 auto !important;
+  }
+}
+body .navbar-brand-image {
+  height: 100%;
+  width: 150px;
+}
+body .color-primary {
+  --tblr-heading-color: #e20c19;
+  color: #e20c19;
+}
+body .text-justify,
+body .text-justify p {
+  text-align: justify;
+}
+body .text-right {
+  text-align: right;
+}
+body .text-left {
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  body .text-lg-right {
+    text-align: right;
+  }
+}
+@media screen and (min-width: 768px) {
+  body .text-lg-left {
+    text-align: left;
+  }
+}
+body .btn.btn-sm .icon {
+  vertical-align: middle;
+  margin-top: -2px;
+}
+@media screen and (min-width: 768px) {
+  body #form-message-submit-container {
+    display: none;
+  }
+}
+body #form-edit-message-options .form-container-super, body #form-editor-profile-options .form-container-super, body #form-editor-channel-options .form-container-super {
+  position: relative;
+  z-index: 1;
+}
+body #form-edit-message .ckeditor-container,
+body #form-edit-message-private .ckeditor-container {
+  display: block;
+  margin: 0 auto 0 auto;
+  height: auto;
+  width: 100%;
+}
+body #form-edit-message .ckeditor-container .ck-editor__editable_inline:not(.ck-comment__input *),
+body #form-edit-message-private .ckeditor-container .ck-editor__editable_inline:not(.ck-comment__input *) {
+  min-height: 250px !important;
+  width: 100% !important;
+  padding-bottom: 1em;
+}
+body #form-edit-message .ckeditor-container .ck.ck-dropdown.ck-heading-dropdown .ck-dropdown__button .ck-button__label,
+body #form-edit-message-private .ckeditor-container .ck.ck-dropdown.ck-heading-dropdown .ck-dropdown__button .ck-button__label {
+  width: 6em !important;
+}
+body #form-edit-message .ckeditor-container .ck.ck-toolbar,
+body #form-edit-message-private .ckeditor-container .ck.ck-toolbar {
+  width: 100% !important;
+  z-index: 1;
+}
+body #form-edit-message .ckeditor-container .ck.ck-editor__main,
+body #form-edit-message-private .ckeditor-container .ck.ck-editor__main {
+  overflow-y: auto;
+}
+body #form-edit-message .ckeditor-container .raw-html-embed__content-wrapper textarea,
+body #form-edit-message-private .ckeditor-container .raw-html-embed__content-wrapper textarea {
+  height: auto !important;
+}
+body #form-edit-message .ckeditor-container .ck-source-editing-area:after,
+body #form-edit-message-private .ckeditor-container .ck-source-editing-area:after {
+  height: auto !important;
+}
+body #form-edit-message .mobile-phone,
+body #form-edit-message-private .mobile-phone {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+  width: 554px;
+  height: 750px;
+  border: 1px solid var(--tblr-border-color-translucent);
+  border-radius: 4px;
+  background: white;
+}
+@media screen and (max-width: 767px) {
+  body #form-edit-message .mobile-phone,
+  body #form-edit-message-private .mobile-phone {
+    margin: 0 auto;
+    margin-top: 4em;
+  }
+}
+@media screen and (max-width: 460px) {
+  body #form-edit-message .mobile-phone,
+  body #form-edit-message-private .mobile-phone {
+    width: 349px;
+  }
+}
+body #form-edit-message .mobile-phone .mask,
+body #form-edit-message-private .mobile-phone .mask {
+  position: absolute;
+  top: -25px;
+  left: 99px;
+  background: white;
+  height: 50px;
+  width: 335px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+@media screen and (max-width: 460px) {
+  body #form-edit-message .mobile-phone .mask,
+  body #form-edit-message-private .mobile-phone .mask {
+    left: 8px;
+    width: 327px;
+  }
+}
+body #form-edit-message .mobile-phone .screen,
+body #form-edit-message-private .mobile-phone .screen {
+  position: absolute;
+  top: -45px;
+  left: 16px;
+  width: 537px;
+  height: calc(100% + 45px);
+  background: url("/assets/img/phone_container.png") no-repeat;
+  z-index: 10;
+  background-size: 590px auto;
+  pointer-events: none;
+  border-radius: 4px;
+}
+@media screen and (max-width: 460px) {
+  body #form-edit-message .mobile-phone .screen,
+  body #form-edit-message-private .mobile-phone .screen {
+    top: -41px;
+    left: 0px;
+    width: 347px;
+    background-size: 550px auto;
+    pointer-events: none;
+    border-radius: 4px;
+    background-position-x: -63px;
+  }
+}
+body #form-edit-message .mobile-phone .ckeditor-container,
+body #form-edit-message-private .mobile-phone .ckeditor-container {
+  display: block;
+  margin: 0 auto 0 auto;
+  height: 678px;
+  width: 345px;
+}
+@media screen and (max-width: 460px) {
+  body #form-edit-message .mobile-phone .ckeditor-container,
+  body #form-edit-message-private .mobile-phone .ckeditor-container {
+    width: 322px;
+  }
+}
+body #form-edit-message .mobile-phone .ckeditor-container .ck-editor__editable_inline:not(.ck-comment__input *),
+body #form-edit-message-private .mobile-phone .ckeditor-container .ck-editor__editable_inline:not(.ck-comment__input *) {
+  height: 563px !important;
+  width: 330px !important;
+  padding-bottom: 1em;
+  overflow-y: auto;
+}
+body #form-edit-message .mobile-phone .ckeditor-container .ck.ck-dropdown.ck-heading-dropdown .ck-dropdown__button .ck-button__label,
+body #form-edit-message-private .mobile-phone .ckeditor-container .ck.ck-dropdown.ck-heading-dropdown .ck-dropdown__button .ck-button__label {
+  width: 6em !important;
+}
+body #form-edit-message .mobile-phone .ckeditor-container .ck.ck-toolbar,
+body #form-edit-message-private .mobile-phone .ckeditor-container .ck.ck-toolbar {
+  width: 330px !important;
+  z-index: 1;
+}
+body #form-edit-message .mobile-phone .ckeditor-container .ck.ck-editor__main,
+body #form-edit-message-private .mobile-phone .ckeditor-container .ck.ck-editor__main {
+  height: 560px;
+  overflow-y: auto;
+}
+body #form-edit-message .mobile-phone .ckeditor-container .raw-html-embed__content-wrapper textarea,
+body #form-edit-message-private .mobile-phone .ckeditor-container .raw-html-embed__content-wrapper textarea {
+  height: 480px;
+}
+body #form-edit-message .mobile-phone .ckeditor-container .ck-source-editing-area:after,
+body #form-edit-message-private .mobile-phone .ckeditor-container .ck-source-editing-area:after {
+  height: 520px;
+}
+body #form-edit-message .mobile-phone .ckeditor-container .ck-source-editing-area textarea,
+body #form-edit-message-private .mobile-phone .ckeditor-container .ck-source-editing-area textarea {
+  height: 520px;
+}
+body #form-edit-message #word-count,
+body #form-edit-message-private #word-count {
+  text-align: center;
+  width: 100%;
+}
+body #loading {
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  display: flex;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-width: 2rem;
+  min-height: 2rem;
+  top: 0;
+  left: 0;
+  z-index: 222;
+  justify-content: center;
+  align-items: center;
+}
+body #loading::after {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid #007fc2;
+  border-radius: 100%;
+  margin: auto;
+  visibility: visible;
+  animation: spin 1s infinite linear;
+  z-index: 333;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body *[data-loading=true] {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+body .choices__inner {
+  display: flex;
+  vertical-align: top;
+  width: 100%;
+  padding: 7.5px 7.5px 3.75px;
+  border: 1px solid var(--tblr-border-color);
+  border-radius: 2.5px;
+  font-size: 14px;
+  min-height: 41px;
+  overflow: hidden;
+}
+body .choices__inner .choices__list--single {
+  display: flex;
+  padding: 0 1em;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-items: center;
+  align-content: center;
+  min-height: 100%;
+}
+body[data-bs-theme=light], body:not([data-bs-theme=dark]) {
+  /*
+        /*rtl:begin:ignore*/
+  /*
+        /*rtl:end:ignore*/
+  /*
+        /*rtl:begin:ignore*/
+  /*
+        /*rtl:end:ignore*/
+}
+body[data-bs-theme=light] .legend-color, body:not([data-bs-theme=dark]) .legend-color {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 8px;
+  border-radius: 4px;
+}
+body[data-bs-theme=light] .legend-color.creating, body:not([data-bs-theme=dark]) .legend-color.creating {
+  background-color: #fff6e5;
+}
+body[data-bs-theme=light] .legend-color.publication, body:not([data-bs-theme=dark]) .legend-color.publication {
+  background-color: #cfdfea;
+}
+body[data-bs-theme=light] .card-attachment, body:not([data-bs-theme=dark]) .card-attachment {
+  background-color: #f3f3f3;
+  border: 1px solid black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+}
+body[data-bs-theme=light] .card-attachment svg, body:not([data-bs-theme=dark]) .card-attachment svg {
+  color: unset;
+}
+body[data-bs-theme=light] .card-attachment span, body:not([data-bs-theme=dark]) .card-attachment span {
+  text-align: center;
+  color: #0a66c2;
+  font-weight: bold;
+  text-decoration: underline;
+}
+body[data-bs-theme=light] .row-message-creating, body:not([data-bs-theme=dark]) .row-message-creating {
+  background-color: #fff6e5 !important;
+}
+body[data-bs-theme=light] .row-message-publication, body:not([data-bs-theme=dark]) .row-message-publication {
+  background-color: #cfdfea;
+}
+body[data-bs-theme=light] .flatpickr-calendar, body:not([data-bs-theme=dark]) .flatpickr-calendar {
+  background: transparent;
+  opacity: 0;
+  display: none;
+  text-align: center;
+  visibility: hidden;
+  padding: 0;
+  -webkit-animation: none;
+  animation: none;
+  direction: ltr;
+  border: 0;
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 5px;
+  position: absolute;
+  width: 307.875px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -webkit-box-shadow: 0 3px 13px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 13px rgba(0, 0, 0, 0.08);
+}
+body[data-bs-theme=light] .flatpickr-calendar.open,
+body[data-bs-theme=light] .flatpickr-calendar.inline, body:not([data-bs-theme=dark]) .flatpickr-calendar.open,
+body:not([data-bs-theme=dark]) .flatpickr-calendar.inline {
+  opacity: 1;
+  max-height: 640px;
+  visibility: visible;
+}
+body[data-bs-theme=light] .flatpickr-calendar.open, body:not([data-bs-theme=dark]) .flatpickr-calendar.open {
+  display: inline-block;
+  z-index: 99999;
+}
+body[data-bs-theme=light] .flatpickr-calendar.animate.open, body:not([data-bs-theme=dark]) .flatpickr-calendar.animate.open {
+  -webkit-animation: fpFadeInDown 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  animation: fpFadeInDown 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+body[data-bs-theme=light] .flatpickr-calendar.inline, body:not([data-bs-theme=dark]) .flatpickr-calendar.inline {
+  display: block;
+  position: relative;
+  top: 2px;
+}
+body[data-bs-theme=light] .flatpickr-calendar.static, body:not([data-bs-theme=dark]) .flatpickr-calendar.static {
+  position: absolute;
+  top: calc(100% + 2px);
+}
+body[data-bs-theme=light] .flatpickr-calendar.static.open, body:not([data-bs-theme=dark]) .flatpickr-calendar.static.open {
+  z-index: 999;
+  display: block;
+}
+body[data-bs-theme=light] .flatpickr-calendar.multiMonth .flatpickr-days .dayContainer:nth-child(n+1) .flatpickr-day.inRange:nth-child(7n+7), body:not([data-bs-theme=dark]) .flatpickr-calendar.multiMonth .flatpickr-days .dayContainer:nth-child(n+1) .flatpickr-day.inRange:nth-child(7n+7) {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+body[data-bs-theme=light] .flatpickr-calendar.multiMonth .flatpickr-days .dayContainer:nth-child(n+2) .flatpickr-day.inRange:nth-child(7n+1), body:not([data-bs-theme=dark]) .flatpickr-calendar.multiMonth .flatpickr-days .dayContainer:nth-child(n+2) .flatpickr-day.inRange:nth-child(7n+1) {
+  -webkit-box-shadow: -2px 0 0 #e6e6e6, 5px 0 0 #e6e6e6;
+  box-shadow: -2px 0 0 #e6e6e6, 5px 0 0 #e6e6e6;
+}
+body[data-bs-theme=light] .flatpickr-calendar .hasWeeks .dayContainer,
+body[data-bs-theme=light] .flatpickr-calendar .hasTime .dayContainer, body:not([data-bs-theme=dark]) .flatpickr-calendar .hasWeeks .dayContainer,
+body:not([data-bs-theme=dark]) .flatpickr-calendar .hasTime .dayContainer {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+body[data-bs-theme=light] .flatpickr-calendar .hasWeeks .dayContainer, body:not([data-bs-theme=dark]) .flatpickr-calendar .hasWeeks .dayContainer {
+  border-left: 0;
+}
+body[data-bs-theme=light] .flatpickr-calendar.hasTime .flatpickr-time, body:not([data-bs-theme=dark]) .flatpickr-calendar.hasTime .flatpickr-time {
+  height: 40px;
+  border-top: 1px solid #eceef1;
+}
+body[data-bs-theme=light] .flatpickr-calendar.hasTime .flatpickr-innerContainer, body:not([data-bs-theme=dark]) .flatpickr-calendar.hasTime .flatpickr-innerContainer {
+  border-bottom: 0;
+}
+body[data-bs-theme=light] .flatpickr-calendar.hasTime .flatpickr-time, body:not([data-bs-theme=dark]) .flatpickr-calendar.hasTime .flatpickr-time {
+  border: 1px solid #eceef1;
+}
+body[data-bs-theme=light] .flatpickr-calendar.noCalendar.hasTime .flatpickr-time, body:not([data-bs-theme=dark]) .flatpickr-calendar.noCalendar.hasTime .flatpickr-time {
+  height: auto;
+}
+body[data-bs-theme=light] .flatpickr-calendar:before,
+body[data-bs-theme=light] .flatpickr-calendar:after, body:not([data-bs-theme=dark]) .flatpickr-calendar:before,
+body:not([data-bs-theme=dark]) .flatpickr-calendar:after {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  left: 22px;
+}
+body[data-bs-theme=light] .flatpickr-calendar.rightMost:before,
+body[data-bs-theme=light] .flatpickr-calendar.arrowRight:before,
+body[data-bs-theme=light] .flatpickr-calendar.rightMost:after,
+body[data-bs-theme=light] .flatpickr-calendar.arrowRight:after, body:not([data-bs-theme=dark]) .flatpickr-calendar.rightMost:before,
+body:not([data-bs-theme=dark]) .flatpickr-calendar.arrowRight:before,
+body:not([data-bs-theme=dark]) .flatpickr-calendar.rightMost:after,
+body:not([data-bs-theme=dark]) .flatpickr-calendar.arrowRight:after {
+  left: auto;
+  right: 22px;
+}
+body[data-bs-theme=light] .flatpickr-calendar.arrowCenter:before,
+body[data-bs-theme=light] .flatpickr-calendar.arrowCenter:after, body:not([data-bs-theme=dark]) .flatpickr-calendar.arrowCenter:before,
+body:not([data-bs-theme=dark]) .flatpickr-calendar.arrowCenter:after {
+  left: 50%;
+  right: 50%;
+}
+body[data-bs-theme=light] .flatpickr-calendar:before, body:not([data-bs-theme=dark]) .flatpickr-calendar:before {
+  border-width: 5px;
+  margin: 0 -5px;
+}
+body[data-bs-theme=light] .flatpickr-calendar:after, body:not([data-bs-theme=dark]) .flatpickr-calendar:after {
+  border-width: 4px;
+  margin: 0 -4px;
+}
+body[data-bs-theme=light] .flatpickr-calendar.arrowTop:before,
+body[data-bs-theme=light] .flatpickr-calendar.arrowTop:after, body:not([data-bs-theme=dark]) .flatpickr-calendar.arrowTop:before,
+body:not([data-bs-theme=dark]) .flatpickr-calendar.arrowTop:after {
+  bottom: 100%;
+}
+body[data-bs-theme=light] .flatpickr-calendar.arrowTop:before, body:not([data-bs-theme=dark]) .flatpickr-calendar.arrowTop:before {
+  border-bottom-color: #eceef1;
+}
+body[data-bs-theme=light] .flatpickr-calendar.arrowTop:after, body:not([data-bs-theme=dark]) .flatpickr-calendar.arrowTop:after {
+  border-bottom-color: #eceef1;
+}
+body[data-bs-theme=light] .flatpickr-calendar.arrowBottom:before,
+body[data-bs-theme=light] .flatpickr-calendar.arrowBottom:after, body:not([data-bs-theme=dark]) .flatpickr-calendar.arrowBottom:before,
+body:not([data-bs-theme=dark]) .flatpickr-calendar.arrowBottom:after {
+  top: 100%;
+}
+body[data-bs-theme=light] .flatpickr-calendar.arrowBottom:before, body:not([data-bs-theme=dark]) .flatpickr-calendar.arrowBottom:before {
+  border-top-color: #eceef1;
+}
+body[data-bs-theme=light] .flatpickr-calendar.arrowBottom:after, body:not([data-bs-theme=dark]) .flatpickr-calendar.arrowBottom:after {
+  border-top-color: #eceef1;
+}
+body[data-bs-theme=light] .flatpickr-calendar:focus, body:not([data-bs-theme=dark]) .flatpickr-calendar:focus {
+  outline: 0;
+}
+body[data-bs-theme=light] .flatpickr-wrapper, body:not([data-bs-theme=dark]) .flatpickr-wrapper {
+  position: relative;
+  display: inline-block;
+}
+body[data-bs-theme=light] .flatpickr-months, body:not([data-bs-theme=dark]) .flatpickr-months {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+body[data-bs-theme=light] .flatpickr-months .flatpickr-month, body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-month {
+  border-radius: 5px 5px 0 0;
+  background: #eceef1;
+  color: #5a6171;
+  fill: #5a6171;
+  height: 34px;
+  line-height: 1;
+  text-align: center;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+body[data-bs-theme=light] .flatpickr-months .flatpickr-prev-month,
+body[data-bs-theme=light] .flatpickr-months .flatpickr-next-month, body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-prev-month,
+body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-next-month {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  height: 34px;
+  padding: 10px;
+  z-index: 3;
+  color: #5a6171;
+  fill: #5a6171;
+}
+body[data-bs-theme=light] .flatpickr-months .flatpickr-prev-month.flatpickr-disabled,
+body[data-bs-theme=light] .flatpickr-months .flatpickr-next-month.flatpickr-disabled, body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-prev-month.flatpickr-disabled,
+body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-next-month.flatpickr-disabled {
+  display: none;
+}
+body[data-bs-theme=light] .flatpickr-months .flatpickr-prev-month i,
+body[data-bs-theme=light] .flatpickr-months .flatpickr-next-month i, body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-prev-month i,
+body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-next-month i {
+  position: relative;
+}
+body[data-bs-theme=light] .flatpickr-months .flatpickr-prev-month.flatpickr-prev-month,
+body[data-bs-theme=light] .flatpickr-months .flatpickr-next-month.flatpickr-prev-month, body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-prev-month.flatpickr-prev-month,
+body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-next-month.flatpickr-prev-month {
+  /*
+        /*rtl:begin:ignore*/
+  /*
+        */
+  left: 0;
+  /*
+        /*rtl:end:ignore*/
+  /*
+        */
+}
+body[data-bs-theme=light] .flatpickr-months .flatpickr-prev-month.flatpickr-next-month,
+body[data-bs-theme=light] .flatpickr-months .flatpickr-next-month.flatpickr-next-month, body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-prev-month.flatpickr-next-month,
+body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-next-month.flatpickr-next-month {
+  /*
+        /*rtl:begin:ignore*/
+  /*
+        */
+  right: 0;
+  /*
+        /*rtl:end:ignore*/
+  /*
+        */
+}
+body[data-bs-theme=light] .flatpickr-months .flatpickr-prev-month:hover,
+body[data-bs-theme=light] .flatpickr-months .flatpickr-next-month:hover, body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-prev-month:hover,
+body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-next-month:hover {
+  color: #bbb;
+}
+body[data-bs-theme=light] .flatpickr-months .flatpickr-prev-month:hover svg,
+body[data-bs-theme=light] .flatpickr-months .flatpickr-next-month:hover svg, body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-prev-month:hover svg,
+body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-next-month:hover svg {
+  fill: #f64747;
+}
+body[data-bs-theme=light] .flatpickr-months .flatpickr-prev-month svg,
+body[data-bs-theme=light] .flatpickr-months .flatpickr-next-month svg, body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-prev-month svg,
+body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-next-month svg {
+  width: 14px;
+  height: 14px;
+}
+body[data-bs-theme=light] .flatpickr-months .flatpickr-prev-month svg path,
+body[data-bs-theme=light] .flatpickr-months .flatpickr-next-month svg path, body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-prev-month svg path,
+body:not([data-bs-theme=dark]) .flatpickr-months .flatpickr-next-month svg path {
+  -webkit-transition: fill 0.1s;
+  transition: fill 0.1s;
+  fill: inherit;
+}
+body[data-bs-theme=light] .numInputWrapper, body:not([data-bs-theme=dark]) .numInputWrapper {
+  position: relative;
+  height: auto;
+}
+body[data-bs-theme=light] .numInputWrapper input,
+body[data-bs-theme=light] .numInputWrapper span, body:not([data-bs-theme=dark]) .numInputWrapper input,
+body:not([data-bs-theme=dark]) .numInputWrapper span {
+  display: inline-block;
+}
+body[data-bs-theme=light] .numInputWrapper input, body:not([data-bs-theme=dark]) .numInputWrapper input {
+  width: 100%;
+}
+body[data-bs-theme=light] .numInputWrapper input::-ms-clear, body:not([data-bs-theme=dark]) .numInputWrapper input::-ms-clear {
+  display: none;
+}
+body[data-bs-theme=light] .numInputWrapper input::-webkit-outer-spin-button,
+body[data-bs-theme=light] .numInputWrapper input::-webkit-inner-spin-button, body:not([data-bs-theme=dark]) .numInputWrapper input::-webkit-outer-spin-button,
+body:not([data-bs-theme=dark]) .numInputWrapper input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+body[data-bs-theme=light] .numInputWrapper span, body:not([data-bs-theme=dark]) .numInputWrapper span {
+  position: absolute;
+  right: 0;
+  width: 14px;
+  padding: 0 4px 0 2px;
+  height: 50%;
+  line-height: 50%;
+  opacity: 0;
+  cursor: pointer;
+  border: 1px solid rgba(72, 72, 72, 0.15);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body[data-bs-theme=light] .numInputWrapper span:hover, body:not([data-bs-theme=dark]) .numInputWrapper span:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+body[data-bs-theme=light] .numInputWrapper span:active, body:not([data-bs-theme=dark]) .numInputWrapper span:active {
+  background: rgba(0, 0, 0, 0.2);
+}
+body[data-bs-theme=light] .numInputWrapper span:after, body:not([data-bs-theme=dark]) .numInputWrapper span:after {
+  display: block;
+  content: "";
+  position: absolute;
+}
+body[data-bs-theme=light] .numInputWrapper span.arrowUp, body:not([data-bs-theme=dark]) .numInputWrapper span.arrowUp {
+  top: 0;
+  border-bottom: 0;
+}
+body[data-bs-theme=light] .numInputWrapper span.arrowUp:after, body:not([data-bs-theme=dark]) .numInputWrapper span.arrowUp:after {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid rgba(72, 72, 72, 0.6);
+  top: 26%;
+}
+body[data-bs-theme=light] .numInputWrapper span.arrowDown, body:not([data-bs-theme=dark]) .numInputWrapper span.arrowDown {
+  top: 50%;
+}
+body[data-bs-theme=light] .numInputWrapper span.arrowDown:after, body:not([data-bs-theme=dark]) .numInputWrapper span.arrowDown:after {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid rgba(72, 72, 72, 0.6);
+  top: 40%;
+}
+body[data-bs-theme=light] .numInputWrapper span svg, body:not([data-bs-theme=dark]) .numInputWrapper span svg {
+  width: inherit;
+  height: auto;
+}
+body[data-bs-theme=light] .numInputWrapper span svg path, body:not([data-bs-theme=dark]) .numInputWrapper span svg path {
+  fill: rgba(90, 97, 113, 0.5);
+}
+body[data-bs-theme=light] .numInputWrapper:hover, body:not([data-bs-theme=dark]) .numInputWrapper:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+body[data-bs-theme=light] .numInputWrapper:hover span, body:not([data-bs-theme=dark]) .numInputWrapper:hover span {
+  opacity: 1;
+}
+body[data-bs-theme=light] .flatpickr-current-month, body:not([data-bs-theme=dark]) .flatpickr-current-month {
+  font-size: 135%;
+  line-height: inherit;
+  font-weight: 300;
+  color: inherit;
+  position: absolute;
+  width: 75%;
+  left: 12.5%;
+  padding: 7.48px 0 0 0;
+  line-height: 1;
+  height: 34px;
+  display: inline-block;
+  text-align: center;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+body[data-bs-theme=light] .flatpickr-current-month span.cur-month, body:not([data-bs-theme=dark]) .flatpickr-current-month span.cur-month {
+  font-family: inherit;
+  font-weight: 700;
+  color: inherit;
+  display: inline-block;
+  margin-left: 0.5ch;
+  padding: 0;
+}
+body[data-bs-theme=light] .flatpickr-current-month span.cur-month:hover, body:not([data-bs-theme=dark]) .flatpickr-current-month span.cur-month:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+body[data-bs-theme=light] .flatpickr-current-month .numInputWrapper, body:not([data-bs-theme=dark]) .flatpickr-current-month .numInputWrapper {
+  width: 6ch;
+  width: 7ch \0 ;
+  display: inline-block;
+}
+body[data-bs-theme=light] .flatpickr-current-month .numInputWrapper span.arrowUp:after, body:not([data-bs-theme=dark]) .flatpickr-current-month .numInputWrapper span.arrowUp:after {
+  border-bottom-color: #5a6171;
+}
+body[data-bs-theme=light] .flatpickr-current-month .numInputWrapper span.arrowDown:after, body:not([data-bs-theme=dark]) .flatpickr-current-month .numInputWrapper span.arrowDown:after {
+  border-top-color: #5a6171;
+}
+body[data-bs-theme=light] .flatpickr-current-month input.cur-year, body:not([data-bs-theme=dark]) .flatpickr-current-month input.cur-year {
+  background: transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: inherit;
+  cursor: text;
+  padding: 0 0 0 0.5ch;
+  margin: 0;
+  display: inline-block;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 300;
+  line-height: inherit;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  vertical-align: initial;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+body[data-bs-theme=light] .flatpickr-current-month input.cur-year:focus, body:not([data-bs-theme=dark]) .flatpickr-current-month input.cur-year:focus {
+  outline: 0;
+}
+body[data-bs-theme=light] .flatpickr-current-month input.cur-year[disabled],
+body[data-bs-theme=light] .flatpickr-current-month input.cur-year[disabled]:hover, body:not([data-bs-theme=dark]) .flatpickr-current-month input.cur-year[disabled],
+body:not([data-bs-theme=dark]) .flatpickr-current-month input.cur-year[disabled]:hover {
+  font-size: 100%;
+  color: rgba(90, 97, 113, 0.5);
+  background: transparent;
+  pointer-events: none;
+}
+body[data-bs-theme=light] .flatpickr-current-month .flatpickr-monthDropdown-months, body:not([data-bs-theme=dark]) .flatpickr-current-month .flatpickr-monthDropdown-months {
+  appearance: menulist;
+  background: #eceef1;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: inherit;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 300;
+  height: auto;
+  line-height: inherit;
+  margin: -1px 0 0 0;
+  outline: none;
+  padding: 0 0 0 0.5ch;
+  position: relative;
+  vertical-align: initial;
+  -webkit-box-sizing: border-box;
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+  width: auto;
+}
+body[data-bs-theme=light] .flatpickr-current-month .flatpickr-monthDropdown-months:focus,
+body[data-bs-theme=light] .flatpickr-current-month .flatpickr-monthDropdown-months:active, body:not([data-bs-theme=dark]) .flatpickr-current-month .flatpickr-monthDropdown-months:focus,
+body:not([data-bs-theme=dark]) .flatpickr-current-month .flatpickr-monthDropdown-months:active {
+  outline: none;
+}
+body[data-bs-theme=light] .flatpickr-current-month .flatpickr-monthDropdown-months:hover, body:not([data-bs-theme=dark]) .flatpickr-current-month .flatpickr-monthDropdown-months:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+body[data-bs-theme=light] .flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month, body:not([data-bs-theme=dark]) .flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month {
+  background-color: #eceef1;
+  outline: none;
+  padding: 0;
+}
+body[data-bs-theme=light] .flatpickr-weekdays, body:not([data-bs-theme=dark]) .flatpickr-weekdays {
+  background: #eceef1;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+}
+body[data-bs-theme=light] .flatpickr-weekdays .flatpickr-weekdaycontainer, body:not([data-bs-theme=dark]) .flatpickr-weekdays .flatpickr-weekdaycontainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+body[data-bs-theme=light] span.flatpickr-weekday, body:not([data-bs-theme=dark]) span.flatpickr-weekday {
+  cursor: default;
+  font-size: 90%;
+  background: #eceef1;
+  color: #5a6171;
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: bolder;
+}
+body[data-bs-theme=light] .dayContainer,
+body[data-bs-theme=light] .flatpickr-weeks, body:not([data-bs-theme=dark]) .dayContainer,
+body:not([data-bs-theme=dark]) .flatpickr-weeks {
+  padding: 1px 0 0 0;
+}
+body[data-bs-theme=light] .flatpickr-days, body:not([data-bs-theme=dark]) .flatpickr-days {
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 307.875px;
+  border-left: 1px solid #eceef1;
+  border-right: 1px solid #eceef1;
+}
+body[data-bs-theme=light] .flatpickr-days:focus, body:not([data-bs-theme=dark]) .flatpickr-days:focus {
+  outline: 0;
+}
+body[data-bs-theme=light] .dayContainer, body:not([data-bs-theme=dark]) .dayContainer {
+  padding: 0;
+  outline: 0;
+  text-align: left;
+  width: 307.875px;
+  min-width: 307.875px;
+  max-width: 307.875px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+  opacity: 1;
+}
+body[data-bs-theme=light] .dayContainer + .dayContainer, body:not([data-bs-theme=dark]) .dayContainer + .dayContainer {
+  -webkit-box-shadow: -1px 0 0 #eceef1;
+  box-shadow: -1px 0 0 #eceef1;
+}
+body[data-bs-theme=light] .flatpickr-day, body:not([data-bs-theme=dark]) .flatpickr-day {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 150px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #484848;
+  cursor: pointer;
+  font-weight: 400;
+  width: 14.2857143%;
+  -webkit-flex-basis: 14.2857143%;
+  -ms-flex-preferred-size: 14.2857143%;
+  flex-basis: 14.2857143%;
+  max-width: 39px;
+  height: 39px;
+  line-height: 39px;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+body[data-bs-theme=light] .flatpickr-day.inRange,
+body[data-bs-theme=light] .flatpickr-day.prevMonthDay.inRange,
+body[data-bs-theme=light] .flatpickr-day.nextMonthDay.inRange,
+body[data-bs-theme=light] .flatpickr-day.today.inRange,
+body[data-bs-theme=light] .flatpickr-day.prevMonthDay.today.inRange,
+body[data-bs-theme=light] .flatpickr-day.nextMonthDay.today.inRange,
+body[data-bs-theme=light] .flatpickr-day:hover,
+body[data-bs-theme=light] .flatpickr-day.prevMonthDay:hover,
+body[data-bs-theme=light] .flatpickr-day.nextMonthDay:hover,
+body[data-bs-theme=light] .flatpickr-day:focus,
+body[data-bs-theme=light] .flatpickr-day.prevMonthDay:focus,
+body[data-bs-theme=light] .flatpickr-day.nextMonthDay:focus, body:not([data-bs-theme=dark]) .flatpickr-day.inRange,
+body:not([data-bs-theme=dark]) .flatpickr-day.prevMonthDay.inRange,
+body:not([data-bs-theme=dark]) .flatpickr-day.nextMonthDay.inRange,
+body:not([data-bs-theme=dark]) .flatpickr-day.today.inRange,
+body:not([data-bs-theme=dark]) .flatpickr-day.prevMonthDay.today.inRange,
+body:not([data-bs-theme=dark]) .flatpickr-day.nextMonthDay.today.inRange,
+body:not([data-bs-theme=dark]) .flatpickr-day:hover,
+body:not([data-bs-theme=dark]) .flatpickr-day.prevMonthDay:hover,
+body:not([data-bs-theme=dark]) .flatpickr-day.nextMonthDay:hover,
+body:not([data-bs-theme=dark]) .flatpickr-day:focus,
+body:not([data-bs-theme=dark]) .flatpickr-day.prevMonthDay:focus,
+body:not([data-bs-theme=dark]) .flatpickr-day.nextMonthDay:focus {
+  cursor: pointer;
+  outline: 0;
+  background: #e2e2e2;
+  border-color: #e2e2e2;
+}
+body[data-bs-theme=light] .flatpickr-day.today, body:not([data-bs-theme=dark]) .flatpickr-day.today {
+  border-color: #bbb;
+}
+body[data-bs-theme=light] .flatpickr-day.today:hover,
+body[data-bs-theme=light] .flatpickr-day.today:focus, body:not([data-bs-theme=dark]) .flatpickr-day.today:hover,
+body:not([data-bs-theme=dark]) .flatpickr-day.today:focus {
+  border-color: #bbb;
+  background: #bbb;
+  color: #fff;
+}
+body[data-bs-theme=light] .flatpickr-day.selected,
+body[data-bs-theme=light] .flatpickr-day.startRange,
+body[data-bs-theme=light] .flatpickr-day.endRange,
+body[data-bs-theme=light] .flatpickr-day.selected.inRange,
+body[data-bs-theme=light] .flatpickr-day.startRange.inRange,
+body[data-bs-theme=light] .flatpickr-day.endRange.inRange,
+body[data-bs-theme=light] .flatpickr-day.selected:focus,
+body[data-bs-theme=light] .flatpickr-day.startRange:focus,
+body[data-bs-theme=light] .flatpickr-day.endRange:focus,
+body[data-bs-theme=light] .flatpickr-day.selected:hover,
+body[data-bs-theme=light] .flatpickr-day.startRange:hover,
+body[data-bs-theme=light] .flatpickr-day.endRange:hover,
+body[data-bs-theme=light] .flatpickr-day.selected.prevMonthDay,
+body[data-bs-theme=light] .flatpickr-day.startRange.prevMonthDay,
+body[data-bs-theme=light] .flatpickr-day.endRange.prevMonthDay,
+body[data-bs-theme=light] .flatpickr-day.selected.nextMonthDay,
+body[data-bs-theme=light] .flatpickr-day.startRange.nextMonthDay,
+body[data-bs-theme=light] .flatpickr-day.endRange.nextMonthDay, body:not([data-bs-theme=dark]) .flatpickr-day.selected,
+body:not([data-bs-theme=dark]) .flatpickr-day.startRange,
+body:not([data-bs-theme=dark]) .flatpickr-day.endRange,
+body:not([data-bs-theme=dark]) .flatpickr-day.selected.inRange,
+body:not([data-bs-theme=dark]) .flatpickr-day.startRange.inRange,
+body:not([data-bs-theme=dark]) .flatpickr-day.endRange.inRange,
+body:not([data-bs-theme=dark]) .flatpickr-day.selected:focus,
+body:not([data-bs-theme=dark]) .flatpickr-day.startRange:focus,
+body:not([data-bs-theme=dark]) .flatpickr-day.endRange:focus,
+body:not([data-bs-theme=dark]) .flatpickr-day.selected:hover,
+body:not([data-bs-theme=dark]) .flatpickr-day.startRange:hover,
+body:not([data-bs-theme=dark]) .flatpickr-day.endRange:hover,
+body:not([data-bs-theme=dark]) .flatpickr-day.selected.prevMonthDay,
+body:not([data-bs-theme=dark]) .flatpickr-day.startRange.prevMonthDay,
+body:not([data-bs-theme=dark]) .flatpickr-day.endRange.prevMonthDay,
+body:not([data-bs-theme=dark]) .flatpickr-day.selected.nextMonthDay,
+body:not([data-bs-theme=dark]) .flatpickr-day.startRange.nextMonthDay,
+body:not([data-bs-theme=dark]) .flatpickr-day.endRange.nextMonthDay {
+  background: #ff5a5f;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  border-color: #ff5a5f;
+}
+body[data-bs-theme=light] .flatpickr-day.selected.startRange,
+body[data-bs-theme=light] .flatpickr-day.startRange.startRange,
+body[data-bs-theme=light] .flatpickr-day.endRange.startRange, body:not([data-bs-theme=dark]) .flatpickr-day.selected.startRange,
+body:not([data-bs-theme=dark]) .flatpickr-day.startRange.startRange,
+body:not([data-bs-theme=dark]) .flatpickr-day.endRange.startRange {
+  border-radius: 50px 0 0 50px;
+}
+body[data-bs-theme=light] .flatpickr-day.selected.endRange,
+body[data-bs-theme=light] .flatpickr-day.startRange.endRange,
+body[data-bs-theme=light] .flatpickr-day.endRange.endRange, body:not([data-bs-theme=dark]) .flatpickr-day.selected.endRange,
+body:not([data-bs-theme=dark]) .flatpickr-day.startRange.endRange,
+body:not([data-bs-theme=dark]) .flatpickr-day.endRange.endRange {
+  border-radius: 0 50px 50px 0;
+}
+body[data-bs-theme=light] .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)),
+body[data-bs-theme=light] .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)),
+body[data-bs-theme=light] .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)), body:not([data-bs-theme=dark]) .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)),
+body:not([data-bs-theme=dark]) .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)),
+body:not([data-bs-theme=dark]) .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
+  -webkit-box-shadow: -10px 0 0 #ff5a5f;
+  box-shadow: -10px 0 0 #ff5a5f;
+}
+body[data-bs-theme=light] .flatpickr-day.selected.startRange.endRange,
+body[data-bs-theme=light] .flatpickr-day.startRange.startRange.endRange,
+body[data-bs-theme=light] .flatpickr-day.endRange.startRange.endRange, body:not([data-bs-theme=dark]) .flatpickr-day.selected.startRange.endRange,
+body:not([data-bs-theme=dark]) .flatpickr-day.startRange.startRange.endRange,
+body:not([data-bs-theme=dark]) .flatpickr-day.endRange.startRange.endRange {
+  border-radius: 50px;
+}
+body[data-bs-theme=light] .flatpickr-day.inRange, body:not([data-bs-theme=dark]) .flatpickr-day.inRange {
+  border-radius: 0;
+  -webkit-box-shadow: -5px 0 0 #e2e2e2, 5px 0 0 #e2e2e2;
+  box-shadow: -5px 0 0 #e2e2e2, 5px 0 0 #e2e2e2;
+}
+body[data-bs-theme=light] .flatpickr-day.flatpickr-disabled,
+body[data-bs-theme=light] .flatpickr-day.flatpickr-disabled:hover,
+body[data-bs-theme=light] .flatpickr-day.prevMonthDay,
+body[data-bs-theme=light] .flatpickr-day.nextMonthDay,
+body[data-bs-theme=light] .flatpickr-day.notAllowed,
+body[data-bs-theme=light] .flatpickr-day.notAllowed.prevMonthDay,
+body[data-bs-theme=light] .flatpickr-day.notAllowed.nextMonthDay, body:not([data-bs-theme=dark]) .flatpickr-day.flatpickr-disabled,
+body:not([data-bs-theme=dark]) .flatpickr-day.flatpickr-disabled:hover,
+body:not([data-bs-theme=dark]) .flatpickr-day.prevMonthDay,
+body:not([data-bs-theme=dark]) .flatpickr-day.nextMonthDay,
+body:not([data-bs-theme=dark]) .flatpickr-day.notAllowed,
+body:not([data-bs-theme=dark]) .flatpickr-day.notAllowed.prevMonthDay,
+body:not([data-bs-theme=dark]) .flatpickr-day.notAllowed.nextMonthDay {
+  color: rgba(72, 72, 72, 0.3);
+  background: transparent;
+  border-color: transparent;
+  cursor: default;
+}
+body[data-bs-theme=light] .flatpickr-day.flatpickr-disabled,
+body[data-bs-theme=light] .flatpickr-day.flatpickr-disabled:hover, body:not([data-bs-theme=dark]) .flatpickr-day.flatpickr-disabled,
+body:not([data-bs-theme=dark]) .flatpickr-day.flatpickr-disabled:hover {
+  cursor: not-allowed;
+  color: rgba(72, 72, 72, 0.1);
+}
+body[data-bs-theme=light] .flatpickr-day.week.selected, body:not([data-bs-theme=dark]) .flatpickr-day.week.selected {
+  border-radius: 0;
+  -webkit-box-shadow: -5px 0 0 #ff5a5f, 5px 0 0 #ff5a5f;
+  box-shadow: -5px 0 0 #ff5a5f, 5px 0 0 #ff5a5f;
+}
+body[data-bs-theme=light] .flatpickr-day.hidden, body:not([data-bs-theme=dark]) .flatpickr-day.hidden {
+  visibility: hidden;
+}
+body[data-bs-theme=light] .rangeMode .flatpickr-day, body:not([data-bs-theme=dark]) .rangeMode .flatpickr-day {
+  margin-top: 1px;
+}
+body[data-bs-theme=light] .flatpickr-weekwrapper, body:not([data-bs-theme=dark]) .flatpickr-weekwrapper {
+  float: left;
+}
+body[data-bs-theme=light] .flatpickr-weekwrapper .flatpickr-weeks, body:not([data-bs-theme=dark]) .flatpickr-weekwrapper .flatpickr-weeks {
+  padding: 0 12px;
+  border-left: 1px solid #eceef1;
+}
+body[data-bs-theme=light] .flatpickr-weekwrapper .flatpickr-weekday, body:not([data-bs-theme=dark]) .flatpickr-weekwrapper .flatpickr-weekday {
+  float: none;
+  width: 100%;
+  line-height: 28px;
+}
+body[data-bs-theme=light] .flatpickr-weekwrapper span.flatpickr-day,
+body[data-bs-theme=light] .flatpickr-weekwrapper span.flatpickr-day:hover, body:not([data-bs-theme=dark]) .flatpickr-weekwrapper span.flatpickr-day,
+body:not([data-bs-theme=dark]) .flatpickr-weekwrapper span.flatpickr-day:hover {
+  display: block;
+  width: 100%;
+  max-width: none;
+  color: rgba(72, 72, 72, 0.3);
+  background: transparent;
+  cursor: default;
+  border: none;
+}
+body[data-bs-theme=light] .flatpickr-innerContainer, body:not([data-bs-theme=dark]) .flatpickr-innerContainer {
+  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid #eceef1;
+}
+body[data-bs-theme=light] .flatpickr-rContainer, body:not([data-bs-theme=dark]) .flatpickr-rContainer {
+  display: inline-block;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body[data-bs-theme=light] .flatpickr-time, body:not([data-bs-theme=dark]) .flatpickr-time {
+  text-align: center;
+  outline: 0;
+  display: block;
+  height: 0;
+  line-height: 40px;
+  max-height: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+}
+body[data-bs-theme=light] .flatpickr-time:after, body:not([data-bs-theme=dark]) .flatpickr-time:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body[data-bs-theme=light] .flatpickr-time .numInputWrapper, body:not([data-bs-theme=dark]) .flatpickr-time .numInputWrapper {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 40%;
+  height: 40px;
+  float: left;
+}
+body[data-bs-theme=light] .flatpickr-time .numInputWrapper span.arrowUp:after, body:not([data-bs-theme=dark]) .flatpickr-time .numInputWrapper span.arrowUp:after {
+  border-bottom-color: #484848;
+}
+body[data-bs-theme=light] .flatpickr-time .numInputWrapper span.arrowDown:after, body:not([data-bs-theme=dark]) .flatpickr-time .numInputWrapper span.arrowDown:after {
+  border-top-color: #484848;
+}
+body[data-bs-theme=light] .flatpickr-time.hasSeconds .numInputWrapper, body:not([data-bs-theme=dark]) .flatpickr-time.hasSeconds .numInputWrapper {
+  width: 26%;
+}
+body[data-bs-theme=light] .flatpickr-time.time24hr .numInputWrapper, body:not([data-bs-theme=dark]) .flatpickr-time.time24hr .numInputWrapper {
+  width: 49%;
+}
+body[data-bs-theme=light] .flatpickr-time input, body:not([data-bs-theme=dark]) .flatpickr-time input {
+  background: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: inherit;
+  line-height: inherit;
+  color: #484848;
+  font-size: 14px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+body[data-bs-theme=light] .flatpickr-time input.flatpickr-hour, body:not([data-bs-theme=dark]) .flatpickr-time input.flatpickr-hour {
+  font-weight: bold;
+}
+body[data-bs-theme=light] .flatpickr-time input.flatpickr-minute,
+body[data-bs-theme=light] .flatpickr-time input.flatpickr-second, body:not([data-bs-theme=dark]) .flatpickr-time input.flatpickr-minute,
+body:not([data-bs-theme=dark]) .flatpickr-time input.flatpickr-second {
+  font-weight: 400;
+}
+body[data-bs-theme=light] .flatpickr-time input:focus, body:not([data-bs-theme=dark]) .flatpickr-time input:focus {
+  outline: 0;
+  border: 0;
+}
+body[data-bs-theme=light] .flatpickr-time .flatpickr-time-separator,
+body[data-bs-theme=light] .flatpickr-time .flatpickr-am-pm, body:not([data-bs-theme=dark]) .flatpickr-time .flatpickr-time-separator,
+body:not([data-bs-theme=dark]) .flatpickr-time .flatpickr-am-pm {
+  height: inherit;
+  float: left;
+  line-height: inherit;
+  color: #484848;
+  font-weight: bold;
+  width: 2%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+body[data-bs-theme=light] .flatpickr-time .flatpickr-am-pm, body:not([data-bs-theme=dark]) .flatpickr-time .flatpickr-am-pm {
+  outline: 0;
+  width: 18%;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 400;
+}
+body[data-bs-theme=light] .flatpickr-time input:hover,
+body[data-bs-theme=light] .flatpickr-time .flatpickr-am-pm:hover,
+body[data-bs-theme=light] .flatpickr-time input:focus,
+body[data-bs-theme=light] .flatpickr-time .flatpickr-am-pm:focus, body:not([data-bs-theme=dark]) .flatpickr-time input:hover,
+body:not([data-bs-theme=dark]) .flatpickr-time .flatpickr-am-pm:hover,
+body:not([data-bs-theme=dark]) .flatpickr-time input:focus,
+body:not([data-bs-theme=dark]) .flatpickr-time .flatpickr-am-pm:focus {
+  background: #eaeaea;
+}
+body[data-bs-theme=light] .flatpickr-input[readonly], body:not([data-bs-theme=dark]) .flatpickr-input[readonly] {
+  cursor: pointer;
+}
+@-webkit-keyframes fpFadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fpFadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+body[data-bs-theme=light] span.flatpickr-day.selected, body:not([data-bs-theme=dark]) span.flatpickr-day.selected {
+  font-weight: bold;
+}
+body .choices__list--dropdown {
+  z-index: 2 !important;
+}
+body[data-bs-theme=dark] {
+  /*
+        /*rtl:begin:ignore*/
+  /*
+        /*rtl:end:ignore*/
+  /*
+        /*rtl:begin:ignore*/
+  /*
+        /*rtl:end:ignore*/
+}
+body[data-bs-theme=dark] tbody .row-message-creating {
+  background-color: #15415b;
+}
+body[data-bs-theme=dark] tbody .row-message-publication {
+  background-color: rgb(63, 63, 63);
+}
+body[data-bs-theme=dark] .choices {
+  background-color: var(--tblr-bg-forms);
+  color: #fff;
+  border-color: var(--tblr-border-color);
+}
+body[data-bs-theme=dark] .choices__inner {
+  background-color: var(--tblr-bg-forms);
+  border-color: var(--tblr-border-color);
+  color: #fff;
+}
+body[data-bs-theme=dark] .choices__list--dropdown {
+  background-color: var(--tblr-bg-forms);
+  border-color: var(--tblr-border-color);
+}
+body[data-bs-theme=dark] .choices__list--dropdown.is-open, body[data-bs-theme=dark] .choices__list--dropdown[aria-expanded] {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+body[data-bs-theme=dark] .choices__list--dropdown .choices__item {
+  background: var(--tblr-border-color);
+}
+body[data-bs-theme=dark] .choices__list--dropdown .choices__item.is-highlighted {
+  background: rgba(var(--tblr-border-color), 0.16);
+}
+body[data-bs-theme=dark] .choices__item {
+  color: #fff;
+}
+body[data-bs-theme=dark] .choices__item--selectable.is-highlighted {
+  background-color: #555;
+  color: #fff;
+}
+body[data-bs-theme=dark] .choices__input {
+  color: #fff;
+  background-color: #333;
+}
+body[data-bs-theme=dark] .choices__button {
+  background-color: #555;
+  color: #fff;
+}
+body[data-bs-theme=dark] .flatpickr-calendar {
+  background: transparent;
+  opacity: 0;
+  display: none;
+  text-align: center;
+  visibility: hidden;
+  padding: 0;
+  -webkit-animation: none;
+  animation: none;
+  direction: ltr;
+  border: 0;
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 5px;
+  position: absolute;
+  width: 307.875px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  background: #3f4458;
+  -webkit-box-shadow: 1px 0 0 #20222c, -1px 0 0 #20222c, 0 1px 0 #20222c, 0 -1px 0 #20222c, 0 3px 13px rgba(0, 0, 0, 0.08);
+  box-shadow: 1px 0 0 #20222c, -1px 0 0 #20222c, 0 1px 0 #20222c, 0 -1px 0 #20222c, 0 3px 13px rgba(0, 0, 0, 0.08);
+}
+body[data-bs-theme=dark] .flatpickr-calendar.open,
+body[data-bs-theme=dark] .flatpickr-calendar.inline {
+  opacity: 1;
+  max-height: 640px;
+  visibility: visible;
+}
+body[data-bs-theme=dark] .flatpickr-calendar.open {
+  display: inline-block;
+  z-index: 99999;
+}
+body[data-bs-theme=dark] .flatpickr-calendar.animate.open {
+  -webkit-animation: fpFadeInDown 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  animation: fpFadeInDown 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+body[data-bs-theme=dark] .flatpickr-calendar.inline {
+  display: block;
+  position: relative;
+  top: 2px;
+}
+body[data-bs-theme=dark] .flatpickr-calendar.static {
+  position: absolute;
+  top: calc(100% + 2px);
+}
+body[data-bs-theme=dark] .flatpickr-calendar.static.open {
+  z-index: 999;
+  display: block;
+}
+body[data-bs-theme=dark] .flatpickr-calendar.multiMonth .flatpickr-days .dayContainer:nth-child(n+1) .flatpickr-day.inRange:nth-child(7n+7) {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+body[data-bs-theme=dark] .flatpickr-calendar.multiMonth .flatpickr-days .dayContainer:nth-child(n+2) .flatpickr-day.inRange:nth-child(7n+1) {
+  -webkit-box-shadow: -2px 0 0 #e6e6e6, 5px 0 0 #e6e6e6;
+  box-shadow: -2px 0 0 #e6e6e6, 5px 0 0 #e6e6e6;
+}
+body[data-bs-theme=dark] .flatpickr-calendar .hasWeeks .dayContainer,
+body[data-bs-theme=dark] .flatpickr-calendar .hasTime .dayContainer {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+body[data-bs-theme=dark] .flatpickr-calendar .hasWeeks .dayContainer {
+  border-left: 0;
+}
+body[data-bs-theme=dark] .flatpickr-calendar.hasTime .flatpickr-time {
+  height: 40px;
+  border-top: 1px solid #20222c;
+}
+body[data-bs-theme=dark] .flatpickr-calendar.noCalendar.hasTime .flatpickr-time {
+  height: auto;
+}
+body[data-bs-theme=dark] .flatpickr-calendar:before,
+body[data-bs-theme=dark] .flatpickr-calendar:after {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  left: 22px;
+}
+body[data-bs-theme=dark] .flatpickr-calendar.rightMost:before,
+body[data-bs-theme=dark] .flatpickr-calendar.arrowRight:before,
+body[data-bs-theme=dark] .flatpickr-calendar.rightMost:after,
+body[data-bs-theme=dark] .flatpickr-calendar.arrowRight:after {
+  left: auto;
+  right: 22px;
+}
+body[data-bs-theme=dark] .flatpickr-calendar.arrowCenter:before,
+body[data-bs-theme=dark] .flatpickr-calendar.arrowCenter:after {
+  left: 50%;
+  right: 50%;
+}
+body[data-bs-theme=dark] .flatpickr-calendar:before {
+  border-width: 5px;
+  margin: 0 -5px;
+}
+body[data-bs-theme=dark] .flatpickr-calendar:after {
+  border-width: 4px;
+  margin: 0 -4px;
+}
+body[data-bs-theme=dark] .flatpickr-calendar.arrowTop:before,
+body[data-bs-theme=dark] .flatpickr-calendar.arrowTop:after {
+  bottom: 100%;
+}
+body[data-bs-theme=dark] .flatpickr-calendar.arrowTop:before {
+  border-bottom-color: #20222c;
+}
+body[data-bs-theme=dark] .flatpickr-calendar.arrowTop:after {
+  border-bottom-color: #3f4458;
+}
+body[data-bs-theme=dark] .flatpickr-calendar.arrowBottom:before,
+body[data-bs-theme=dark] .flatpickr-calendar.arrowBottom:after {
+  top: 100%;
+}
+body[data-bs-theme=dark] .flatpickr-calendar.arrowBottom:before {
+  border-top-color: #20222c;
+}
+body[data-bs-theme=dark] .flatpickr-calendar.arrowBottom:after {
+  border-top-color: #3f4458;
+}
+body[data-bs-theme=dark] .flatpickr-calendar:focus {
+  outline: 0;
+}
+body[data-bs-theme=dark] .flatpickr-wrapper {
+  position: relative;
+  display: inline-block;
+}
+body[data-bs-theme=dark] .flatpickr-months {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-month {
+  background: #3f4458;
+  color: #fff;
+  fill: #fff;
+  height: 34px;
+  line-height: 1;
+  text-align: center;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-prev-month,
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-next-month {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  height: 34px;
+  padding: 10px;
+  z-index: 3;
+  color: #fff;
+  fill: #fff;
+}
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-prev-month.flatpickr-disabled,
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-next-month.flatpickr-disabled {
+  display: none;
+}
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-prev-month i,
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-next-month i {
+  position: relative;
+}
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-prev-month.flatpickr-prev-month,
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-next-month.flatpickr-prev-month {
+  /*
+        /*rtl:begin:ignore*/
+  /*
+        */
+  left: 0;
+  /*
+        /*rtl:end:ignore*/
+  /*
+        */
+}
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-prev-month.flatpickr-next-month,
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-next-month.flatpickr-next-month {
+  /*
+        /*rtl:begin:ignore*/
+  /*
+        */
+  right: 0;
+  /*
+        /*rtl:end:ignore*/
+  /*
+        */
+}
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-prev-month:hover,
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-next-month:hover {
+  color: #eee;
+}
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-prev-month:hover svg,
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-next-month:hover svg {
+  fill: #f64747;
+}
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-prev-month svg,
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-next-month svg {
+  width: 14px;
+  height: 14px;
+}
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-prev-month svg path,
+body[data-bs-theme=dark] .flatpickr-months .flatpickr-next-month svg path {
+  -webkit-transition: fill 0.1s;
+  transition: fill 0.1s;
+  fill: inherit;
+}
+body[data-bs-theme=dark] .numInputWrapper {
+  position: relative;
+  height: auto;
+}
+body[data-bs-theme=dark] .numInputWrapper input,
+body[data-bs-theme=dark] .numInputWrapper span {
+  display: inline-block;
+}
+body[data-bs-theme=dark] .numInputWrapper input {
+  width: 100%;
+}
+body[data-bs-theme=dark] .numInputWrapper input::-ms-clear {
+  display: none;
+}
+body[data-bs-theme=dark] .numInputWrapper input::-webkit-outer-spin-button,
+body[data-bs-theme=dark] .numInputWrapper input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+body[data-bs-theme=dark] .numInputWrapper span {
+  position: absolute;
+  right: 0;
+  width: 14px;
+  padding: 0 4px 0 2px;
+  height: 50%;
+  line-height: 50%;
+  opacity: 0;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body[data-bs-theme=dark] .numInputWrapper span:hover {
+  background: rgba(192, 187, 167, 0.1);
+}
+body[data-bs-theme=dark] .numInputWrapper span:active {
+  background: rgba(192, 187, 167, 0.2);
+}
+body[data-bs-theme=dark] .numInputWrapper span:after {
+  display: block;
+  content: "";
+  position: absolute;
+}
+body[data-bs-theme=dark] .numInputWrapper span.arrowUp {
+  top: 0;
+  border-bottom: 0;
+}
+body[data-bs-theme=dark] .numInputWrapper span.arrowUp:after {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.6);
+  top: 26%;
+}
+body[data-bs-theme=dark] .numInputWrapper span.arrowDown {
+  top: 50%;
+}
+body[data-bs-theme=dark] .numInputWrapper span.arrowDown:after {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid rgba(255, 255, 255, 0.6);
+  top: 40%;
+}
+body[data-bs-theme=dark] .numInputWrapper span svg {
+  width: inherit;
+  height: auto;
+}
+body[data-bs-theme=dark] .numInputWrapper span svg path {
+  fill: rgba(255, 255, 255, 0.5);
+}
+body[data-bs-theme=dark] .numInputWrapper:hover {
+  background: rgba(192, 187, 167, 0.05);
+}
+body[data-bs-theme=dark] .numInputWrapper:hover span {
+  opacity: 1;
+}
+body[data-bs-theme=dark] .flatpickr-current-month {
+  font-size: 135%;
+  line-height: inherit;
+  font-weight: 300;
+  color: inherit;
+  position: absolute;
+  width: 75%;
+  left: 12.5%;
+  padding: 7.48px 0 0 0;
+  line-height: 1;
+  height: 34px;
+  display: inline-block;
+  text-align: center;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+body[data-bs-theme=dark] .flatpickr-current-month span.cur-month {
+  font-family: inherit;
+  font-weight: 700;
+  color: inherit;
+  display: inline-block;
+  margin-left: 0.5ch;
+  padding: 0;
+}
+body[data-bs-theme=dark] .flatpickr-current-month span.cur-month:hover {
+  background: rgba(192, 187, 167, 0.05);
+}
+body[data-bs-theme=dark] .flatpickr-current-month .numInputWrapper {
+  width: 6ch;
+  width: 7ch \0 ;
+  display: inline-block;
+}
+body[data-bs-theme=dark] .flatpickr-current-month .numInputWrapper span.arrowUp:after {
+  border-bottom-color: #fff;
+}
+body[data-bs-theme=dark] .flatpickr-current-month .numInputWrapper span.arrowDown:after {
+  border-top-color: #fff;
+}
+body[data-bs-theme=dark] .flatpickr-current-month input.cur-year {
+  background: transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: inherit;
+  cursor: text;
+  padding: 0 0 0 0.5ch;
+  margin: 0;
+  display: inline-block;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 300;
+  line-height: inherit;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  vertical-align: initial;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+body[data-bs-theme=dark] .flatpickr-current-month input.cur-year:focus {
+  outline: 0;
+}
+body[data-bs-theme=dark] .flatpickr-current-month input.cur-year[disabled],
+body[data-bs-theme=dark] .flatpickr-current-month input.cur-year[disabled]:hover {
+  font-size: 100%;
+  color: rgba(255, 255, 255, 0.5);
+  background: transparent;
+  pointer-events: none;
+}
+body[data-bs-theme=dark] .flatpickr-current-month .flatpickr-monthDropdown-months {
+  appearance: menulist;
+  background: #3f4458;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: inherit;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 300;
+  height: auto;
+  line-height: inherit;
+  margin: -1px 0 0 0;
+  outline: none;
+  padding: 0 0 0 0.5ch;
+  position: relative;
+  vertical-align: initial;
+  -webkit-box-sizing: border-box;
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+  width: auto;
+}
+body[data-bs-theme=dark] .flatpickr-current-month .flatpickr-monthDropdown-months:focus,
+body[data-bs-theme=dark] .flatpickr-current-month .flatpickr-monthDropdown-months:active {
+  outline: none;
+}
+body[data-bs-theme=dark] .flatpickr-current-month .flatpickr-monthDropdown-months:hover {
+  background: rgba(192, 187, 167, 0.05);
+}
+body[data-bs-theme=dark] .flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month {
+  background-color: #3f4458;
+  outline: none;
+  padding: 0;
+}
+body[data-bs-theme=dark] .flatpickr-weekdays {
+  background: transparent;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+}
+body[data-bs-theme=dark] .flatpickr-weekdays .flatpickr-weekdaycontainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+body[data-bs-theme=dark] span.flatpickr-weekday {
+  cursor: default;
+  font-size: 90%;
+  background: #3f4458;
+  color: #fff;
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: bolder;
+}
+body[data-bs-theme=dark] .dayContainer,
+body[data-bs-theme=dark] .flatpickr-weeks {
+  padding: 1px 0 0 0;
+}
+body[data-bs-theme=dark] .flatpickr-days {
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 307.875px;
+}
+body[data-bs-theme=dark] .flatpickr-days:focus {
+  outline: 0;
+}
+body[data-bs-theme=dark] .dayContainer {
+  padding: 0;
+  outline: 0;
+  text-align: left;
+  width: 307.875px;
+  min-width: 307.875px;
+  max-width: 307.875px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+  opacity: 1;
+}
+body[data-bs-theme=dark] .dayContainer + .dayContainer {
+  -webkit-box-shadow: -1px 0 0 #20222c;
+  box-shadow: -1px 0 0 #20222c;
+}
+body[data-bs-theme=dark] .flatpickr-day {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 150px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.95);
+  cursor: pointer;
+  font-weight: 400;
+  width: 14.2857143%;
+  -webkit-flex-basis: 14.2857143%;
+  -ms-flex-preferred-size: 14.2857143%;
+  flex-basis: 14.2857143%;
+  max-width: 39px;
+  height: 39px;
+  line-height: 39px;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+body[data-bs-theme=dark] .flatpickr-day.inRange,
+body[data-bs-theme=dark] .flatpickr-day.prevMonthDay.inRange,
+body[data-bs-theme=dark] .flatpickr-day.nextMonthDay.inRange,
+body[data-bs-theme=dark] .flatpickr-day.today.inRange,
+body[data-bs-theme=dark] .flatpickr-day.prevMonthDay.today.inRange,
+body[data-bs-theme=dark] .flatpickr-day.nextMonthDay.today.inRange,
+body[data-bs-theme=dark] .flatpickr-day:hover,
+body[data-bs-theme=dark] .flatpickr-day.prevMonthDay:hover,
+body[data-bs-theme=dark] .flatpickr-day.nextMonthDay:hover,
+body[data-bs-theme=dark] .flatpickr-day:focus,
+body[data-bs-theme=dark] .flatpickr-day.prevMonthDay:focus,
+body[data-bs-theme=dark] .flatpickr-day.nextMonthDay:focus {
+  cursor: pointer;
+  outline: 0;
+  background: #646c8c;
+  border-color: #646c8c;
+}
+body[data-bs-theme=dark] .flatpickr-day.today {
+  border-color: #eee;
+}
+body[data-bs-theme=dark] .flatpickr-day.today:hover,
+body[data-bs-theme=dark] .flatpickr-day.today:focus {
+  border-color: #eee;
+  background: #eee;
+  color: #3f4458;
+}
+body[data-bs-theme=dark] .flatpickr-day.selected,
+body[data-bs-theme=dark] .flatpickr-day.startRange,
+body[data-bs-theme=dark] .flatpickr-day.endRange,
+body[data-bs-theme=dark] .flatpickr-day.selected.inRange,
+body[data-bs-theme=dark] .flatpickr-day.startRange.inRange,
+body[data-bs-theme=dark] .flatpickr-day.endRange.inRange,
+body[data-bs-theme=dark] .flatpickr-day.selected:focus,
+body[data-bs-theme=dark] .flatpickr-day.startRange:focus,
+body[data-bs-theme=dark] .flatpickr-day.endRange:focus,
+body[data-bs-theme=dark] .flatpickr-day.selected:hover,
+body[data-bs-theme=dark] .flatpickr-day.startRange:hover,
+body[data-bs-theme=dark] .flatpickr-day.endRange:hover,
+body[data-bs-theme=dark] .flatpickr-day.selected.prevMonthDay,
+body[data-bs-theme=dark] .flatpickr-day.startRange.prevMonthDay,
+body[data-bs-theme=dark] .flatpickr-day.endRange.prevMonthDay,
+body[data-bs-theme=dark] .flatpickr-day.selected.nextMonthDay,
+body[data-bs-theme=dark] .flatpickr-day.startRange.nextMonthDay,
+body[data-bs-theme=dark] .flatpickr-day.endRange.nextMonthDay {
+  background: #80cbc4;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  border-color: #80cbc4;
+}
+body[data-bs-theme=dark] .flatpickr-day.selected.startRange,
+body[data-bs-theme=dark] .flatpickr-day.startRange.startRange,
+body[data-bs-theme=dark] .flatpickr-day.endRange.startRange {
+  border-radius: 50px 0 0 50px;
+}
+body[data-bs-theme=dark] .flatpickr-day.selected.endRange,
+body[data-bs-theme=dark] .flatpickr-day.startRange.endRange,
+body[data-bs-theme=dark] .flatpickr-day.endRange.endRange {
+  border-radius: 0 50px 50px 0;
+}
+body[data-bs-theme=dark] .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)),
+body[data-bs-theme=dark] .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)),
+body[data-bs-theme=dark] .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
+  -webkit-box-shadow: -10px 0 0 #80cbc4;
+  box-shadow: -10px 0 0 #80cbc4;
+}
+body[data-bs-theme=dark] .flatpickr-day.selected.startRange.endRange,
+body[data-bs-theme=dark] .flatpickr-day.startRange.startRange.endRange,
+body[data-bs-theme=dark] .flatpickr-day.endRange.startRange.endRange {
+  border-radius: 50px;
+}
+body[data-bs-theme=dark] .flatpickr-day.inRange {
+  border-radius: 0;
+  -webkit-box-shadow: -5px 0 0 #646c8c, 5px 0 0 #646c8c;
+  box-shadow: -5px 0 0 #646c8c, 5px 0 0 #646c8c;
+}
+body[data-bs-theme=dark] .flatpickr-day.flatpickr-disabled,
+body[data-bs-theme=dark] .flatpickr-day.flatpickr-disabled:hover,
+body[data-bs-theme=dark] .flatpickr-day.prevMonthDay,
+body[data-bs-theme=dark] .flatpickr-day.nextMonthDay,
+body[data-bs-theme=dark] .flatpickr-day.notAllowed,
+body[data-bs-theme=dark] .flatpickr-day.notAllowed.prevMonthDay,
+body[data-bs-theme=dark] .flatpickr-day.notAllowed.nextMonthDay {
+  color: rgba(255, 255, 255, 0.3);
+  background: transparent;
+  border-color: transparent;
+  cursor: default;
+}
+body[data-bs-theme=dark] .flatpickr-day.flatpickr-disabled,
+body[data-bs-theme=dark] .flatpickr-day.flatpickr-disabled:hover {
+  cursor: not-allowed;
+  color: rgba(255, 255, 255, 0.1);
+}
+body[data-bs-theme=dark] .flatpickr-day.week.selected {
+  border-radius: 0;
+  -webkit-box-shadow: -5px 0 0 #80cbc4, 5px 0 0 #80cbc4;
+  box-shadow: -5px 0 0 #80cbc4, 5px 0 0 #80cbc4;
+}
+body[data-bs-theme=dark] .flatpickr-day.hidden {
+  visibility: hidden;
+}
+body[data-bs-theme=dark] .rangeMode .flatpickr-day {
+  margin-top: 1px;
+}
+body[data-bs-theme=dark] .flatpickr-weekwrapper {
+  float: left;
+}
+body[data-bs-theme=dark] .flatpickr-weekwrapper .flatpickr-weeks {
+  padding: 0 12px;
+  -webkit-box-shadow: 1px 0 0 #20222c;
+  box-shadow: 1px 0 0 #20222c;
+}
+body[data-bs-theme=dark] .flatpickr-weekwrapper .flatpickr-weekday {
+  float: none;
+  width: 100%;
+  line-height: 28px;
+}
+body[data-bs-theme=dark] .flatpickr-weekwrapper span.flatpickr-day,
+body[data-bs-theme=dark] .flatpickr-weekwrapper span.flatpickr-day:hover {
+  display: block;
+  width: 100%;
+  max-width: none;
+  color: rgba(255, 255, 255, 0.3);
+  background: transparent;
+  cursor: default;
+  border: none;
+}
+body[data-bs-theme=dark] .flatpickr-innerContainer {
+  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body[data-bs-theme=dark] .flatpickr-rContainer {
+  display: inline-block;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body[data-bs-theme=dark] .flatpickr-time {
+  text-align: center;
+  outline: 0;
+  display: block;
+  height: 0;
+  line-height: 40px;
+  max-height: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+body[data-bs-theme=dark] .flatpickr-time:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body[data-bs-theme=dark] .flatpickr-time .numInputWrapper {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 40%;
+  height: 40px;
+  float: left;
+}
+body[data-bs-theme=dark] .flatpickr-time .numInputWrapper span.arrowUp:after {
+  border-bottom-color: rgba(255, 255, 255, 0.95);
+}
+body[data-bs-theme=dark] .flatpickr-time .numInputWrapper span.arrowDown:after {
+  border-top-color: rgba(255, 255, 255, 0.95);
+}
+body[data-bs-theme=dark] .flatpickr-time.hasSeconds .numInputWrapper {
+  width: 26%;
+}
+body[data-bs-theme=dark] .flatpickr-time.time24hr .numInputWrapper {
+  width: 49%;
+}
+body[data-bs-theme=dark] .flatpickr-time input {
+  background: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: inherit;
+  line-height: inherit;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 14px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+body[data-bs-theme=dark] .flatpickr-time input.flatpickr-hour {
+  font-weight: bold;
+}
+body[data-bs-theme=dark] .flatpickr-time input.flatpickr-minute,
+body[data-bs-theme=dark] .flatpickr-time input.flatpickr-second {
+  font-weight: 400;
+}
+body[data-bs-theme=dark] .flatpickr-time input:focus {
+  outline: 0;
+  border: 0;
+}
+body[data-bs-theme=dark] .flatpickr-time .flatpickr-time-separator,
+body[data-bs-theme=dark] .flatpickr-time .flatpickr-am-pm {
+  height: inherit;
+  float: left;
+  line-height: inherit;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: bold;
+  width: 2%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+body[data-bs-theme=dark] .flatpickr-time .flatpickr-am-pm {
+  outline: 0;
+  width: 18%;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 400;
+}
+body[data-bs-theme=dark] .flatpickr-time input:hover,
+body[data-bs-theme=dark] .flatpickr-time .flatpickr-am-pm:hover,
+body[data-bs-theme=dark] .flatpickr-time input:focus,
+body[data-bs-theme=dark] .flatpickr-time .flatpickr-am-pm:focus {
+  background: #6a7395;
+}
+body[data-bs-theme=dark] .flatpickr-input[readonly] {
+  cursor: pointer;
+}
+@-webkit-keyframes fpFadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fpFadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+body .breadcrumb-container {
+  background-color: transparent;
+}
+body .breadcrumb-container .container {
+  margin-bottom: 0 !important;
+}
+body .breadcrumb-container .breadcrumb {
+  background: none !important;
+  margin: 0;
+  padding: 1rem 1rem 1rem 0;
+}
+body .breadcrumb-container .breadcrumb ol {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+  list-style: none;
+  border-radius: 0.25rem;
+}
+body .breadcrumb-container .breadcrumb ol.outline {
+  background-color: white;
+  border: 1px solid #898989;
+}
+body .breadcrumb-container .breadcrumb ol.outline .breadcrumb-item {
+  color: #898989;
+}
+body .breadcrumb-container .breadcrumb ol.outline .breadcrumb-item a {
+  color: #898989;
+}
+body .breadcrumb-container .breadcrumb ol.blue {
+  background-color: #007fc2;
+}
+body .breadcrumb-container .breadcrumb ol.blue .breadcrumb-item {
+  color: white;
+}
+body .breadcrumb-container .breadcrumb ol.blue .breadcrumb-item a {
+  color: #f8f9fa;
+}
+body .breadcrumb-container .breadcrumb ol.light {
+  background-color: transparent;
+}
+body .breadcrumb-container .breadcrumb ol.light .breadcrumb-item {
+  color: #007fc2;
+}
+body .breadcrumb-container .breadcrumb ol.light .breadcrumb-item a {
+  color: #898989;
+}
+body .breadcrumb-container .breadcrumb .breadcrumb-item + .breadcrumb-item:before {
+  display: inline-block;
+  padding-right: 0.5rem;
+  color: #170101;
+  content: ">";
+}
+body .breadcrumb-container .breadcrumb .breadcrumb-item {
+  color: #898989;
+}
+body .breadcrumb-container .breadcrumb .breadcrumb-item a {
+  color: #e20c19;
+}
+body .breadcrumb-container .breadcrumb .breadcrumb-item.circle {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  background: #e20c19;
+}
+body .breadcrumb-container .breadcrumb .breadcrumb-item.circle a {
+  font-size: 20px;
+  color: white;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>NGine\Image\ImageResize | Template App – API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:NGine_Image_ImageResize" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Rechercher"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Afficher le menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Template App – API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Sommaire</a></li>
+                    <li><a href="../../search.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">classe</span></li>
+                        <li><a href="../../NGine.html">NGine</a></li><li class="backslash">\</li><li><a href="../../NGine/Image.html">Image</a></li><li class="backslash">\</li><li>ImageResize</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ImageResize    
+            </h1>
+    </div>
+
+    
+    <p>        classe
+    <strong>ImageResize</strong>
+</p>
+
+        
+        
+    
+        
+
+            <div class="description">
+            <p><p>PHP class to resize and scale images</p>
+</p>                    </div>
+            
+        
+            <h2>Constantes</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                                                                                        CROPTOP
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        CROPCENTRE
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        CROPCENTER
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        CROPBOTTOM
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        CROPLEFT
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        CROPRIGHT
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        CROPTOPCENTER
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        IMG_FLIP_HORIZONTAL
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        IMG_FLIP_VERTICAL
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        IMG_FLIP_BOTH
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Propriétés</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_quality_jpg">
+                                                                                
+                                                                                
+                                    </td>
+                <td>$quality_jpg</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_quality_webp">
+                                                                                
+                                                                                
+                                    </td>
+                <td>$quality_webp</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_quality_png">
+                                                                                
+                                                                                
+                                    </td>
+                <td>$quality_png</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_quality_truecolor">
+                                                                                
+                                                                                
+                                    </td>
+                <td>$quality_truecolor</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_gamma_correct">
+                                                                                
+                                                                                
+                                    </td>
+                <td>$gamma_correct</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_interlace">
+                                                                                
+                                                                                
+                                    </td>
+                <td>$interlace</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_source_type">
+                                                                                
+                                                                                
+                                    </td>
+                <td>$source_type</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_source_image">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$source_image</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_original_w">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$original_w</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_original_h">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$original_h</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dest_x">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$dest_x</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dest_y">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$dest_y</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_source_x">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$source_x</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_source_y">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$source_y</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dest_w">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$dest_w</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dest_h">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$dest_h</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_source_w">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$source_w</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_source_h">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$source_h</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_source_info">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$source_info</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_filters">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$filters</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Méthodes</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createFromString">createFromString</a>(string $image_data)
+        
+                                            <p><p>Create instance from a strng</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addFilter">addFilter</a>(callable $filter)
+        
+                                            <p><p>Add filter function for use right before save image to file.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_applyFilter">applyFilter</a>(mixed $image, int $filterType = IMG_FILTER_NEGATE)
+        
+                                            <p><p>Apply filters.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(string $filename)
+        
+                                            <p><p>Loads image source and its properties to the instanciated object</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_imageCreateJpegfromExif">imageCreateJpegfromExif</a>($filename)
+        
+                                            <p class="no-description">Pas de description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_save">save</a>(string $filename, int $image_type = null, int $quality = null, int $permissions = null, bool $exact_size = false)
+        
+                                            <p><p>Saves new image</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getImageAsString">getImageAsString</a>(int $image_type = null, int $quality = null)
+        
+                                            <p><p>Convert the image to string</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p><p>Convert the image to string with the current settings</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_output">output</a>(string $image_type = null, int $quality = null)
+        
+                                            <p><p>Outputs image to browser</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resizeToShortSide">resizeToShortSide</a>(int $max_short, bool $allow_enlarge = false)
+        
+                                            <p><p>Resizes image according to the given short side (short side proportional)</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resizeToLongSide">resizeToLongSide</a>(int $max_long, bool $allow_enlarge = false)
+        
+                                            <p><p>Resizes image according to the given long side (short side proportional)</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resizeToHeight">resizeToHeight</a>(int $height, bool $allow_enlarge = false)
+        
+                                            <p><p>Resizes image according to the given height (width proportional)</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resizeToWidth">resizeToWidth</a>(int $width, bool $allow_enlarge = false)
+        
+                                            <p><p>Resizes image according to the given width (height proportional)</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resizeToBestFit">resizeToBestFit</a>(int $max_width, int $max_height, bool $allow_enlarge = false)
+        
+                                            <p><p>Resizes image to best fit inside the given dimensions</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_scale">scale</a>(int|float $scale)
+        
+                                            <p><p>Resizes image according to given scale (proportionally)</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resize">resize</a>(int $width, int $height, bool $allow_enlarge = false)
+        
+                                            <p><p>Resizes image according to the given width and height</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_crop">crop</a>(int $width, int $height, bool $allow_enlarge = false, int $position = self::CROPCENTER)
+        
+                                            <p><p>Crops image according to the given width, height and crop position</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_freecrop">freecrop</a>(int $width, int $height, int $x = false, int $y = false)
+        
+                                            <p><p>Crops image according to the given width, height, x and y</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSourceWidth">getSourceWidth</a>()
+        
+                                            <p><p>Gets source width</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSourceHeight">getSourceHeight</a>()
+        
+                                            <p><p>Gets source height</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDestWidth">getDestWidth</a>()
+        
+                                            <p><p>Gets width of the destination image</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDestHeight">getDestHeight</a>()
+        
+                                            <p><p>Gets height of the destination image</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCropPosition">getCropPosition</a>(int $expectedSize, int $position = self::CROPCENTER)
+        
+                                            <p><p>Gets crop position (X or Y) according to the given position</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_gamma">gamma</a>(bool $enable = false)
+        
+                                            <p><p>Enable or not the gamma color correction on the image, enabled by default</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Détails</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_createFromString">
+        <div class="location">à la ligne 61</div>
+        <code>        static            <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+    <strong>createFromString</strong>(string $image_data)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create instance from a strng</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$image_data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../NGine/Image/ImageResizeException.html"><abbr title="NGine\Image\ImageResizeException">ImageResizeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFilter">
+        <div class="location">à la ligne 77</div>
+        <code>                    $this
+    <strong>addFilter</strong>(callable $filter)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add filter function for use right before save image to file.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$filter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_applyFilter">
+        <div class="location">à la ligne 89</div>
+        <code>            protected        
+    <strong>applyFilter</strong>(mixed $image, int $filterType = IMG_FILTER_NEGATE)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Apply filters.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$image</td>
+                <td><p>resource an image resource identifier</p>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$filterType</td>
+                <td><p>int type and default value is IMG_FILTER_NEGATE</p>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">à la ligne 103</div>
+        <code>                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+    <strong>__construct</strong>(string $filename)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Loads image source and its properties to the instanciated object</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../NGine/Image/ImageResizeException.html"><abbr title="NGine\Image\ImageResizeException">ImageResizeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_imageCreateJpegfromExif">
+        <div class="location">à la ligne 195</div>
+        <code>                    
+    <strong>imageCreateJpegfromExif</strong>($filename)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">Pas de description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$filename</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_save">
+        <div class="location">à la ligne 241</div>
+        <code>                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+    <strong>save</strong>(string $filename, int $image_type = null, int $quality = null, int $permissions = null, bool $exact_size = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Saves new image</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$image_type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$quality</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$permissions</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$exact_size</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../NGine/Image/ImageResizeException.html"><abbr title="NGine\Image\ImageResizeException">ImageResizeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getImageAsString">
+        <div class="location">à la ligne 421</div>
+        <code>                    string
+    <strong>getImageAsString</strong>(int $image_type = null, int $quality = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert the image to string</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$image_type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$quality</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">à la ligne 439</div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert the image to string with the current settings</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_output">
+        <div class="location">à la ligne 450</div>
+        <code>                    
+    <strong>output</strong>(string $image_type = null, int $quality = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Outputs image to browser</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$image_type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$quality</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../NGine/Image/ImageResizeException.html"><abbr title="NGine\Image\ImageResizeException">ImageResizeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resizeToShortSide">
+        <div class="location">à la ligne 466</div>
+        <code>                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+    <strong>resizeToShortSide</strong>(int $max_short, bool $allow_enlarge = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resizes image according to the given short side (short side proportional)</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$max_short</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allow_enlarge</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resizeToLongSide">
+        <div class="location">à la ligne 490</div>
+        <code>                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+    <strong>resizeToLongSide</strong>(int $max_long, bool $allow_enlarge = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resizes image according to the given long side (short side proportional)</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$max_long</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allow_enlarge</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resizeToHeight">
+        <div class="location">à la ligne 514</div>
+        <code>                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+    <strong>resizeToHeight</strong>(int $height, bool $allow_enlarge = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resizes image according to the given height (width proportional)</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$height</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allow_enlarge</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resizeToWidth">
+        <div class="location">à la ligne 531</div>
+        <code>                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+    <strong>resizeToWidth</strong>(int $width, bool $allow_enlarge = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resizes image according to the given width (height proportional)</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$width</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allow_enlarge</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resizeToBestFit">
+        <div class="location">à la ligne 549</div>
+        <code>                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+    <strong>resizeToBestFit</strong>(int $max_width, int $max_height, bool $allow_enlarge = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resizes image to best fit inside the given dimensions</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$max_width</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$max_height</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allow_enlarge</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_scale">
+        <div class="location">à la ligne 573</div>
+        <code>                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+    <strong>scale</strong>(int|float $scale)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resizes image according to given scale (proportionally)</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|float</td>
+                <td>$scale</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resize">
+        <div class="location">à la ligne 591</div>
+        <code>                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+    <strong>resize</strong>(int $width, int $height, bool $allow_enlarge = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resizes image according to the given width and height</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$width</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$height</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allow_enlarge</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_crop">
+        <div class="location">à la ligne 625</div>
+        <code>                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+    <strong>crop</strong>(int $width, int $height, bool $allow_enlarge = false, int $position = self::CROPCENTER)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Crops image according to the given width, height and crop position</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$width</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$height</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allow_enlarge</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$position</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_freecrop">
+        <div class="location">à la ligne 676</div>
+        <code>                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+    <strong>freecrop</strong>(int $width, int $height, int $x = false, int $y = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Crops image according to the given width, height, x and y</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$width</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$height</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$x</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$y</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSourceWidth">
+        <div class="location">à la ligne 706</div>
+        <code>                    int
+    <strong>getSourceWidth</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets source width</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSourceHeight">
+        <div class="location">à la ligne 716</div>
+        <code>                    int
+    <strong>getSourceHeight</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets source height</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDestWidth">
+        <div class="location">à la ligne 726</div>
+        <code>                    int
+    <strong>getDestWidth</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets width of the destination image</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDestHeight">
+        <div class="location">à la ligne 735</div>
+        <code>                    int
+    <strong>getDestHeight</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets height of the destination image</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCropPosition">
+        <div class="location">à la ligne 747</div>
+        <code>            protected        int
+    <strong>getCropPosition</strong>(int $expectedSize, int $position = self::CROPCENTER)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets crop position (X or Y) according to the given position</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$expectedSize</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$position</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_gamma">
+        <div class="location">à la ligne 764</div>
+        <code>                    <a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>
+    <strong>gamma</strong>(bool $enable = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Enable or not the gamma color correction on the image, enabled by default</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$enable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Généré par <a href="https://github.com/code-lts/doctum">Doctum, un générateur de documentation d'API, successeur de Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

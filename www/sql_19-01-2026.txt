@@ -1,0 +1,226 @@
+
+### /ajax/createAccount #####
+SELECT 1 FROM users WHERE login = :needle  LIMIT 1
+
+### /ajax/createAccount #####
+SELECT 1 FROM users WHERE email = :needle  LIMIT 1
+
+### /ajax/createAccount #####
+INSERT INTO users (level, login, email, password, cookie_token, reset_token, reset_expires_at, google2fa_secret, google2fa_enabled, failed_2fa_attempts) VALUES ('user', 'yoan', 'yoan30470@hotmail.fr', '$2y$10$dvX/j8T/mFBa1swlKXQb4OJUSLFUTIkk50/ByW.r5MqUzCnqS7uO6', NULL, NULL, NULL, NULL, '0', '0')
+
+### /ajax/login #####
+SELECT id, level, password FROM users WHERE (login = 'yoan30470@hotmail.fr' OR email = 'yoan30470@hotmail.fr') LIMIT 1
+
+### /ajax/login #####
+SELECT * FROM users WHERE id = '1' LIMIT 1
+
+### /ajax/login #####
+SHOW TABLES LIKE 'logs'
+
+### /ajax/login #####
+INSERT INTO logs 
+                                        SET date = NOW(),
+                                            level = 'ERROR',
+                                            ip  = '127.0.0.1',
+                                            request  = '/ajax/login',
+                                            message = 'Class "PragmaRX\Google2FA\Google2FA" not found
+#0 E:\projets\developpement\cleanminiphp\www\app\controllers\BoController.php(341): Google2FaManager->__construct()
+#1 E:\projets\developpement\cleanminiphp\www\app\controllers\BoController.php(247): BoController->ajaxLogin()
+#2 E:\projets\developpement\cleanminiphp\www\app\core\App.php(198): BoController->index('ajax', 'login')
+#3 E:\projets\developpement\cleanminiphp\www\app\core\App.php(87): App->invoke('BoController', 'index', Array)
+#4 E:\projets\developpement\cleanminiphp\www\public\index.php(63): App->run()
+#5 {main}',
+                                            file = 'E:\projets\developpement\cleanminiphp\www\app\managers\Google2FaManager.php',
+                                            line = '25',
+                                            trace = '#0 E:\projets\developpement\cleanminiphp\www\vendor\filp\whoops\src\Whoops\Handler\CallbackHandler.php(50): Handler::{closure}(Object(Error), Object(Whoops\Exception\Inspector), Object(Whoops\Run))
+#1 E:\projets\developpement\cleanminiphp\www\vendor\filp\whoops\src\Whoops\Run.php(403): Whoops\Handler\CallbackHandler->handle(Object(Error))
+#2 [internal function]: Whoops\Run->handleException(Object(Error))
+#3 {main}', 
+                                            infos = 'array (
+  'HTTP_HOST' => 'cleanminiphp.local',
+  'REQUEST_URI' => '/ajax/login',
+  'SERVER_NAME' => 'cleanminiphp.local',
+  'REQUEST_METHOD' => 'POST',
+  'HTTP_REFERER' => 'NC',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'HEADERS' => 
+  array (
+    'Host' => 'cleanminiphp.local',
+    'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+    'Accept' => '*/*',
+    'Accept-Language' => 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+    'Accept-Encoding' => 'gzip, deflate, br, zstd',
+    'X-Requested-With' => 'XMLHttpRequest',
+    'X-CSRF-Token' => '0d3354b68abafbd62962d7e4e90d501e5324776f340ebdc368f599adc78abea0',
+    'Content-Type' => 'application/json',
+    'Content-Length' => '138',
+    'Origin' => 'https://cleanminiphp.local',
+    'DNT' => '1',
+    'Sec-GPC' => '1',
+    'Connection' => 'keep-alive',
+    'Cookie' => 'PHPSESSID=hr1udlhr8rvam1h9epqsdn4ks6',
+    'Sec-Fetch-Dest' => 'empty',
+    'Sec-Fetch-Mode' => 'cors',
+    'Sec-Fetch-Site' => 'same-origin',
+    'Priority' => 'u=0',
+    'Cache-Control' => 'max-age=0',
+  ),
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+  'POST' => 
+  array (
+  ),
+  'PHP INPUT' => '{"login":"yoan30470@hotmail.fr","password":"Ardkordu.30*","csrf_token":"0d3354b68abafbd62962d7e4e90d501e5324776f340ebdc368f599adc78abea0"}',
+)'
+
+### /ajax/login #####
+SELECT id, level, password FROM users WHERE (login = 'yoan30470@hotmail.fr' OR email = 'yoan30470@hotmail.fr') LIMIT 1
+
+### /ajax/login #####
+
+                INSERT INTO logs_connexion_2fa
+                    (fk_users_id, success, reason, attempts_count, context, ip_address, user_agent, gmt_create)
+                VALUES
+                    (NULL, '0', 'identifiant ou mot de passe incorrect', NULL, 'LOGIN', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0', NOW())
+            
+
+### /ajax/login #####
+SELECT id, level, password FROM users WHERE (login = 'yoan30470@hotmail.fr' OR email = 'yoan30470@hotmail.fr') LIMIT 1
+
+### /ajax/login #####
+SELECT * FROM users WHERE id = '1' LIMIT 1
+
+### /ajax/login #####
+SHOW TABLES LIKE 'logs'
+
+### /ajax/login #####
+INSERT INTO logs 
+                                        SET date = NOW(),
+                                            level = 'ERROR',
+                                            ip  = '127.0.0.1',
+                                            request  = '/ajax/login',
+                                            message = 'Class "PragmaRX\Google2FA\Google2FA" not found
+#0 E:\projets\developpement\cleanminiphp\www\app\controllers\BoController.php(341): Google2FaManager->__construct()
+#1 E:\projets\developpement\cleanminiphp\www\app\controllers\BoController.php(247): BoController->ajaxLogin()
+#2 E:\projets\developpement\cleanminiphp\www\app\core\App.php(198): BoController->index('ajax', 'login')
+#3 E:\projets\developpement\cleanminiphp\www\app\core\App.php(87): App->invoke('BoController', 'index', Array)
+#4 E:\projets\developpement\cleanminiphp\www\public\index.php(63): App->run()
+#5 {main}',
+                                            file = 'E:\projets\developpement\cleanminiphp\www\app\managers\Google2FaManager.php',
+                                            line = '25',
+                                            trace = '#0 E:\projets\developpement\cleanminiphp\www\vendor\filp\whoops\src\Whoops\Handler\CallbackHandler.php(50): Handler::{closure}(Object(Error), Object(Whoops\Exception\Inspector), Object(Whoops\Run))
+#1 E:\projets\developpement\cleanminiphp\www\vendor\filp\whoops\src\Whoops\Run.php(403): Whoops\Handler\CallbackHandler->handle(Object(Error))
+#2 [internal function]: Whoops\Run->handleException(Object(Error))
+#3 {main}', 
+                                            infos = 'array (
+  'HTTP_HOST' => 'cleanminiphp.local',
+  'REQUEST_URI' => '/ajax/login',
+  'SERVER_NAME' => 'cleanminiphp.local',
+  'REQUEST_METHOD' => 'POST',
+  'HTTP_REFERER' => 'NC',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'HEADERS' => 
+  array (
+    'Host' => 'cleanminiphp.local',
+    'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+    'Accept' => '*/*',
+    'Accept-Language' => 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+    'Accept-Encoding' => 'gzip, deflate, br, zstd',
+    'X-Requested-With' => 'XMLHttpRequest',
+    'X-CSRF-Token' => 'da9d643b56ff33288d03b4d9930add3b30540bc1f65f481428156747e37fa1d0',
+    'Content-Type' => 'application/json',
+    'Content-Length' => '138',
+    'Origin' => 'https://cleanminiphp.local',
+    'DNT' => '1',
+    'Sec-GPC' => '1',
+    'Connection' => 'keep-alive',
+    'Cookie' => 'PHPSESSID=hr1udlhr8rvam1h9epqsdn4ks6',
+    'Sec-Fetch-Dest' => 'empty',
+    'Sec-Fetch-Mode' => 'cors',
+    'Sec-Fetch-Site' => 'same-origin',
+    'Priority' => 'u=0',
+    'Cache-Control' => 'max-age=0',
+  ),
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+  'POST' => 
+  array (
+  ),
+  'PHP INPUT' => '{"login":"yoan30470@hotmail.fr","password":"Ardkordu.30*","csrf_token":"da9d643b56ff33288d03b4d9930add3b30540bc1f65f481428156747e37fa1d0"}',
+)'
+
+### /ajax/login #####
+SELECT id, level, password FROM users WHERE (login = 'yoan30470@hotmail.fr' OR email = 'yoan30470@hotmail.fr') LIMIT 1
+
+### /ajax/login #####
+SELECT * FROM users WHERE id = '1' LIMIT 1
+
+### /ajax/login #####
+SHOW TABLES LIKE 'logs'
+
+### /ajax/login #####
+INSERT INTO logs 
+                                        SET date = NOW(),
+                                            level = 'ERROR',
+                                            ip  = '127.0.0.1',
+                                            request  = '/ajax/login',
+                                            message = 'Class "PragmaRX\Google2FA\Google2FA" not found
+#0 E:\projets\developpement\cleanminiphp\www\app\controllers\BoController.php(341): Google2FaManager->__construct()
+#1 E:\projets\developpement\cleanminiphp\www\app\controllers\BoController.php(247): BoController->ajaxLogin()
+#2 E:\projets\developpement\cleanminiphp\www\app\core\App.php(198): BoController->index('ajax', 'login')
+#3 E:\projets\developpement\cleanminiphp\www\app\core\App.php(87): App->invoke('BoController', 'index', Array)
+#4 E:\projets\developpement\cleanminiphp\www\public\index.php(63): App->run()
+#5 {main}',
+                                            file = 'E:\projets\developpement\cleanminiphp\www\app\managers\Google2FaManager.php',
+                                            line = '25',
+                                            trace = '#0 E:\projets\developpement\cleanminiphp\www\vendor\filp\whoops\src\Whoops\Handler\CallbackHandler.php(50): Handler::{closure}(Object(Error), Object(Whoops\Exception\Inspector), Object(Whoops\Run))
+#1 E:\projets\developpement\cleanminiphp\www\vendor\filp\whoops\src\Whoops\Run.php(403): Whoops\Handler\CallbackHandler->handle(Object(Error))
+#2 [internal function]: Whoops\Run->handleException(Object(Error))
+#3 {main}', 
+                                            infos = 'array (
+  'HTTP_HOST' => 'cleanminiphp.local',
+  'REQUEST_URI' => '/ajax/login',
+  'SERVER_NAME' => 'cleanminiphp.local',
+  'REQUEST_METHOD' => 'POST',
+  'HTTP_REFERER' => 'NC',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'HEADERS' => 
+  array (
+    'Host' => 'cleanminiphp.local',
+    'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+    'Accept' => '*/*',
+    'Accept-Language' => 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+    'Accept-Encoding' => 'gzip, deflate, br, zstd',
+    'X-Requested-With' => 'XMLHttpRequest',
+    'X-CSRF-Token' => '6221a2f7d0897157e047f11325ec70927ffee1b90dbaa90a9862297512db5e4f',
+    'Content-Type' => 'application/json',
+    'Content-Length' => '138',
+    'Origin' => 'https://cleanminiphp.local',
+    'DNT' => '1',
+    'Sec-GPC' => '1',
+    'Connection' => 'keep-alive',
+    'Cookie' => 'PHPSESSID=hr1udlhr8rvam1h9epqsdn4ks6',
+    'Sec-Fetch-Dest' => 'empty',
+    'Sec-Fetch-Mode' => 'cors',
+    'Sec-Fetch-Site' => 'same-origin',
+    'Priority' => 'u=0',
+    'Cache-Control' => 'max-age=0',
+  ),
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+  'POST' => 
+  array (
+  ),
+  'PHP INPUT' => '{"login":"yoan30470@hotmail.fr","password":"Ardkordu.30*","csrf_token":"6221a2f7d0897157e047f11325ec70927ffee1b90dbaa90a9862297512db5e4f"}',
+)'
+
+### /ajax/login #####
+SELECT id, level, password FROM users WHERE (login = 'yoan30470@hotmail.fr' OR email = 'yoan30470@hotmail.fr') LIMIT 1
+
+### /ajax/login #####
+SELECT * FROM users WHERE id = '1' LIMIT 1
+
+### /ajax/login #####
+
+                INSERT INTO logs_connexion_2fa
+                    (fk_users_id, success, reason, attempts_count, context, ip_address, user_agent, gmt_create)
+                VALUES
+                    ('1', '1', 'Connexion sans 2FA (2FA non activée pour ce compte)', NULL, 'LOGIN', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0', NOW())
+            

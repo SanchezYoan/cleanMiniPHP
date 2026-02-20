@@ -1,0 +1,60 @@
+{
+  "name": "template/app",
+  "type": "project",
+  "description": "",
+  "keywords": [
+    "NouveauProjet",
+    "api",
+    "digitalfit"
+  ],
+  "homepage": "https://xxx.xxx",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Equipe Dev N-Gine Innovation",
+      "email": "dev@digitalfit.tech",
+      "role": "developer"
+    }
+  ],
+    "config": {
+        "platform": {
+            "php": "8.3.0"
+        }
+    },
+    "scripts": {
+        "doc": "sh -c 'php ../tools/doctum/vendor/bin/doctum.php update doctum.php; code=$?; if [ $code -eq 64 ]; then exit 0; else exit $code; fi'",
+        "doc:force": "php ../tools/doctum/vendor/bin/doctum.php update doctum.php --force",
+        "doc:serve": "php -S 127.0.0.1:8080 -t build/docs"
+    },
+  "require": {
+    "phpmailer/phpmailer": "^7",
+    "guzzlehttp/guzzle": "^7.5",
+    "mobiledetect/mobiledetectlib": "^4",
+    "ext-mbstring": "*",
+    "ext-openssl": "*",
+    "ext-curl": "*",
+    "ext-pdo": "*",
+    "ext-gd": "*",
+    "ext-fileinfo": "*",
+    "ext-ctype": "*",
+    "kreait/firebase-php": "^7.12",
+    "pragmarx/google2fa": "^9.0",
+    "endroid/qr-code": "^6.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^12",
+    "roave/security-advisories": "dev-latest",
+    "filp/whoops": "^2.15"
+  },
+  "autoload": {
+    "psr-4": {
+      "": [
+        "app/core/",
+        "app/models/",
+        "app/managers/",
+        "app/libraries/",
+        "app/controllers/"
+      ]
+    }
+  }
+}

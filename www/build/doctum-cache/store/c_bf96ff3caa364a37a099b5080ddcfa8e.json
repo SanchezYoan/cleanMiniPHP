@@ -1,0 +1,101 @@
+{
+    "name": "AppController",
+    "line": 9,
+    "short_desc": "Orchestrer les points d'entr\u00e9e de l'API mobile.",
+    "long_desc": "R\u00e9alise les contr\u00f4les de s\u00e9curit\u00e9 (HTTPS, headers obligatoires), valide les\nheaders envoy\u00e9s par l'app puis route vers les actions correspondantes.",
+    "hint": null,
+    "tags": [],
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/controllers\/AppController.php",
+    "relative_file": null,
+    "hash": "b39d44b1eaa438bce6a9219a73ca5fedc35efb67",
+    "parent": "Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb",
+        "JsonResponseHandler": "Whoops\\Handler\\JsonResponseHandler",
+        "Run": "Whoops\\Run",
+        "ImageResize": "Gumlet\\ImageResize",
+        "ImageResizeException": "Gumlet\\ImageResizeException",
+        "UploadException": "ManagerException\\UploadException",
+        "Google2FA": "PragmaRX\\Google2FA\\Google2FA",
+        "Writer": "BaconQrCode\\Writer",
+        "SvgImageBackEnd": "BaconQrCode\\Renderer\\Image\\SvgImageBackEnd",
+        "RendererStyle": "BaconQrCode\\Renderer\\RendererStyle\\RendererStyle",
+        "ImageRenderer": "BaconQrCode\\Renderer\\ImageRenderer",
+        "Html": "NGine\\Html\\Html",
+        "GeoHelper": "NGine\\GeoHelper\\GeoHelper"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "beforeAction": {
+            "name": "beforeAction",
+            "line": 36,
+            "short_desc": "Ex\u00e9cuter la logique avant l'action du contr\u00f4leur.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "R\u00e9ponse imm\u00e9diate ou null pour poursuivre.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "index": {
+            "name": "index",
+            "line": 112,
+            "short_desc": "Router dynamiquement les appels API vers les m\u00e9thodes du contr\u00f4leur.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "R\u00e9ponse JSON correspondant \u00e0 la route ou une 404.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\PHPMailer\\PHPMailer\\Exception",
+                    "Lorsque l'invocation dynamique \u00e9choue."
+                ]
+            ],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": {
+        "ROUTES": {
+            "name": "ROUTES",
+            "line": 16,
+            "short_desc": "Routes reconnues par l'API (url \u2192 m\u00e9thode).",
+            "long_desc": "",
+            "modifiers": 4,
+            "tags": []
+        }
+    }
+}

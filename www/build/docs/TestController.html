@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>TestController | Template App – API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="doctum.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script async defer src="js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:TestController" data-root-path="" data-search-index-url="doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Rechercher"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Afficher le menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Template App – API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="namespaces.html">Namespaces</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Sommaire</a></li>
+                    <li><a href="search.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+    <div class="page-header">
+        <h1>TestController    
+            </h1>
+    </div>
+
+    
+    <p>        classe
+    <strong>TestController</strong>        étends <a href="Controller.html">Controller</a>
+</p>
+
+        
+        
+    
+                        <table>
+            <tr>
+                <td><span class="label label-warning">interface</span></td>
+                <td>&nbsp;Destiné aux vérifications locales.</td>
+            </tr>
+        </table>
+                &nbsp;
+    
+
+            <div class="description">
+            <p><p>Contrôleur de test.</p>
+</p>                    </div>
+            
+        
+            <h2>Constantes</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                                                                                        SUCCESS
+                                    </td>
+                <td class="last">
+                    <p><em><p>Code HTTP OK.</p>
+</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        ERR_INVALID_REQUEST
+                                    </td>
+                <td class="last">
+                    <p><em><p>Requête invalide.</p>
+</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        ERR_UNAUTHORIZED
+                                    </td>
+                <td class="last">
+                    <p><em><p>Non autorisé.</p>
+</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        ERROR_FORBIDDEN
+                                    </td>
+                <td class="last">
+                    <p><em><p>Accès interdit.</p>
+</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        ERR_NOT_FOUND
+                                    </td>
+                <td class="last">
+                    <p><em><p>Non trouvé.</p>
+</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        ERR_VALIDATION
+                                    </td>
+                <td class="last">
+                    <p><em><p>Erreur de validation.</p>
+</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        ERR_BAD_PARAMS
+                                    </td>
+                <td class="last">
+                    <p><em><p>Paramètres invalides.</p>
+</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        ERR_EXPIRED
+                                    </td>
+                <td class="last">
+                    <p><em><p>Session expirée.</p>
+</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        ERR_UNKNOWN_DEVICE
+                                    </td>
+                <td class="last">
+                    <p><em><p>Appareil inconnu.</p>
+</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        ERR_UNKNOWN_USER
+                                    </td>
+                <td class="last">
+                    <p><em><p>Utilisateur inconnu.</p>
+</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        ERR_INTERNAL_ERROR
+                                    </td>
+                <td class="last">
+                    <p><em><p>Erreur interne.</p>
+</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        ERR_CUSTOM
+                                    </td>
+                <td class="last">
+                    <p><em><p>Erreur serveur personnalisée.</p>
+</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Propriétés</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_breadcrumb">
+                                                                                <a href="NGine/Breadcrumb/Breadcrumb.html"><abbr title="NGine\Breadcrumb\Breadcrumb">Breadcrumb</abbr></a>|null
+                                                                                
+                                    </td>
+                <td>$breadcrumb</td>
+                <td class="last"><p>Fil d'Ariane du contrôleur.</p>
+</td>
+                <td><small>depuis&nbsp;<a href="Controller.html#property_breadcrumb">
+Controller</a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_user">
+                                                                                <a href="User.html">User</a>|null
+                                                                                
+                                    </td>
+                <td>$user</td>
+                <td class="last"><p>Utilisateur courant (API/app).</p>
+</td>
+                <td><small>depuis&nbsp;<a href="Controller.html#property_user">
+Controller</a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_admin">
+                                                                                <a href="User.html">User</a>|null
+                                                                                
+                                    </td>
+                <td>$admin</td>
+                <td class="last"><p>Administrateur courant (BO).</p>
+</td>
+                <td><small>depuis&nbsp;<a href="Controller.html#property_admin">
+Controller</a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_device">
+                                                                                Device|null
+                                                                                
+                                    </td>
+                <td>$device</td>
+                <td class="last"><p>Appareil courant (API/app).</p>
+</td>
+                <td><small>depuis&nbsp;<a href="Controller.html#property_device">
+Controller</a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_validator">
+                                                                                <a href="Validation.html">Validation</a>
+                                                                                
+                                    </td>
+                <td>$validator</td>
+                <td class="last"><p>Validateur de champs.</p>
+</td>
+                <td><small>depuis&nbsp;<a href="Controller.html#property_validator">
+Controller</a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_lang">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$lang</td>
+                <td class="last"><p>Langue courante (ISO 639-1).</p>
+</td>
+                <td><small>depuis&nbsp;<a href="Controller.html#property_lang">
+Controller</a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_request">
+                                                                                <a href="Request.html">Request</a>
+                                                                                
+                                    </td>
+                <td>$request</td>
+                <td class="last"><p>Requête HTTP en cours.</p>
+</td>
+                <td><small>depuis&nbsp;<a href="Controller.html#property_request">
+Controller</a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_response">
+                                                                                <a href="Response.html">Response</a>
+                                                                                
+                                    </td>
+                <td>$response</td>
+                <td class="last"><p>Réponse HTTP en cours.</p>
+</td>
+                <td><small>depuis&nbsp;<a href="Controller.html#property_response">
+Controller</a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_components">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$components</td>
+                <td class="last"><p>Composants chargés.</p>
+</td>
+                <td><small>depuis&nbsp;<a href="Controller.html#property_components">
+Controller</a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_view">
+                                        protected                                        <a href="View.html">View</a>
+                                                                                
+                                    </td>
+                <td>$view</td>
+                <td class="last"><p>Vue associée au contrôleur.</p>
+</td>
+                <td><small>depuis&nbsp;<a href="Controller.html#property_view">
+Controller</a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Méthodes</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="Request.html">Request</a>|null $request = null, <a href="Response.html">Response</a>|null $response = null)
+        
+                                            <p><p>Construire un contrôleur et hydrater les dépendances.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Controller.html#method___construct">
+Controller</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Response.html">Response</a>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_startupProcess">startupProcess</a>()
+        
+                                            <p><p>Exécuter la phase de démarrage du contrôleur.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Controller.html#method_startupProcess">
+Controller</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Response.html">Response</a>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_beforeAction">beforeAction</a>()
+        
+                                            <p><p>Exécuter la logique avant l'action du contrôleur.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Controller.html#method_beforeAction">
+Controller</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Response.html">Response</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_error">error</a>(int $code, string $message)
+        
+                                            <p><p>Rendre une page d'erreur HTML.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Controller.html#method_error">
+Controller</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___get">__get</a>(string $name)
+        
+                                            <p><p>Charger dynamiquement un modèle par son nom.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Controller.html#method___get">
+Controller</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___set">__set</a>(string $name, object $value)
+        
+                                            <p><p>Affecter dynamiquement une propriété.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Controller.html#method___set">
+Controller</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___isset">__isset</a>(string $name)
+        
+                                            <p><p>Vérifier si une propriété dynamique existe.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Controller.html#method___isset">
+Controller</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_forceSSL">forceSSL</a>()
+        
+                                            <p><p>Forcer une requête HTTPS.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Controller.html#method_forceSSL">
+Controller</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_index">index</a>()
+        
+                                            <p><p>Point d'entrée de test.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Détails</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">dans <a href="Controller.html#method___construct">
+Controller</a> à la ligne 121</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="Request.html">Request</a>|null $request = null, <a href="Response.html">Response</a>|null $response = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Construire un contrôleur et hydrater les dépendances.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Request.html">Request</a>|null</td>
+                <td>$request</td>
+                <td><p>Requête injectée.</p>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="Response.html">Response</a>|null</td>
+                <td>$response</td>
+                <td><p>Réponse injectée.</p>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="PHPMailer\PHPMailer\Exception">Exception</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_startupProcess">
+        <div class="location">dans <a href="Controller.html#method_startupProcess">
+Controller</a> à la ligne 144</div>
+        <code>                    <a href="Response.html">Response</a>|null
+    <strong>startupProcess</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Exécuter la phase de démarrage du contrôleur.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Response.html">Response</a>|null</td>
+            <td><p>Réponse immédiate ou null pour continuer.</p>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="PHPMailer\PHPMailer\Exception">Exception</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_beforeAction">
+        <div class="location">dans <a href="Controller.html#method_beforeAction">
+Controller</a> à la ligne 160</div>
+        <code>                    <a href="Response.html">Response</a>|null
+    <strong>beforeAction</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Exécuter la logique avant l'action du contrôleur.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Response.html">Response</a>|null</td>
+            <td><p>Réponse immédiate ou null pour poursuivre.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_error">
+        <div class="location">dans <a href="Controller.html#method_error">
+Controller</a> à la ligne 172</div>
+        <code>                    <a href="Response.html">Response</a>
+    <strong>error</strong>(int $code, string $message)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Rendre une page d'erreur HTML.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$code</td>
+                <td><p>Code HTTP.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>Message à afficher.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Response.html">Response</a></td>
+            <td><p>Réponse HTML.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location">dans <a href="Controller.html#method___get">
+Controller</a> à la ligne 191</div>
+        <code>                    object
+    <strong>__get</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Charger dynamiquement un modèle par son nom.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Nom de propriété demandé.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td><p>Instance créée.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___set">
+        <div class="location">dans <a href="Controller.html#method___set">
+Controller</a> à la ligne 211</div>
+        <code>                    void
+    <strong>__set</strong>(string $name, object $value)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Affecter dynamiquement une propriété.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Nom de propriété.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>object</td>
+                <td>$value</td>
+                <td><p>Valeur à stocker.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___isset">
+        <div class="location">dans <a href="Controller.html#method___isset">
+Controller</a> à la ligne 224</div>
+        <code>                    bool
+    <strong>__isset</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Vérifier si une propriété dynamique existe.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Nom de propriété.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true si définie.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forceSSL">
+        <div class="location">dans <a href="Controller.html#method_forceSSL">
+Controller</a> à la ligne 235</div>
+        <code>                    void
+    <strong>forceSSL</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Forcer une requête HTTPS.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_index">
+        <div class="location">à la ligne 15</div>
+        <code>                    void
+    <strong>index</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Point d'entrée de test.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Généré par <a href="https://github.com/code-lts/doctum">Doctum, un générateur de documentation d'API, successeur de Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

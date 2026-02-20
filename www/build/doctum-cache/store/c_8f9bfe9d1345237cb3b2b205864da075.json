@@ -1,0 +1,1574 @@
+{
+    "name": "User",
+    "line": 8,
+    "short_desc": "Repr\u00e9senter un utilisateur applicatif.",
+    "long_desc": "G\u00e8re la persistance, l'authentification et l'\u00e9tat 2FA.",
+    "hint": null,
+    "tags": [],
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/models\/User.php",
+    "relative_file": null,
+    "hash": "5c9b27ba9deb0981eba5cf1e588c1068be06bcac",
+    "parent": "Model",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb",
+        "JsonResponseHandler": "Whoops\\Handler\\JsonResponseHandler",
+        "Run": "Whoops\\Run",
+        "ImageResize": "Gumlet\\ImageResize",
+        "ImageResizeException": "Gumlet\\ImageResizeException",
+        "UploadException": "ManagerException\\UploadException",
+        "Google2FA": "PragmaRX\\Google2FA\\Google2FA",
+        "Writer": "BaconQrCode\\Writer",
+        "SvgImageBackEnd": "BaconQrCode\\Renderer\\Image\\SvgImageBackEnd",
+        "RendererStyle": "BaconQrCode\\Renderer\\RendererStyle\\RendererStyle",
+        "ImageRenderer": "BaconQrCode\\Renderer\\ImageRenderer"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 110,
+            "short_desc": "Charger un utilisateur si l'identifiant est fourni.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 110,
+                    "short_desc": "Identifiant utilisateur.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "null",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "createUsersTable": {
+            "name": "createUsersTable",
+            "line": 146,
+            "short_desc": "Cr\u00e9er la table users si elle n'existe pas.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getAll": {
+            "name": "getAll",
+            "line": 183,
+            "short_desc": "R\u00e9cup\u00e9rer tous les utilisateurs.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Liste d'objets User.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getId": {
+            "name": "getId",
+            "line": 201,
+            "short_desc": "R\u00e9cup\u00e9rer l'identifiant utilisateur.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "Identifiant.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setId": {
+            "name": "setId",
+            "line": 213,
+            "short_desc": "D\u00e9finir l'identifiant utilisateur.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 213,
+                    "short_desc": "Identifiant.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getLevel": {
+            "name": "getLevel",
+            "line": 224,
+            "short_desc": "R\u00e9cup\u00e9rer le r\u00f4le utilisateur.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "R\u00f4le.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setLevel": {
+            "name": "setLevel",
+            "line": 236,
+            "short_desc": "D\u00e9finir le r\u00f4le utilisateur.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "level": {
+                    "name": "level",
+                    "line": 236,
+                    "short_desc": "R\u00f4le.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getLogin": {
+            "name": "getLogin",
+            "line": 247,
+            "short_desc": "R\u00e9cup\u00e9rer le login.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Login.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setLogin": {
+            "name": "setLogin",
+            "line": 259,
+            "short_desc": "D\u00e9finir le login.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "login": {
+                    "name": "login",
+                    "line": 259,
+                    "short_desc": "Login.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getEmail": {
+            "name": "getEmail",
+            "line": 270,
+            "short_desc": "R\u00e9cup\u00e9rer l'email.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Email.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setEmail": {
+            "name": "setEmail",
+            "line": 282,
+            "short_desc": "D\u00e9finir l'email.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "email": {
+                    "name": "email",
+                    "line": 282,
+                    "short_desc": "Email.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getPassword": {
+            "name": "getPassword",
+            "line": 293,
+            "short_desc": "R\u00e9cup\u00e9rer le mot de passe hach\u00e9.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Hash du mot de passe.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setPassword": {
+            "name": "setPassword",
+            "line": 305,
+            "short_desc": "D\u00e9finir le mot de passe (hach\u00e9).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "password": {
+                    "name": "password",
+                    "line": 305,
+                    "short_desc": "Hash du mot de passe.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getLastActivity": {
+            "name": "getLastActivity",
+            "line": 316,
+            "short_desc": "R\u00e9cup\u00e9rer la derni\u00e8re activit\u00e9.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\DateTime",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Date de derni\u00e8re activit\u00e9.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setLastActivity": {
+            "name": "setLastActivity",
+            "line": 328,
+            "short_desc": "D\u00e9finir la derni\u00e8re activit\u00e9.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "lastActivity": {
+                    "name": "lastActivity",
+                    "line": 328,
+                    "short_desc": "Date de derni\u00e8re activit\u00e9.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\DateTime",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getCreatedAt": {
+            "name": "getCreatedAt",
+            "line": 339,
+            "short_desc": "R\u00e9cup\u00e9rer la date de cr\u00e9ation.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\DateTime",
+                    false
+                ]
+            ],
+            "hint_desc": "Date de cr\u00e9ation.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setCreatedAt": {
+            "name": "setCreatedAt",
+            "line": 351,
+            "short_desc": "D\u00e9finir la date de cr\u00e9ation.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "createdAt": {
+                    "name": "createdAt",
+                    "line": 351,
+                    "short_desc": "Date de cr\u00e9ation.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\DateTime",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getCookieToken": {
+            "name": "getCookieToken",
+            "line": 362,
+            "short_desc": "R\u00e9cup\u00e9rer le token cookie.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Jeton cookie.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setCookieToken": {
+            "name": "setCookieToken",
+            "line": 374,
+            "short_desc": "D\u00e9finir le token cookie.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "cookieToken": {
+                    "name": "cookieToken",
+                    "line": 374,
+                    "short_desc": "Jeton cookie.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getResetToken": {
+            "name": "getResetToken",
+            "line": 385,
+            "short_desc": "R\u00e9cup\u00e9rer le hash de token de r\u00e9initialisation.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Hash du token.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setResetTokenHash": {
+            "name": "setResetTokenHash",
+            "line": 397,
+            "short_desc": "D\u00e9finir le hash de token de r\u00e9initialisation.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "resetToken": {
+                    "name": "resetToken",
+                    "line": 397,
+                    "short_desc": "Hash du token.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getResetTokenHash": {
+            "name": "getResetTokenHash",
+            "line": 408,
+            "short_desc": "R\u00e9cup\u00e9rer le hash de token de r\u00e9initialisation.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Hash du token.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getResetExpiresAt": {
+            "name": "getResetExpiresAt",
+            "line": 418,
+            "short_desc": "R\u00e9cup\u00e9rer la date d'expiration du reset.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\DateTime",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Date d'expiration.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setResetExpiresAt": {
+            "name": "setResetExpiresAt",
+            "line": 430,
+            "short_desc": "D\u00e9finir la date d'expiration du reset.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "resetExpiresAt": {
+                    "name": "resetExpiresAt",
+                    "line": 430,
+                    "short_desc": "Date d'expiration.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\DateTime",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getGoogle2faSecret": {
+            "name": "getGoogle2faSecret",
+            "line": 441,
+            "short_desc": "R\u00e9cup\u00e9rer le secret Google Authenticator.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Secret 2FA.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setGoogle2faSecret": {
+            "name": "setGoogle2faSecret",
+            "line": 453,
+            "short_desc": "D\u00e9finir le secret Google Authenticator.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "google2faSecret": {
+                    "name": "google2faSecret",
+                    "line": 453,
+                    "short_desc": "Secret 2FA.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getGoogle2faEnabled": {
+            "name": "getGoogle2faEnabled",
+            "line": 464,
+            "short_desc": "R\u00e9cup\u00e9rer l'\u00e9tat d'activation 2FA.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si activ\u00e9e.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setGoogle2faEnabled": {
+            "name": "setGoogle2faEnabled",
+            "line": 476,
+            "short_desc": "D\u00e9finir l'\u00e9tat d'activation 2FA.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "google2faEnabled": {
+                    "name": "google2faEnabled",
+                    "line": 476,
+                    "short_desc": "true pour activer.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "isTwoFactorActive": {
+            "name": "isTwoFactorActive",
+            "line": 487,
+            "short_desc": "V\u00e9rifier si la 2FA est active.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si 2FA activ\u00e9e.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getFailed2faAttempts": {
+            "name": "getFailed2faAttempts",
+            "line": 497,
+            "short_desc": "R\u00e9cup\u00e9rer le nombre d'\u00e9checs 2FA.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "Nombre d'\u00e9checs.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setFailed2faAttempts": {
+            "name": "setFailed2faAttempts",
+            "line": 509,
+            "short_desc": "D\u00e9finir le nombre d'\u00e9checs 2FA.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "failed2faAttempts": {
+                    "name": "failed2faAttempts",
+                    "line": 509,
+                    "short_desc": "Compteur d'\u00e9checs.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getLast2faAttempt": {
+            "name": "getLast2faAttempt",
+            "line": 520,
+            "short_desc": "R\u00e9cup\u00e9rer la date de derni\u00e8re tentative 2FA.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\DateTime",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Date de derni\u00e8re tentative.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setLast2faAttempt": {
+            "name": "setLast2faAttempt",
+            "line": 532,
+            "short_desc": "D\u00e9finir la date de derni\u00e8re tentative 2FA.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "last2faAttempt": {
+                    "name": "last2faAttempt",
+                    "line": 532,
+                    "short_desc": "Date de derni\u00e8re tentative.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\DateTime",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "exists": {
+            "name": "exists",
+            "line": 543,
+            "short_desc": "V\u00e9rifier si l'utilisateur existe en base.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si l'utilisateur est charg\u00e9.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "save": {
+            "name": "save",
+            "line": 555,
+            "short_desc": "Sauvegarder l'utilisateur en base.",
+            "long_desc": "Effets de bord : \u00e9critures en base (INSERT\/UPDATE).",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "delete": {
+            "name": "delete",
+            "line": 598,
+            "short_desc": "Supprimer un utilisateur.",
+            "long_desc": "Effets de bord : suppression en base.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "checkAccess": {
+            "name": "checkAccess",
+            "line": 614,
+            "short_desc": "V\u00e9rifier le niveau d'acc\u00e8s d'un utilisateur.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si l'acc\u00e8s est autoris\u00e9.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "userRole": {
+                    "name": "userRole",
+                    "line": 614,
+                    "short_desc": "R\u00f4le de l'utilisateur.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "requiredRole": {
+                    "name": "requiredRole",
+                    "line": 614,
+                    "short_desc": "R\u00f4le requis.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "login": {
+            "name": "login",
+            "line": 643,
+            "short_desc": "Authentifier un utilisateur via login\/email et mot de passe.",
+            "long_desc": "Effets de bord : cr\u00e9ation d'un compte adminsu par d\u00e9faut si absent.",
+            "hint": [
+                [
+                    "\\stdClass",
+                    false
+                ]
+            ],
+            "hint_desc": "Objet contenant {error:bool, admin?:User}.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "login": {
+                    "name": "login",
+                    "line": 643,
+                    "short_desc": "Login ou email.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "password": {
+                    "name": "password",
+                    "line": 643,
+                    "short_desc": "Mot de passe en clair.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getByEmail": {
+            "name": "getByEmail",
+            "line": 715,
+            "short_desc": "R\u00e9cup\u00e9rer un utilisateur par email.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Utilisateur trouv\u00e9 ou null.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "email": {
+                    "name": "email",
+                    "line": 715,
+                    "short_desc": "Email recherch\u00e9.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "hashResetToken": {
+            "name": "hashResetToken",
+            "line": 735,
+            "short_desc": "Hacher un token de r\u00e9initialisation avec HMAC.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Hash HMAC.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "token": {
+                    "name": "token",
+                    "line": 735,
+                    "short_desc": "Token en clair.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "isResetTokenValid": {
+            "name": "isResetTokenValid",
+            "line": 748,
+            "short_desc": "V\u00e9rifier un token de r\u00e9initialisation.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si le token est valide.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "token": {
+                    "name": "token",
+                    "line": 748,
+                    "short_desc": "Token en clair.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "isTwoFactorTemporarilyLocked": {
+            "name": "isTwoFactorTemporarilyLocked",
+            "line": 771,
+            "short_desc": "V\u00e9rifier si le compte est temporairement verrouill\u00e9 en 2FA.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si verrouill\u00e9.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "lockMinutes": {
+                    "name": "lockMinutes",
+                    "line": 771,
+                    "short_desc": "Dur\u00e9e de verrouillage en minutes.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "60",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getTwoFactorLockRemainingMinutes": {
+            "name": "getTwoFactorLockRemainingMinutes",
+            "line": 799,
+            "short_desc": "Calculer le d\u00e9lai restant avant d\u00e9verrouillage 2FA.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "Minutes restantes (0 si non bloqu\u00e9).",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "lockMinutes": {
+                    "name": "lockMinutes",
+                    "line": 799,
+                    "short_desc": "Dur\u00e9e de verrouillage en minutes.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "60",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "resetTwoFactorLockIfExpired": {
+            "name": "resetTwoFactorLockIfExpired",
+            "line": 828,
+            "short_desc": "R\u00e9initialiser le blocage 2FA si le d\u00e9lai est d\u00e9pass\u00e9.",
+            "long_desc": "Effets de bord : met \u00e0 jour l'utilisateur en base.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "lockMinutes": {
+                    "name": "lockMinutes",
+                    "line": 828,
+                    "short_desc": "Dur\u00e9e de verrouillage en minutes.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "60",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getTwoFactorBlockedUsers": {
+            "name": "getTwoFactorBlockedUsers",
+            "line": 852,
+            "short_desc": "R\u00e9cup\u00e9rer les utilisateurs bloqu\u00e9s par la 2FA.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Liste d'utilisateurs bloqu\u00e9s.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": {
+        "ADMINSU": {
+            "name": "ADMINSU",
+            "line": 13,
+            "short_desc": "R\u00f4le super administrateur.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "ADMIN": {
+            "name": "ADMIN",
+            "line": 18,
+            "short_desc": "R\u00f4le administrateur.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "USERSU": {
+            "name": "USERSU",
+            "line": 23,
+            "short_desc": "R\u00f4le super utilisateur.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "USER": {
+            "name": "USER",
+            "line": 28,
+            "short_desc": "R\u00f4le utilisateur standard.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        }
+    }
+}

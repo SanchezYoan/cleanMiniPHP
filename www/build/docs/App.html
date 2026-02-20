@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>App | Template App – API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="doctum.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script async defer src="js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:App" data-root-path="" data-search-index-url="doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Rechercher"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Afficher le menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Template App – API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="namespaces.html">Namespaces</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Sommaire</a></li>
+                    <li><a href="search.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+    <div class="page-header">
+        <h1>App    
+            </h1>
+    </div>
+
+    
+    <p>        classe
+    <strong>App</strong>
+</p>
+
+        
+        
+    
+        
+
+            <div class="description">
+            <p><p>Diriger la requête entrante vers le contrôleur approprié.</p>
+</p>            <p><p>La classe instancie la Request/Response, résout le contrôleur et déclenche
+l'action ciblée en tenant compte du sous-domaine et de l'URL.</p>
+</p>        </div>
+            
+        
+    
+    
+            <h2>Méthodes</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p><p>Construire l'application et initialiser Request/Response.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Response.html">Response</a>|string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_run">run</a>()
+        
+                                            <p><p>Exécuter la résolution du contrôleur et de l'action cible.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_splitUrl">splitUrl</a>()
+        
+                                            <p><p>Découper l'URL courante et déduire contrôleur, action et arguments.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Détails</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">à la ligne 52</div>
+        <code>                    
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Construire l'application et initialiser Request/Response.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_run">
+        <div class="location">à la ligne 71</div>
+        <code>                    <a href="Response.html">Response</a>|string
+    <strong>run</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Exécuter la résolution du contrôleur et de l'action cible.</p>
+</p>                <p><p>Définit le contrôleur par défaut selon le sous-domaine, parse l'URL puis
+invoque l'action. La réponse HTTP est renvoyée ou directement envoyée.</p>
+</p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Response.html">Response</a>|string</td>
+            <td><p>Corps de réponse ou instance Response envoyée.</p>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="PHPMailer\PHPMailer\Exception">Exception</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_splitUrl">
+        <div class="location">à la ligne 142</div>
+        <code>                    void
+    <strong>splitUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Découper l'URL courante et déduire contrôleur, action et arguments.</p>
+</p>                <p><p>Détermine le contrôleur en fonction du sous-domaine (BO/APP/EDITOR) et
+renseigne API_VERSION pour l'éditeur. Les segments restants alimentent
+la liste d'arguments.</p>
+</p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Généré par <a href="https://github.com/code-lts/doctum">Doctum, un générateur de documentation d'API, successeur de Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

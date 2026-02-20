@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Google2FaManager | Template App – API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="doctum.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script async defer src="js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Google2FaManager" data-root-path="" data-search-index-url="doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Rechercher"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Afficher le menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Template App – API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="namespaces.html">Namespaces</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Sommaire</a></li>
+                    <li><a href="search.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+    <div class="page-header">
+        <h1>Google2FaManager    
+            </h1>
+    </div>
+
+    
+    <p>        classe
+    <strong>Google2FaManager</strong>        étends <a href="Manager.html">Manager</a>
+</p>
+
+        
+        
+    
+        
+
+            <div class="description">
+            <p><p>Encapsuler la logique de double authentification Google Authenticator.</p>
+</p>            <p><p>Centralise la génération de secrets/QR codes et la vérification de codes TOTP
+en s'appuyant sur la configuration et l'état utilisateur.</p>
+</p>        </div>
+            
+        
+    
+            <h2>Propriétés</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_errors">
+                                        protected                                        list&lt;string&gt;
+                                                                                
+                                    </td>
+                <td>$errors</td>
+                <td class="last"><p>Liste des erreurs collectées lors des opérations métier.</p>
+</td>
+                <td><small>depuis&nbsp;<a href="Manager.html#property_errors">
+Manager</a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Méthodes</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validate">validate</a>(array $data)
+        
+                                            <p><p>Valider des données métier (à implémenter dans les classes filles).</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Manager.html#method_validate">
+Manager</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_errors">errors</a>()
+        
+                                            <p><p>Récupérer la liste des erreurs courantes.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Manager.html#method_errors">
+Manager</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasErrors">hasErrors</a>()
+        
+                                            <p><p>Vérifier la présence d'au moins une erreur.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Manager.html#method_hasErrors">
+Manager</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addError">addError</a>(string $error, bool $sendMail = false)
+        
+                                            <p><p>Ajouter une erreur et logger l'information.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Manager.html#method_addError">
+Manager</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addErrors">addErrors</a>(array $errors, bool $sendMail = false)
+        
+                                            <p><p>Ajouter plusieurs erreurs et les journaliser.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Manager.html#method_addErrors">
+Manager</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_errorsAsString">errorsAsString</a>()
+        
+                                            <p><p>Retourner les erreurs concaténées.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Manager.html#method_errorsAsString">
+Manager</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resetErrors">resetErrors</a>()
+        
+                                            <p><p>Réinitialiser complètement l'état des erreurs.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Manager.html#method_resetErrors">
+Manager</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p class="no-description">Pas de description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_is2faAllowedForUser">is2faAllowedForUser</a>(<a href="User.html">User</a> $user)
+        
+                                            <p><p>Déterminer si la 2FA est autorisée pour le rôle d'un utilisateur.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_is2faEnabledForUser">is2faEnabledForUser</a>(<a href="User.html">User</a> $user)
+        
+                                            <p><p>Vérifier si la 2FA est activée pour un utilisateur.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_enable2faForUser">enable2faForUser</a>(<a href="User.html">User</a> $user)
+        
+                                            <p><p>Activer la 2FA pour un utilisateur autorisé.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_disable2faForUser">disable2faForUser</a>(<a href="User.html">User</a> $user)
+        
+                                            <p><p>Désactiver la 2FA pour un utilisateur.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getOrCreateSecretForUser">getOrCreateSecretForUser</a>(<a href="User.html">User</a> $user)
+        
+                                            <p><p>Obtenir ou créer le secret 2FA d'un utilisateur.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getOtpAuthUrlForUser">getOtpAuthUrlForUser</a>(string $companyName, string $userEmail, string $secret)
+        
+                                            <p><p>Générer l'URL otpauth:// utilisée par Google Authenticator.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_generateInlineQrCode">generateInlineQrCode</a>(string $otpAuthUrl, int $size = 220)
+        
+                                            <p><p>Générer un QR code SVG inline à partir d'une URL otpauth://.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_verifyCodeForUser">verifyCodeForUser</a>(<a href="User.html">User</a> $user, string $code)
+        
+                                            <p><p>Vérifier un code TOTP pour un utilisateur.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_verifyCode">verifyCode</a>(string $secret, string $code)
+        
+                                            <p><p>Vérifier un code TOTP à partir d'un secret.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Détails</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_validate">
+        <div class="location">dans <a href="Manager.html#method_validate">
+Manager</a> à la ligne 26</div>
+        <code>                    bool
+    <strong>validate</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Valider des données métier (à implémenter dans les classes filles).</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td><p>Jeu de données à contrôler.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true si les données sont valides.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_errors">
+        <div class="location">dans <a href="Manager.html#method_errors">
+Manager</a> à la ligne 36</div>
+        <code>                    array
+    <strong>errors</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer la liste des erreurs courantes.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>erreurs recensées.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasErrors">
+        <div class="location">dans <a href="Manager.html#method_hasErrors">
+Manager</a> à la ligne 44</div>
+        <code>                    bool
+    <strong>hasErrors</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Vérifier la présence d'au moins une erreur.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addError">
+        <div class="location">dans <a href="Manager.html#method_addError">
+Manager</a> à la ligne 55</div>
+        <code>                    void
+    <strong>addError</strong>(string $error, bool $sendMail = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Ajouter une erreur et logger l'information.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$error</td>
+                <td><p>Message d'erreur.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$sendMail</td>
+                <td><p>Indique si le logger doit notifier par mail.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addErrors">
+        <div class="location">dans <a href="Manager.html#method_addErrors">
+Manager</a> à la ligne 72</div>
+        <code>                    void
+    <strong>addErrors</strong>(array $errors, bool $sendMail = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Ajouter plusieurs erreurs et les journaliser.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$errors</td>
+                <td><p>Messages d'erreur à ajouter.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$sendMail</td>
+                <td><p>Indique si le logger doit notifier par mail.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_errorsAsString">
+        <div class="location">dans <a href="Manager.html#method_errorsAsString">
+Manager</a> à la ligne 83</div>
+        <code>                    string
+    <strong>errorsAsString</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retourner les erreurs concaténées.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetErrors">
+        <div class="location">dans <a href="Manager.html#method_resetErrors">
+Manager</a> à la ligne 95</div>
+        <code>                    void
+    <strong>resetErrors</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Réinitialiser complètement l'état des erreurs.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">à la ligne 23</div>
+        <code>                    
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">Pas de description</p>
+                    
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_is2faAllowedForUser">
+        <div class="location">à la ligne 35</div>
+        <code>                    bool
+    <strong>is2faAllowedForUser</strong>(<a href="User.html">User</a> $user)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Déterminer si la 2FA est autorisée pour le rôle d'un utilisateur.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="User.html">User</a></td>
+                <td>$user</td>
+                <td><p>Utilisateur à évaluer.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true si la configuration active la 2FA pour ce rôle.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_is2faEnabledForUser">
+        <div class="location">à la ligne 52</div>
+        <code>                    bool
+    <strong>is2faEnabledForUser</strong>(<a href="User.html">User</a> $user)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Vérifier si la 2FA est activée pour un utilisateur.</p>
+</p>                <p><p>Combine la configuration de rôle et les indicateurs persistés côté utilisateur.</p>
+</p>        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="User.html">User</a></td>
+                <td>$user</td>
+                <td><p>Utilisateur à contrôler.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true si la 2FA est activée et autorisée pour ce rôle.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_enable2faForUser">
+        <div class="location">à la ligne 73</div>
+        <code>                    string
+    <strong>enable2faForUser</strong>(<a href="User.html">User</a> $user)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Activer la 2FA pour un utilisateur autorisé.</p>
+</p>                <p><p>Génère un secret si nécessaire, active le flag utilisateur et persiste en base.</p>
+</p>        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="User.html">User</a></td>
+                <td>$user</td>
+                <td><p>Utilisateur à activer.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Secret 2FA actif.</p>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disable2faForUser">
+        <div class="location">à la ligne 101</div>
+        <code>                    void
+    <strong>disable2faForUser</strong>(<a href="User.html">User</a> $user)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Désactiver la 2FA pour un utilisateur.</p>
+</p>                <p><p>Révoque le secret, désactive le flag utilisateur et persiste en base.</p>
+</p>        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="User.html">User</a></td>
+                <td>$user</td>
+                <td><p>Utilisateur ciblé.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOrCreateSecretForUser">
+        <div class="location">à la ligne 117</div>
+        <code>                    string
+    <strong>getOrCreateSecretForUser</strong>(<a href="User.html">User</a> $user)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Obtenir ou créer le secret 2FA d'un utilisateur.</p>
+</p>                <p><p>Si la 2FA n'est pas autorisée pour ce rôle, renvoie une chaîne vide.</p>
+</p>        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="User.html">User</a></td>
+                <td>$user</td>
+                <td><p>Utilisateur cible.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Secret 2FA ou chaîne vide si non autorisée.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOtpAuthUrlForUser">
+        <div class="location">à la ligne 143</div>
+        <code>                    string
+    <strong>getOtpAuthUrlForUser</strong>(string $companyName, string $userEmail, string $secret)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Générer l'URL otpauth:// utilisée par Google Authenticator.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$companyName</td>
+                <td><p>Nom d'affichage de l'émetteur.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$userEmail</td>
+                <td><p>Email de l'utilisateur.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$secret</td>
+                <td><p>Secret 2FA.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>URL otpauth:// prête pour un QR code.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateInlineQrCode">
+        <div class="location">à la ligne 160</div>
+        <code>                    string
+    <strong>generateInlineQrCode</strong>(string $otpAuthUrl, int $size = 220)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Générer un QR code SVG inline à partir d'une URL otpauth://.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$otpAuthUrl</td>
+                <td><p>URL otpauth://.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td><p>Taille du rendu en pixels.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Data URI SVG base64.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_verifyCodeForUser">
+        <div class="location">à la ligne 183</div>
+        <code>                    bool
+    <strong>verifyCodeForUser</strong>(<a href="User.html">User</a> $user, string $code)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Vérifier un code TOTP pour un utilisateur.</p>
+</p>                <p><p>La validation ne s'exécute que si la 2FA est autorisée pour ce rôle et activée.</p>
+</p>        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="User.html">User</a></td>
+                <td>$user</td>
+                <td><p>Utilisateur cible.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td><p>Code TOTP saisi.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true si le code est valide.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_verifyCode">
+        <div class="location">à la ligne 205</div>
+        <code>                    bool
+    <strong>verifyCode</strong>(string $secret, string $code)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Vérifier un code TOTP à partir d'un secret.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$secret</td>
+                <td><p>Secret 2FA.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td><p>Code TOTP saisi.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true si le code est valide.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Généré par <a href="https://github.com/code-lts/doctum">Doctum, un générateur de documentation d'API, successeur de Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

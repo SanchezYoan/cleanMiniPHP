@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>NGine\ActuGalleryItem | Template App – API</title>
+
+            <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../fonts/doctum-font.css">
+        <script src="../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../doctum.js"></script>
+        <script async defer src="../js/bootstrap.min.js"></script>
+        <script async defer src="../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:NGine_ActuGalleryItem" data-root-path="../" data-search-index-url="../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Rechercher"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Afficher le menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Template App – API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../classes.html">Classes</a></li>
+                    <li><a href="../namespaces.html">Namespaces</a></li>
+                    <li><a href="../interfaces.html">Interfaces</a></li>
+                    <li><a href="../traits.html">Traits</a></li>
+                    <li><a href="../doc-index.html">Sommaire</a></li>
+                    <li><a href="../search.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">classe</span></li>
+                        <li><a href="../NGine.html">NGine</a></li><li class="backslash">\</li><li>ActuGalleryItem</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ActuGalleryItem    
+            </h1>
+    </div>
+
+    
+    <p>        classe
+    <strong>ActuGalleryItem</strong>        implémente        <a target="_blank" rel="noopener" href="https://www.php.net/JsonSerializable">JsonSerializable</a>
+</p>
+
+        
+        
+    
+        
+
+            <div class="description">
+            <p><p>Représente un item d'image dans une galerie d'actualités.</p>
+</p>                    </div>
+            
+        
+    
+    
+            <h2>Méthodes</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p><p>Construire un item de galerie.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_jsonSerialize">jsonSerialize</a>()
+        
+                                            <p><p>Exporter l'item au format JSON.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getId">getId</a>()
+        
+                                            <p><p>Récupérer l'identifiant de l'item.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../NGine/ActuGalleryItem.html"><abbr title="NGine\ActuGalleryItem">ActuGalleryItem</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setId">setId</a>(mixed $id)
+        
+                                            <p><p>Définir l'identifiant de l'item.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMaj">getMaj</a>()
+        
+                                            <p><p>Récupérer la date de mise à jour.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../NGine/ActuGalleryItem.html"><abbr title="NGine\ActuGalleryItem">ActuGalleryItem</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setMaj">setMaj</a>(mixed $maj)
+        
+                                            <p><p>Définir la date de mise à jour.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getW">getW</a>()
+        
+                                            <p><p>Récupérer la largeur.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../NGine/ActuGalleryItem.html"><abbr title="NGine\ActuGalleryItem">ActuGalleryItem</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setW">setW</a>(mixed $w)
+        
+                                            <p><p>Définir la largeur.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getH">getH</a>()
+        
+                                            <p><p>Récupérer la hauteur.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../NGine/ActuGalleryItem.html"><abbr title="NGine\ActuGalleryItem">ActuGalleryItem</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setH">setH</a>(mixed $h)
+        
+                                            <p><p>Définir la hauteur.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Détails</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">à la ligne 37</div>
+        <code>                    
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Construire un item de galerie.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_jsonSerialize">
+        <div class="location">à la ligne 46</div>
+        <code>                    array
+    <strong>jsonSerialize</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Exporter l'item au format JSON.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getId">
+        <div class="location">à la ligne 63</div>
+        <code>                    mixed
+    <strong>getId</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer l'identifiant de l'item.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>Identifiant.</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setId">
+        <div class="location">à la ligne 75</div>
+        <code>                    <a href="../NGine/ActuGalleryItem.html"><abbr title="NGine\ActuGalleryItem">ActuGalleryItem</abbr></a>
+    <strong>setId</strong>(mixed $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir l'identifiant de l'item.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td>Identifiant.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../NGine/ActuGalleryItem.html"><abbr title="NGine\ActuGalleryItem">ActuGalleryItem</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMaj">
+        <div class="location">à la ligne 87</div>
+        <code>                    mixed
+    <strong>getMaj</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer la date de mise à jour.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Date formatée.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMaj">
+        <div class="location">à la ligne 99</div>
+        <code>                    <a href="../NGine/ActuGalleryItem.html"><abbr title="NGine\ActuGalleryItem">ActuGalleryItem</abbr></a>
+    <strong>setMaj</strong>(mixed $maj)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir la date de mise à jour.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$maj</td>
+                <td><p>Date brute.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../NGine/ActuGalleryItem.html"><abbr title="NGine\ActuGalleryItem">ActuGalleryItem</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getW">
+        <div class="location">à la ligne 111</div>
+        <code>                    mixed
+    <strong>getW</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer la largeur.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>Largeur.</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setW">
+        <div class="location">à la ligne 123</div>
+        <code>                    <a href="../NGine/ActuGalleryItem.html"><abbr title="NGine\ActuGalleryItem">ActuGalleryItem</abbr></a>
+    <strong>setW</strong>(mixed $w)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir la largeur.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$w</td>
+                <td>Largeur.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../NGine/ActuGalleryItem.html"><abbr title="NGine\ActuGalleryItem">ActuGalleryItem</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getH">
+        <div class="location">à la ligne 135</div>
+        <code>                    mixed
+    <strong>getH</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer la hauteur.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>Hauteur.</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setH">
+        <div class="location">à la ligne 147</div>
+        <code>                    <a href="../NGine/ActuGalleryItem.html"><abbr title="NGine\ActuGalleryItem">ActuGalleryItem</abbr></a>
+    <strong>setH</strong>(mixed $h)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir la hauteur.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$h</td>
+                <td>Hauteur.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../NGine/ActuGalleryItem.html"><abbr title="NGine\ActuGalleryItem">ActuGalleryItem</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Généré par <a href="https://github.com/code-lts/doctum">Doctum, un générateur de documentation d'API, successeur de Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

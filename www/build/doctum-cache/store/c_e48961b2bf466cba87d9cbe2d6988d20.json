@@ -1,0 +1,209 @@
+{
+    "name": "NGine\\GeoHelper\\DbScan",
+    "line": 8,
+    "short_desc": "Impl\u00e9mente l'algorithme DBSCAN pour regrouper des points par distance.",
+    "long_desc": "",
+    "hint": null,
+    "tags": [],
+    "namespace": "NGine\\GeoHelper",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/libraries\/NGine\/GeoHelper\/DbScan.php",
+    "relative_file": null,
+    "hash": "4dead88e0db577cb5eb55f11f2eef8a9451b313b",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": [],
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 49,
+            "short_desc": "Instancier un DBSCAN.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "distance_matrix": {
+                    "name": "distance_matrix",
+                    "line": 49,
+                    "short_desc": "Matrice de distances.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "NGine\\GeoHelper\\array<int",
+                            false
+                        ],
+                        [
+                            "NGine\\GeoHelper\\string,array<int",
+                            false
+                        ],
+                        [
+                            "NGine\\GeoHelper\\string,float",
+                            false
+                        ],
+                        [
+                            "NGine\\GeoHelper\\int>>",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "points": {
+                    "name": "points",
+                    "line": 49,
+                    "short_desc": "Identifiants des points.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "NGine\\GeoHelper\\(int",
+                            false
+                        ],
+                        [
+                            "NGine\\GeoHelper\\string)",
+                            true
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "set_points": {
+            "name": "set_points",
+            "line": 65,
+            "short_desc": "Red\u00e9finir le sous-ensemble de points \u00e0 analyser.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "Aucune valeur de retour.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "new_points": {
+                    "name": "new_points",
+                    "line": 65,
+                    "short_desc": "Nouveaux identifiants.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "NGine\\GeoHelper\\(int",
+                            false
+                        ],
+                        [
+                            "NGine\\GeoHelper\\string)",
+                            true
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "dbscan": {
+            "name": "dbscan",
+            "line": 151,
+            "short_desc": "Lancer l'algorithme DBSCAN.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "NGine\\GeoHelper\\array<int,(int",
+                    false
+                ],
+                [
+                    "NGine\\GeoHelper\\string)[]>",
+                    false
+                ]
+            ],
+            "hint_desc": "Clusters calcul\u00e9s.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "epsilon": {
+                    "name": "epsilon",
+                    "line": 151,
+                    "short_desc": "Distance maximale pour \u00eatre voisin.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "float",
+                            false
+                        ],
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "min_points": {
+                    "name": "min_points",
+                    "line": 151,
+                    "short_desc": "Nombre minimal de points pour un cluster.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

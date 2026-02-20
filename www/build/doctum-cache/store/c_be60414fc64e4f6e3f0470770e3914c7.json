@@ -1,0 +1,171 @@
+{
+    "name": "Csrf",
+    "line": 9,
+    "short_desc": "G\u00e9rer les jetons CSRF pour la session courante.",
+    "long_desc": "Les op\u00e9rations manipulent la session PHP et peuvent envoyer un en-t\u00eate\n`X-CSRF-Token` afin d'exposer le jeton au client.",
+    "hint": null,
+    "tags": [],
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/core\/Csrf.php",
+    "relative_file": null,
+    "hash": "c3bc60e815967d884f69f35053dd6f44f281c406",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb",
+        "JsonResponseHandler": "Whoops\\Handler\\JsonResponseHandler",
+        "Run": "Whoops\\Run",
+        "ImageResize": "Gumlet\\ImageResize",
+        "ImageResizeException": "Gumlet\\ImageResizeException",
+        "UploadException": "ManagerException\\UploadException"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "token": {
+            "name": "token",
+            "line": 22,
+            "short_desc": "R\u00e9cup\u00e9rer le jeton CSRF en le g\u00e9n\u00e9rant si n\u00e9cessaire.",
+            "long_desc": "Initialise la session si besoin et expose le jeton via un en-t\u00eate HTTP\nlorsque celui-ci est cr\u00e9\u00e9.",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "validate": {
+            "name": "validate",
+            "line": 40,
+            "short_desc": "Valider un jeton CSRF fourni par le client.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si le jeton correspond \u00e0 celui en session, false sinon.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "token": {
+                    "name": "token",
+                    "line": 40,
+                    "short_desc": "Jeton fourni (formulaire ou en-t\u00eate).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "validateRequest": {
+            "name": "validateRequest",
+            "line": 63,
+            "short_desc": "Valider un jeton CSRF pr\u00e9sent dans la requ\u00eate.",
+            "long_desc": "Le jeton est recherch\u00e9 en priorit\u00e9 dans les donn\u00e9es de formulaire puis\ndans les en-t\u00eates (`X-CSRF-Token`). La session est initialis\u00e9e si besoin.",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si le jeton est valide, false sinon.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 63,
+                    "short_desc": "Requ\u00eate contenant les donn\u00e9es \u00e0 inspecter.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "clear": {
+            "name": "clear",
+            "line": 77,
+            "short_desc": "Supprimer le jeton CSRF de la session courante.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": {
+        "SESSION_KEY": {
+            "name": "SESSION_KEY",
+            "line": 14,
+            "short_desc": "Cl\u00e9 de stockage du jeton CSRF en session.",
+            "long_desc": "",
+            "modifiers": 4,
+            "tags": []
+        }
+    }
+}

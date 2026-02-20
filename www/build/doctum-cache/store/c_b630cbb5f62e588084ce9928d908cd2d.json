@@ -1,0 +1,233 @@
+{
+    "name": "NGine\\GeoHelper\\GeoHelper",
+    "line": 11,
+    "short_desc": "Calcule une distance entre 2 points GPS.",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "GeoHelper"
+            ]
+        ]
+    },
+    "namespace": "NGine\\GeoHelper",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/libraries\/NGine\/GeoHelper\/GeoHelper.php",
+    "relative_file": null,
+    "hash": "5764d54b94fd5e502dd45a37c341ac10c05d770c",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": [],
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "getDistance": {
+            "name": "getDistance",
+            "line": 24,
+            "short_desc": "Returns distance in meters between two Points according to GPX coordinates.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "float",
+                    false
+                ],
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "see": [
+                    [
+                        "\\NGine\\GeoHelper\\Point"
+                    ]
+                ]
+            },
+            "see": [
+                [
+                    "\\NGine\\GeoHelper\\Point",
+                    "",
+                    "\\NGine\\GeoHelper\\Point",
+                    false,
+                    false
+                ]
+            ],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "point1": {
+                    "name": "point1",
+                    "line": 24,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\NGine\\GeoHelper\\Point",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "point2": {
+                    "name": "point2",
+                    "line": 24,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\NGine\\GeoHelper\\Point",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getCoordinates": {
+            "name": "getCoordinates",
+            "line": 46,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "object",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\GuzzleHttp\\Exception\\GuzzleException",
+                    ""
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "address": {
+                    "name": "address",
+                    "line": 46,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "apiKey": {
+                    "name": "apiKey",
+                    "line": 46,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getClusters": {
+            "name": "getClusters",
+            "line": 75,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "distance_matrix": {
+                    "name": "distance_matrix",
+                    "line": 75,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "point_ids": {
+                    "name": "point_ids",
+                    "line": 75,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": {
+        "EARTH_RADIUS": {
+            "name": "EARTH_RADIUS",
+            "line": 13,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        }
+    }
+}

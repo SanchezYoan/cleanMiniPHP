@@ -1,0 +1,372 @@
+{
+    "name": "Parameter",
+    "line": 6,
+    "short_desc": "Repr\u00e9senter un param\u00e8tre applicatif stock\u00e9 en base.",
+    "long_desc": "",
+    "hint": null,
+    "tags": [],
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/models\/Parameter.php",
+    "relative_file": null,
+    "hash": "354e28468ba8b82abcc9cf73f7982a787b2e6052",
+    "parent": "Model",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb",
+        "JsonResponseHandler": "Whoops\\Handler\\JsonResponseHandler",
+        "Run": "Whoops\\Run",
+        "ImageResize": "Gumlet\\ImageResize",
+        "ImageResizeException": "Gumlet\\ImageResizeException",
+        "UploadException": "ManagerException\\UploadException",
+        "Google2FA": "PragmaRX\\Google2FA\\Google2FA",
+        "Writer": "BaconQrCode\\Writer",
+        "SvgImageBackEnd": "BaconQrCode\\Renderer\\Image\\SvgImageBackEnd",
+        "RendererStyle": "BaconQrCode\\Renderer\\RendererStyle\\RendererStyle",
+        "ImageRenderer": "BaconQrCode\\Renderer\\ImageRenderer"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "getUnique": {
+            "name": "getUnique",
+            "line": 39,
+            "short_desc": "R\u00e9cup\u00e9rer une valeur de param\u00e8tre par son nom.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ],
+                [
+                    "false",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur r\u00e9cup\u00e9r\u00e9e ou false si indisponible.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "nom": {
+                    "name": "nom",
+                    "line": 39,
+                    "short_desc": "Nom du param\u00e8tre.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "__construct": {
+            "name": "__construct",
+            "line": 67,
+            "short_desc": "Initialiser un param\u00e8tre en chargeant sa valeur.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "nom": {
+                    "name": "nom",
+                    "line": 67,
+                    "short_desc": "Nom du param\u00e8tre.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "createParametersTable": {
+            "name": "createParametersTable",
+            "line": 83,
+            "short_desc": "Cr\u00e9er la table parameters si elle n'existe pas.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setNom": {
+            "name": "setNom",
+            "line": 102,
+            "short_desc": "D\u00e9finir le nom du param\u00e8tre.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Parameter",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "nom": {
+                    "name": "nom",
+                    "line": 102,
+                    "short_desc": "Nom du param\u00e8tre.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getNom": {
+            "name": "getNom",
+            "line": 114,
+            "short_desc": "R\u00e9cup\u00e9rer le nom du param\u00e8tre.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Nom du param\u00e8tre.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setValeur": {
+            "name": "setValeur",
+            "line": 126,
+            "short_desc": "D\u00e9finir la valeur du param\u00e8tre.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Parameter",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "valeur": {
+                    "name": "valeur",
+                    "line": 126,
+                    "short_desc": "Valeur \u00e0 stocker.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "int",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getValeur": {
+            "name": "getValeur",
+            "line": 138,
+            "short_desc": "R\u00e9cup\u00e9rer la valeur du param\u00e8tre.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ],
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur stock\u00e9e.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "save": {
+            "name": "save",
+            "line": 148,
+            "short_desc": "Sauvegarder la valeur du param\u00e8tre en base.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si la mise \u00e0 jour r\u00e9ussit.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "get": {
+            "name": "get",
+            "line": 173,
+            "short_desc": "Raccourci d'acc\u00e8s \u00e0 un param\u00e8tre.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ],
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur du param\u00e8tre.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "nom": {
+                    "name": "nom",
+                    "line": 173,
+                    "short_desc": "Nom du param\u00e8tre.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": {
+        "_LOGIN_SUPER_ADMIN_": {
+            "name": "_LOGIN_SUPER_ADMIN_",
+            "line": 25,
+            "short_desc": "Cl\u00e9 du login super admin.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "_PWD_SUPER_ADMIN_": {
+            "name": "_PWD_SUPER_ADMIN_",
+            "line": 30,
+            "short_desc": "Cl\u00e9 du mot de passe super admin.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        }
+    }
+}

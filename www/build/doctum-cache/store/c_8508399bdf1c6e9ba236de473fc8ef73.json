@@ -1,0 +1,396 @@
+{
+    "name": "NGine\\Notifications\\Fcm",
+    "line": 16,
+    "short_desc": "Envoie des notifications push via Firebase Cloud Messaging.",
+    "long_desc": "",
+    "hint": null,
+    "tags": [],
+    "namespace": "NGine\\Notifications",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/libraries\/NGine\/Notifications\/Fcm.php",
+    "relative_file": null,
+    "hash": "b5e74a1242be7f5d8309bf8eefc4c6a33e29dfce",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "FirebaseException": "Kreait\\Firebase\\Exception\\FirebaseException",
+        "MessagingException": "Kreait\\Firebase\\Exception\\MessagingException",
+        "Factory": "Kreait\\Firebase\\Factory",
+        "CloudMessage": "Kreait\\Firebase\\Messaging\\CloudMessage",
+        "MessageData": "Kreait\\Firebase\\Messaging\\MessageData",
+        "Notification": "Kreait\\Firebase\\Messaging\\Notification",
+        "MulticastSendReport": "Kreait\\Firebase\\Messaging\\MulticastSendReport"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 78,
+            "short_desc": "Initialiser le client Firebase et la messagerie.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\Exception",
+                    "Si l'initialisation Firebase \u00e9choue."
+                ]
+            ],
+            "errors": [],
+            "parameters": []
+        },
+        "sendNotification": {
+            "name": "sendNotification",
+            "line": 98,
+            "short_desc": "Envoyer une notification simple \u00e0 un appareil.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "R\u00e9sultat renvoy\u00e9 par l'API Firebase.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\Kreait\\Firebase\\Exception\\MessagingException",
+                    ""
+                ],
+                [
+                    "\\Kreait\\Firebase\\Exception\\FirebaseException",
+                    ""
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "deviceToken": {
+                    "name": "deviceToken",
+                    "line": 98,
+                    "short_desc": "Token optionnel si non fourni via setDeviceNotificationTokens.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "\"\"",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getLog": {
+            "name": "getLog",
+            "line": 119,
+            "short_desc": "R\u00e9cup\u00e9rer le log du dernier envoi.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Journal d'ex\u00e9cution.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "multiCast": {
+            "name": "multiCast",
+            "line": 135,
+            "short_desc": "Envoyer une notification \u00e0 plusieurs appareils.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Kreait\\Firebase\\Messaging\\MulticastSendReport",
+                    false
+                ]
+            ],
+            "hint_desc": "Rapport multicast.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\Kreait\\Firebase\\Exception\\MessagingException",
+                    "En cas d'\u00e9chec Firebase."
+                ],
+                [
+                    "\\Kreait\\Firebase\\Exception\\FirebaseException",
+                    "En cas d'\u00e9chec Firebase."
+                ],
+                [
+                    "\\RuntimeException",
+                    "Si aucun token n'est fourni."
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "deviceTokens": {
+                    "name": "deviceTokens",
+                    "line": 135,
+                    "short_desc": "Tokens optionnels si non fournis via setDeviceNotificationTokens.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "[]",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "setDeviceNotificationTokens": {
+            "name": "setDeviceNotificationTokens",
+            "line": 165,
+            "short_desc": "D\u00e9finir la liste des tokens \u00e0 notifier.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Notifications\\Fcm",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "deviceNotificationTokens": {
+                    "name": "deviceNotificationTokens",
+                    "line": 165,
+                    "short_desc": "Tokens des appareils.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "setTitle": {
+            "name": "setTitle",
+            "line": 179,
+            "short_desc": "D\u00e9finir le titre de notification.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Notifications\\Fcm",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "title": {
+                    "name": "title",
+                    "line": 179,
+                    "short_desc": "Titre \u00e0 envoyer.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "setBody": {
+            "name": "setBody",
+            "line": 193,
+            "short_desc": "D\u00e9finir le corps de notification.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Notifications\\Fcm",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "body": {
+                    "name": "body",
+                    "line": 193,
+                    "short_desc": "Corps \u00e0 envoyer.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "setSound": {
+            "name": "setSound",
+            "line": 207,
+            "short_desc": "D\u00e9finir le son de notification.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Notifications\\Fcm",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "sound": {
+                    "name": "sound",
+                    "line": 207,
+                    "short_desc": "Son \u00e0 envoyer.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "setData": {
+            "name": "setData",
+            "line": 221,
+            "short_desc": "D\u00e9finir les donn\u00e9es additionnelles.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Notifications\\Fcm",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "data": {
+                    "name": "data",
+                    "line": 221,
+                    "short_desc": "Payload data.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

@@ -1,0 +1,473 @@
+{
+    "name": "Uploader",
+    "line": 13,
+    "short_desc": "G\u00e9rer les uploads et suppressions de fichiers.",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "license": [
+            [
+                "http:\/\/opensource.org\/licenses\/MIT",
+                "The",
+                "MIT",
+                "License",
+                "(MIT)"
+            ]
+        ],
+        "author": [
+            [
+                "Omar",
+                "El",
+                "Gabry",
+                "<omar.elgabry.93@gmail.com>"
+            ]
+        ]
+    },
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/core\/Uploader.php",
+    "relative_file": null,
+    "hash": "72887e6af1df1be4deb8a508d64e6398424ef517",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb",
+        "JsonResponseHandler": "Whoops\\Handler\\JsonResponseHandler",
+        "Run": "Whoops\\Run",
+        "ImageResize": "Gumlet\\ImageResize",
+        "ImageResizeException": "Gumlet\\ImageResizeException",
+        "UploadException": "ManagerException\\UploadException"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "deleteFile": {
+            "name": "deleteFile",
+            "line": 84,
+            "short_desc": "Supprimer un fichier.",
+            "long_desc": "Effets de bord : suppression du fichier sur disque.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\RuntimeException",
+                    "Si la suppression \u00e9choue."
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "path": {
+                    "name": "path",
+                    "line": 84,
+                    "short_desc": "Chemin du fichier.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "createDirectory": {
+            "name": "createDirectory",
+            "line": 106,
+            "short_desc": "Cr\u00e9er un r\u00e9pertoire.",
+            "long_desc": "Effets de bord : \u00e9criture sur le syst\u00e8me de fichiers.",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Chemin cr\u00e9\u00e9.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\PHPMailer\\PHPMailer\\Exception",
+                    "Si la cr\u00e9ation \u00e9choue."
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "dir": {
+                    "name": "dir",
+                    "line": 106,
+                    "short_desc": "Chemin du r\u00e9pertoire.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "deleteDir": {
+            "name": "deleteDir",
+            "line": 132,
+            "short_desc": "Supprimer un r\u00e9pertoire.",
+            "long_desc": "Effets de bord : suppression r\u00e9cursive sur disque.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\PHPMailer\\PHPMailer\\Exception",
+                    "Si la suppression \u00e9choue."
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "dir": {
+                    "name": "dir",
+                    "line": 132,
+                    "short_desc": "Chemin du r\u00e9pertoire.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "authorisedFileType": {
+            "name": "authorisedFileType",
+            "line": 175,
+            "short_desc": "V\u00e9rifier le type MIME autoris\u00e9.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si autoris\u00e9.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "formTempFile": {
+                    "name": "formTempFile",
+                    "line": 175,
+                    "short_desc": "Chemin du fichier temporaire.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "uploadEntiteLogo": {
+            "name": "uploadEntiteLogo",
+            "line": 205,
+            "short_desc": "Uploader le logo d'une entit\u00e9.",
+            "long_desc": "Effets de bord : \u00e9crit sur disque et redimensionne l'image.",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "false",
+                    false
+                ]
+            ],
+            "hint_desc": "Chemin final ou false si \u00e9chec.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\ManagerException\\UploadException",
+                    "Si le fichier est invalide."
+                ],
+                [
+                    "\\Gumlet\\ImageResizeException",
+                    "Si le redimensionnement \u00e9choue."
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "entite": {
+                    "name": "entite",
+                    "line": 205,
+                    "short_desc": "Entit\u00e9 cible.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Entite",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "uFile": {
+                    "name": "uFile",
+                    "line": 205,
+                    "short_desc": "Fichier upload\u00e9 (structure $_FILES).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "convertImagesUploadsToArrayImages": {
+            "name": "convertImagesUploadsToArrayImages",
+            "line": 247,
+            "short_desc": "Convertir un tableau $_FILES en liste d'images.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Liste des fichiers normalis\u00e9s.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "visuels_uploads": {
+                    "name": "visuels_uploads",
+                    "line": 247,
+                    "short_desc": "Donn\u00e9es $_FILES.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\array<int",
+                            false
+                        ],
+                        [
+                            "\\string,mixed>",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "sortedFileNames": {
+                    "name": "sortedFileNames",
+                    "line": 247,
+                    "short_desc": "Liste de fichiers ordonn\u00e9s (optionnel).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\array<int,object>",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "null",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "validateArrayImagesUploads": {
+            "name": "validateArrayImagesUploads",
+            "line": 287,
+            "short_desc": "Valider un lot d'images upload\u00e9es.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Messages d'erreur.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "array_uploads": {
+                    "name": "array_uploads",
+                    "line": 287,
+                    "short_desc": "Liste d'images.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\array<int,array<string,mixed>>",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "addArrayImagesUploads": {
+            "name": "addArrayImagesUploads",
+            "line": 312,
+            "short_desc": "Ajouter un lot d'images \u00e0 une actualit\u00e9.",
+            "long_desc": "Effets de bord : suppression\/\u00e9criture sur disque et en base.",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si toutes les images sont ajout\u00e9es.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "actu": {
+                    "name": "actu",
+                    "line": 312,
+                    "short_desc": "Objet d'actualit\u00e9.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "array_uploads": {
+                    "name": "array_uploads",
+                    "line": 312,
+                    "short_desc": "Liste d'images.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\array<int,array<string,mixed>>",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

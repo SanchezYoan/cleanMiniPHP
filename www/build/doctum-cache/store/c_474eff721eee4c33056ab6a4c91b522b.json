@@ -1,0 +1,71 @@
+{
+    "name": "TestController",
+    "line": 8,
+    "short_desc": "Contr\u00f4leur de test.",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "internal": [
+            [
+                "Destin\u00e9",
+                "aux",
+                "v\u00e9rifications",
+                "locales."
+            ]
+        ]
+    },
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/controllers\/TestController.php",
+    "relative_file": null,
+    "hash": "901e474c269af89a9ec3855907e8d6f460208045",
+    "parent": "Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb",
+        "JsonResponseHandler": "Whoops\\Handler\\JsonResponseHandler",
+        "Run": "Whoops\\Run",
+        "ImageResize": "Gumlet\\ImageResize",
+        "ImageResizeException": "Gumlet\\ImageResizeException",
+        "UploadException": "ManagerException\\UploadException",
+        "Google2FA": "PragmaRX\\Google2FA\\Google2FA",
+        "Writer": "BaconQrCode\\Writer",
+        "SvgImageBackEnd": "BaconQrCode\\Renderer\\Image\\SvgImageBackEnd",
+        "RendererStyle": "BaconQrCode\\Renderer\\RendererStyle\\RendererStyle",
+        "ImageRenderer": "BaconQrCode\\Renderer\\ImageRenderer",
+        "Html": "NGine\\Html\\Html",
+        "GeoHelper": "NGine\\GeoHelper\\GeoHelper"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "index": {
+            "name": "index",
+            "line": 15,
+            "short_desc": "Point d'entr\u00e9e de test.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

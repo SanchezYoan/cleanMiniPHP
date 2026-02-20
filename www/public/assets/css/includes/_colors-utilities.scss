@@ -1,0 +1,225 @@
+$green: #85ce07;
+$color-footer-header: #0e232f;
+$color-blue-menu: #033b5b;
+$color-blue-menu-text: #b3c4d1;
+$color-primary: #e73035;
+$color-secondary: #007fc2;
+$color-text: #898989;
+$color-text-light: lighten($color-text, 20%);
+$color-body: #f8f9fa;
+$color-info: lighten($color-secondary, 20%);
+$color-success: #61ab07;
+$color-warning: #f6cb4b;
+$color-danger: darken($color-primary, 15%);
+$color-red: $color-danger;
+$color-light: #f8f9fa;
+$menu-height: 72px;
+$test: #4c0854;
+
+html, body {
+    background: var(--color-cua-blue-dark);
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    @include media-breakpoint-down(sm) {
+        font-size: 14px;
+    }
+    
+    @include media-breakpoint-down(sm) {
+        .col-sm-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+    
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .ai-center {
+        align-items: center;
+    }
+    
+    .color-primary {
+        color: $color-primary;
+        
+    }
+    
+    .color-secondary {
+        color: var(--color-cua-blue);
+    }
+    
+    .nav-link:hover {
+        cursor: pointer;
+    }
+}
+
+.hidden-sm {
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+}
+
+.hidden-md {
+    @include media-breakpoint-only(md) {
+        display: none;
+    }
+}
+
+.hidden-lg {
+    @include media-breakpoint-only(lg) {
+        display: none;
+    }
+}
+
+.hidden-xl {
+    @include media-breakpoint-up(xl) {
+        display: none;
+    }
+}
+
+.text-sm-center {
+    @include media-breakpoint-down(sm) {
+        text-align: center !important;
+    }
+}
+
+.display-desktop {
+    @include media-breakpoint-up(md) {
+        display: inherit !important;
+    }
+    @include media-breakpoint-down(md) {
+        display: none !important;
+    }
+}
+
+.display-phone {
+    @include media-breakpoint-up(md) {
+        display: none !important;
+    }
+    @include media-breakpoint-down(md) {
+        display: inherit !important;
+    }
+}
+
+
+.display-sm {
+    @include media-breakpoint-up(sm) {
+        display: none !important;
+    }
+    @include media-breakpoint-down(sm) {
+        display: initial !important;
+    }
+}
+
+
+.btn-round {
+    border-radius: 3em;
+}
+
+
+.red,
+.primary {
+    color: $color-primary !important;
+}
+
+
+.font-weight-bolder {
+    font-weight: 900 !important;
+}
+
+
+#periodPicker {
+    .period {
+        padding-right: 0;
+    }
+}
+
+@media (min-width: 40em) {
+    
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 62em) {
+    .featurette-heading {
+        margin-top: 1rem;
+    }
+}
+
+body {
+    .gu-mirror {
+        position: fixed !important;
+        margin: 0 !important;
+        z-index: 9999 !important;
+        opacity: 0.8;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+        filter: alpha(opacity=80);
+        background-color: $color-primary;
+        color: #fff;
+    }
+    
+    .gu-hide {
+        display: none !important;
+    }
+    
+    .gu-unselectable {
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+    }
+    
+    .gu-transit {
+        opacity: 0.2;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+        filter: alpha(opacity=20);
+    }
+    
+    .splide {
+        visibility: initial !important;
+    }
+    
+    .splide__list {
+        width: 100%;
+    }
+    
+    .splide__fade > .splide__track > .splide__list > .splide__slide.is-active {
+        text-align: center;
+    }
+    
+    .splide__track {
+        background: #e1e2e3;
+    }
+    
+    .splide__slide {
+        margin: 1em 0;
+        border: 8px solid white;
+        box-shadow: 0 0 9px fade_out(black, 0.9);
+        background-color: lighten(black, 96%);
+        
+        
+        width: 100%;
+        align-self: center;
+        text-align: center;
+        
+        img {
+            width: auto;
+            max-width: 100%;
+            max-height: 50rem;
+        }
+        
+    }
+    
+    .sp-replacer.sp-light {
+        width: 100%;
+        
+        .sp-preview {
+            width: calc(100% - 2em);
+        }
+    }
+}

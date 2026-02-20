@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>NGine\Notifications\Fcm | Template App – API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:NGine_Notifications_Fcm" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Rechercher"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Afficher le menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Template App – API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Sommaire</a></li>
+                    <li><a href="../../search.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">classe</span></li>
+                        <li><a href="../../NGine.html">NGine</a></li><li class="backslash">\</li><li><a href="../../NGine/Notifications.html">Notifications</a></li><li class="backslash">\</li><li>Fcm</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Fcm    
+            </h1>
+    </div>
+
+    
+    <p>        classe
+    <strong>Fcm</strong>
+</p>
+
+        
+        
+    
+        
+
+            <div class="description">
+            <p><p>Envoie des notifications push via Firebase Cloud Messaging.</p>
+</p>                    </div>
+            
+        
+    
+    
+            <h2>Méthodes</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p><p>Initialiser le client Firebase et la messagerie.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_sendNotification">sendNotification</a>(string $deviceToken = &quot;&quot;)
+        
+                                            <p><p>Envoyer une notification simple à un appareil.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLog">getLog</a>()
+        
+                                            <p><p>Récupérer le log du dernier envoi.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Kreait\Firebase\Messaging\MulticastSendReport">MulticastSendReport</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_multiCast">multiCast</a>(array $deviceTokens = [])
+        
+                                            <p><p>Envoyer une notification à plusieurs appareils.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Notifications/Fcm.html"><abbr title="NGine\Notifications\Fcm">Fcm</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setDeviceNotificationTokens">setDeviceNotificationTokens</a>(array $deviceNotificationTokens)
+        
+                                            <p><p>Définir la liste des tokens à notifier.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Notifications/Fcm.html"><abbr title="NGine\Notifications\Fcm">Fcm</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setTitle">setTitle</a>(string|null $title)
+        
+                                            <p><p>Définir le titre de notification.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Notifications/Fcm.html"><abbr title="NGine\Notifications\Fcm">Fcm</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setBody">setBody</a>(string|null $body)
+        
+                                            <p><p>Définir le corps de notification.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Notifications/Fcm.html"><abbr title="NGine\Notifications\Fcm">Fcm</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setSound">setSound</a>(string|null $sound)
+        
+                                            <p><p>Définir le son de notification.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Notifications/Fcm.html"><abbr title="NGine\Notifications\Fcm">Fcm</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setData">setData</a>(array $data)
+        
+                                            <p><p>Définir les données additionnelles.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Détails</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">à la ligne 78</div>
+        <code>                    
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialiser le client Firebase et la messagerie.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendNotification">
+        <div class="location">à la ligne 98</div>
+        <code>                    array
+    <strong>sendNotification</strong>(string $deviceToken = &quot;&quot;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Envoyer une notification simple à un appareil.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$deviceToken</td>
+                <td><p>Token optionnel si non fourni via setDeviceNotificationTokens.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Résultat renvoyé par l'API Firebase.</p>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Kreait\Firebase\Exception\MessagingException">MessagingException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Kreait\Firebase\Exception\FirebaseException">FirebaseException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLog">
+        <div class="location">à la ligne 119</div>
+        <code>                    string
+    <strong>getLog</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer le log du dernier envoi.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Journal d'exécution.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_multiCast">
+        <div class="location">à la ligne 135</div>
+        <code>                    <abbr title="Kreait\Firebase\Messaging\MulticastSendReport">MulticastSendReport</abbr>
+    <strong>multiCast</strong>(array $deviceTokens = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Envoyer une notification à plusieurs appareils.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$deviceTokens</td>
+                <td><p>Tokens optionnels si non fournis via setDeviceNotificationTokens.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Kreait\Firebase\Messaging\MulticastSendReport">MulticastSendReport</abbr></td>
+            <td><p>Rapport multicast.</p>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Kreait\Firebase\Exception\MessagingException">MessagingException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Kreait\Firebase\Exception\FirebaseException">FirebaseException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDeviceNotificationTokens">
+        <div class="location">à la ligne 165</div>
+        <code>                    <a href="../../NGine/Notifications/Fcm.html"><abbr title="NGine\Notifications\Fcm">Fcm</abbr></a>
+    <strong>setDeviceNotificationTokens</strong>(array $deviceNotificationTokens)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir la liste des tokens à notifier.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$deviceNotificationTokens</td>
+                <td><p>Tokens des appareils.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Notifications/Fcm.html"><abbr title="NGine\Notifications\Fcm">Fcm</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTitle">
+        <div class="location">à la ligne 179</div>
+        <code>                    <a href="../../NGine/Notifications/Fcm.html"><abbr title="NGine\Notifications\Fcm">Fcm</abbr></a>
+    <strong>setTitle</strong>(string|null $title)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir le titre de notification.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$title</td>
+                <td><p>Titre à envoyer.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Notifications/Fcm.html"><abbr title="NGine\Notifications\Fcm">Fcm</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBody">
+        <div class="location">à la ligne 193</div>
+        <code>                    <a href="../../NGine/Notifications/Fcm.html"><abbr title="NGine\Notifications\Fcm">Fcm</abbr></a>
+    <strong>setBody</strong>(string|null $body)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir le corps de notification.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$body</td>
+                <td><p>Corps à envoyer.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Notifications/Fcm.html"><abbr title="NGine\Notifications\Fcm">Fcm</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSound">
+        <div class="location">à la ligne 207</div>
+        <code>                    <a href="../../NGine/Notifications/Fcm.html"><abbr title="NGine\Notifications\Fcm">Fcm</abbr></a>
+    <strong>setSound</strong>(string|null $sound)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir le son de notification.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$sound</td>
+                <td><p>Son à envoyer.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Notifications/Fcm.html"><abbr title="NGine\Notifications\Fcm">Fcm</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setData">
+        <div class="location">à la ligne 221</div>
+        <code>                    <a href="../../NGine/Notifications/Fcm.html"><abbr title="NGine\Notifications\Fcm">Fcm</abbr></a>
+    <strong>setData</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir les données additionnelles.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td><p>Payload data.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Notifications/Fcm.html"><abbr title="NGine\Notifications\Fcm">Fcm</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Généré par <a href="https://github.com/code-lts/doctum">Doctum, un générateur de documentation d'API, successeur de Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>
