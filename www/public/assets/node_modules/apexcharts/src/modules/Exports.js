@@ -1,5 +1,6 @@
-import Data from '../modules/Data'
+import apexchartsLegendCSS from '../assets/apexcharts-legend.css'
 import AxesUtils from '../modules/axes/AxesUtils'
+import Data from '../modules/Data'
 import Series from '../modules/Series'
 import Utils from '../utils/Utils'
 
@@ -7,6 +8,12 @@ class Exports {
   constructor(ctx) {
     this.ctx = ctx
     this.w = ctx.w
+  }
+
+  svgStringToNode(svgString) {
+    const parser = new DOMParser()
+    const svgDoc = parser.parseFromString(svgString, 'image/svg+xml')
+    return svgDoc.documentElement
   }
 
   scaleSvgNode(svg, scale) {
@@ -19,28 +26,70 @@ class Exports {
     svg.setAttributeNS(null, 'viewBox', '0 0 ' + svgWidth + ' ' + svgHeight)
   }
 
-  getSvgString() {
+  getSvgString(_scale) {
     return new Promise((resolve) => {
       const w = this.w
-      const width = w.config.chart.toolbar.export.width
       let scale =
-        w.config.chart.toolbar.export.scale || width / w.globals.svgWidth
+        _scale ||
+        w.config.chart.toolbar.export.scale ||
+        w.config.chart.toolbar.export.width / w.globals.svgWidth
 
       if (!scale) {
         scale = 1 // if no scale is specified, don't scale...
       }
-      let svgString = this.w.globals.dom.Paper.svg()
 
-      // clone the svg node so it remains intact in the UI
-      const svgNode = this.w.globals.dom.Paper.node.cloneNode(true)
+      const width = w.globals.svgWidth * scale
+      const height = w.globals.svgHeight * scale
 
-      // in case the scale is different than 1, the svg needs to be rescaled
+      const clonedNode = w.globals.dom.elWrap.cloneNode(true)
+      clonedNode.style.width = width + 'px'
+      clonedNode.style.height = height + 'px'
+      const serializedNode = new XMLSerializer().serializeToString(clonedNode)
+
+      // Check if legend is shown and should be included in export
+      const shouldIncludeLegendStyles =
+        w.config.legend.show &&
+        w.globals.dom.elLegendWrap &&
+        w.globals.dom.elLegendWrap.children.length > 0
+
+      // Base styles for export
+      let exportStyles = `
+        .apexcharts-tooltip, .apexcharts-toolbar, .apexcharts-xaxistooltip, .apexcharts-yaxistooltip, .apexcharts-xcrosshairs, .apexcharts-ycrosshairs, .apexcharts-zoom-rect, .apexcharts-selection-rect {
+          display: none;
+        }
+      `
+
+      // Add legend styles if legend is shown
+      if (shouldIncludeLegendStyles) {
+        exportStyles += apexchartsLegendCSS
+      }
+
+      let svgString = `
+        <svg xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          class="apexcharts-svg"
+          xmlns:data="ApexChartsNS"
+          transform="translate(0, 0)"
+          width="${w.globals.svgWidth}px" height="${w.globals.svgHeight}px">
+          <foreignObject width="100%" height="100%">
+            <div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px; height:${height}px;">
+            <style type="text/css">
+              ${exportStyles}
+            </style>
+              ${serializedNode}
+            </div>
+          </foreignObject>
+        </svg>
+      `
+
+      const svgNode = this.svgStringToNode(svgString)
 
       if (scale !== 1) {
         // scale the image
         this.scaleSvgNode(svgNode, scale)
       }
-      // Convert image URLs to base64
+
       this.convertImagesToBase64(svgNode).then(() => {
         svgString = new XMLSerializer().serializeToString(svgNode)
         resolve(svgString.replace(/&nbsp;/g, '&#160;'))
@@ -83,37 +132,8 @@ class Exports {
     })
   }
 
-  cleanup() {
-    const w = this.w
-
-    // hide some elements to avoid printing them on exported svg
-    const xcrosshairs = w.globals.dom.baseEl.getElementsByClassName(
-      'apexcharts-xcrosshairs'
-    )
-    const ycrosshairs = w.globals.dom.baseEl.getElementsByClassName(
-      'apexcharts-ycrosshairs'
-    )
-    const zoomSelectionRects = w.globals.dom.baseEl.querySelectorAll(
-      '.apexcharts-zoom-rect, .apexcharts-selection-rect'
-    )
-    Array.prototype.forEach.call(zoomSelectionRects, (z) => {
-      z.setAttribute('width', 0)
-    })
-    if (xcrosshairs && xcrosshairs[0]) {
-      xcrosshairs[0].setAttribute('x', -500)
-      xcrosshairs[0].setAttribute('x1', -500)
-      xcrosshairs[0].setAttribute('x2', -500)
-    }
-    if (ycrosshairs && ycrosshairs[0]) {
-      ycrosshairs[0].setAttribute('y', -100)
-      ycrosshairs[0].setAttribute('y1', -100)
-      ycrosshairs[0].setAttribute('y2', -100)
-    }
-  }
-
   svgUrl() {
     return new Promise((resolve) => {
-      this.cleanup()
       this.getSvgString().then((svgData) => {
         const svgBlob = new Blob([svgData], {
           type: 'image/svg+xml;charset=utf-8',
@@ -131,7 +151,6 @@ class Exports {
         ? options.scale || options.width / w.globals.svgWidth
         : 1
 
-      this.cleanup()
       const canvas = document.createElement('canvas')
       canvas.width = w.globals.svgWidth * scale
       canvas.height = parseInt(w.globals.dom.elWrap.style.height, 10) * scale // because of resizeNonAxisCharts
@@ -146,7 +165,7 @@ class Exports {
       ctx.fillStyle = canvasBg
       ctx.fillRect(0, 0, canvas.width * scale, canvas.height * scale)
 
-      this.getSvgString().then((svgData) => {
+      this.getSvgString(scale).then((svgData) => {
         const svgUrl = 'data:image/svg+xml,' + encodeURIComponent(svgData)
         let img = new Image()
         img.crossOrigin = 'anonymous'

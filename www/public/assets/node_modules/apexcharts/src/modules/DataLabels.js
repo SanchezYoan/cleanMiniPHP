@@ -284,6 +284,14 @@ class DataLabels {
     }
 
     if (correctedLabels.drawnextLabel) {
+      if (textAnchor === 'middle') {
+        if (x === w.globals.gridWidth) {
+          // last label - might get cropped
+          // fixes https://github.com/apexcharts/apexcharts.js/issues/5036
+          textAnchor = 'end'
+        }
+      }
+
       dataLabelText = graphics.drawText({
         width: 100,
         height: parseInt(dataLabelsConfig.style.fontSize, 10),
@@ -373,7 +381,9 @@ class DataLabels {
       }
       if (elRect) {
         el.parentNode.insertBefore(elRect.node, el)
-        const background = el.getAttribute('fill')
+        const background =
+          w.config.dataLabels.background.backgroundColor ||
+          el.getAttribute('fill')
 
         const shouldAnim =
           w.config.chart.animations.enabled &&
