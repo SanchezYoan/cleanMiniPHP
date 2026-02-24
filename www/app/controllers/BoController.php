@@ -41,7 +41,7 @@ class BoController extends Controller
             "dashboard/profile" => "profile", # Interface pour l'édition du profile de l'éditeur
             
             "ajax/account/password/update" => "ajaxUpdatePassword", # AJAX pour mettre à jour le mot de passe d'un compte
-            "logout"                       => "logout",
+            "logout"    => "logout",
         ],
         "private_USERSU" => [],
         "private_ADMIN" => [
