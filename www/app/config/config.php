@@ -106,9 +106,9 @@ return [
     "HTML" => [
         "HEADERS" => [
             "TITLE" => ENV === "PROD" ? "NouveauProjet" : "NouveauProjet : " . ENV,
-            "DESCRIPTION" => "NouveauProjet : MON Nouveau projet !",
+            "DESCRIPTION" => "lifeforge : developpe ton univers !",
             "TAGS" => [],
-            "AUTHOR" => "DigitalFit",
+            "AUTHOR" => "sanPro",
         ],
     ],
     "GOOGLE_AUTHENTIFICATOR" => [
@@ -118,7 +118,7 @@ return [
         "SECURITY" => [
             "WRITE_DB" => true,
             "SEND_EMAIL" => [
-                "securite@ngine-innovation.com",
+                "sanpro127@gmail.com",
             ],
         ],
         "IS_ACTIVE" =>
