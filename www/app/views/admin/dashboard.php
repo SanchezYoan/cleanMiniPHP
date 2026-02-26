@@ -16,7 +16,7 @@
                 <div class="dashboard-container">
                     <div class="leveling-container d-flex flex-column align-items-center">
                         <span>Level 10</span>
-                        <span>250/2000</span>
+                        <span>500/2000</span>
                     </div>
 
                 </div>
