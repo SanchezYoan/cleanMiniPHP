@@ -43,7 +43,7 @@ class BoController extends Controller
             "ajax/account/password/update" => "ajaxUpdatePassword", # AJAX pour mettre à jour le mot de passe d'un compte
             "logout"    => "logout",
         ],
-        "private_USERSU" => [],
+//        "private_USERSU" => [],
         "private_ADMIN" => [
             "dashboard/accounts" => "manageAccounts", # Gestion des comptes de connexions pour les éditeurs
             
