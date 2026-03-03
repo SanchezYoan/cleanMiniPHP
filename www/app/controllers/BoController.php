@@ -38,7 +38,7 @@ class BoController extends Controller
         "private_USER" => [
             "dashboard"         => "dashboard", # Homepage du dashboard
             "dashboard/account" => "manageAccount", # Modification du compte de l'éditeur
-            "dashboard/profile" => "profile", # Interface pour l'édition du profile de l'éditeur
+//            "dashboard/profile" => "profile", # Interface pour l'édition du profile de l'éditeur
             
             "ajax/account/password/update" => "ajaxUpdatePassword", # AJAX pour mettre à jour le mot de passe d'un compte
             "logout"    => "logout",
