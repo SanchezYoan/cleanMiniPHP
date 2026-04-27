@@ -1,0 +1,14 @@
+
+### /ajax/login #####
+SELECT id, level, password FROM users WHERE (login = 'yoan30470@hotmail.fr' OR email = 'yoan30470@hotmail.fr') LIMIT 1
+
+### /ajax/login #####
+SELECT * FROM users WHERE id = '1' LIMIT 1
+
+### /ajax/login #####
+
+                INSERT INTO logs_connexion_2fa
+                    (fk_users_id, success, reason, attempts_count, context, ip_address, user_agent, gmt_create)
+                VALUES
+                    ('1', '1', 'Connexion sans 2FA (2FA non activée pour ce compte)', NULL, 'LOGIN', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0', NOW())
+            

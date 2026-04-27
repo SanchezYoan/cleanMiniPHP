@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Toutes les classes | Template App – API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="doctum.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script async defer src="js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="classes" data-name="" data-root-path="" data-search-index-url="doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Rechercher"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Afficher le menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Template App – API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="namespaces.html">Namespaces</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Sommaire</a></li>
+                    <li><a href="search.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div id="page-content">    <div class="page-header">
+        <h1>Classes</h1>
+    </div>
+
+    
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="App.html"><abbr title="App">App</abbr></a>    </div>
+                <div class="col-md-6"><p>Diriger la requête entrante vers le contrôleur approprié.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="AppController.html"><abbr title="AppController">AppController</abbr></a>    </div>
+                <div class="col-md-6"><p>Orchestrer les points d'entrée de l'API mobile.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Attachment.html"><abbr title="Attachment">Attachment</abbr></a>    </div>
+                <div class="col-md-6"><p>Représenter une pièce jointe persistée.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="BoController.html"><abbr title="BoController">BoController</abbr></a>    </div>
+                <div class="col-md-6"><p>Contrôleur des routes publiques et back-office.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Config.html"><abbr title="Config">Config</abbr></a>    </div>
+                <div class="col-md-6"><p>Gérer la configuration applicative.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Controller.html"><abbr title="Controller">Controller</abbr></a>    </div>
+                <div class="col-md-6"><p>Fournir la base des contrôleurs applicatifs.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Cookie.html"><abbr title="Cookie">Cookie</abbr></a>    </div>
+                <div class="col-md-6"><p>Gérer le cookie d'authentification &quot;remember me&quot;.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Csrf.html"><abbr title="Csrf">Csrf</abbr></a>    </div>
+                <div class="col-md-6"><p>Gérer les jetons CSRF pour la session courante.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Database.html"><abbr title="Database">Database</abbr></a>    </div>
+                <div class="col-md-6"><p>Fournir un accès simplifié à PDO via un singleton.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Email.html"><abbr title="Email">Email</abbr></a>    </div>
+                <div class="col-md-6"><p>Envoyer des emails via PHPMailer.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Encryption.html"><abbr title="Encryption">Encryption</abbr></a>    </div>
+                <div class="col-md-6"><p>Chiffrer et déchiffrer des données applicatives.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Google2FaManager.html"><abbr title="Google2FaManager">Google2FaManager</abbr></a>    </div>
+                <div class="col-md-6"><p>Encapsuler la logique de double authentification Google Authenticator.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Handler.html"><abbr title="Handler">Handler</abbr></a>    </div>
+                <div class="col-md-6"><p>Centraliser la gestion des erreurs et exceptions non interceptées.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Lang.html"><abbr title="Lang">Lang</abbr></a>    </div>
+                <div class="col-md-6"><p>Gestion simple de la langue courante de l'application.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Logger.html"><abbr title="Logger">Logger</abbr></a>    </div>
+                <div class="col-md-6"><p>Journaliser les événements applicatifs.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="MailManager.html"><abbr title="MailManager">MailManager</abbr></a>    </div>
+                <div class="col-md-6"><p>Orchestrer l'envoi d'emails via PHPMailer.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Manager.html"><abbr title="Manager">Manager</abbr></a>    </div>
+                <div class="col-md-6"><p>Gestionnaire applicatif de base.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Model.html"><abbr title="Model">Model</abbr></a>    </div>
+                <div class="col-md-6"><p>Classe de base des modèles applicatifs.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="NGine/ActuGalleryItem.html"><abbr title="NGine\ActuGalleryItem">ActuGalleryItem</abbr></a>    </div>
+                <div class="col-md-6"><p>Représente un item d'image dans une galerie d'actualités.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="NGine/Breadcrumb/Breadcrumb.html"><abbr title="NGine\Breadcrumb\Breadcrumb">Breadcrumb</abbr></a>    </div>
+                <div class="col-md-6"><p>Gérer un fil d'Ariane sous forme d'items HTML.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="NGine/Breadcrumb/Link.html"><abbr title="NGine\Breadcrumb\Link">Link</abbr></a>    </div>
+                <div class="col-md-6"><p>Décrit un lien d'un fil d'Ariane</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="NGine/GeoHelper/DbScan.html"><abbr title="NGine\GeoHelper\DbScan">DbScan</abbr></a>    </div>
+                <div class="col-md-6"><p>Implémente l'algorithme DBSCAN pour regrouper des points par distance.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="NGine/GeoHelper/GeoHelper.html"><abbr title="NGine\GeoHelper\GeoHelper">GeoHelper</abbr></a>    </div>
+                <div class="col-md-6"><p>Calcule une distance entre 2 points GPS.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="NGine/GeoHelper/Point.html"><abbr title="NGine\GeoHelper\Point">Point</abbr></a>    </div>
+                <div class="col-md-6"><p>Permet de stocker et de manipuler un point géographique</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="NGine/Html/Html.html"><abbr title="NGine\Html\Html">Html</abbr></a>    </div>
+                <div class="col-md-6"><p>Agrège des balises HTML de type meta, link et script.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>    </div>
+                <div class="col-md-6"><p>Représente une balise <link>.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="NGine/Html/Meta.html"><abbr title="NGine\Html\Meta">Meta</abbr></a>    </div>
+                <div class="col-md-6"><p>Représente une balise meta HTML.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="NGine/Html/Script.html"><abbr title="NGine\Html\Script">Script</abbr></a>    </div>
+                <div class="col-md-6"><p>Représente une balise <script>.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="NGine/Html/Seo.html"><abbr title="NGine\Html\Seo">Seo</abbr></a>    </div>
+                <div class="col-md-6"><p>Génère des balises meta SEO selon l'environnement et la page.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="NGine/Image/Image.html"><abbr title="NGine\Image\Image">Image</abbr></a>    </div>
+                <div class="col-md-6"><p>Fournit des métadonnées sur une image locale.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="NGine/Image/ImageResize.html"><abbr title="NGine\Image\ImageResize">ImageResize</abbr></a>    </div>
+                <div class="col-md-6"><p>PHP class to resize and scale images</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="NGine/Image/ImageResizeException.html"><abbr title="NGine\Image\ImageResizeException">ImageResizeException</abbr></a>    </div>
+                <div class="col-md-6"><p>PHP Exception used in the ImageResize class</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="NGine/Notifications/Fcm.html"><abbr title="NGine\Notifications\Fcm">Fcm</abbr></a>    </div>
+                <div class="col-md-6"><p>Envoie des notifications push via Firebase Cloud Messaging.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="NGine/Svg.html"><abbr title="NGine\Svg">Svg</abbr></a>    </div>
+                <div class="col-md-6"><p>Renvoi le contenu text d'un fichier svg pour insertion dans le html d'une page.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="NGine/Translate.html"><abbr title="NGine\Translate">Translate</abbr></a>    </div>
+                <div class="col-md-6"><p>Fournit l'accès aux chaînes de traduction.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Parameter.html"><abbr title="Parameter">Parameter</abbr></a>    </div>
+                <div class="col-md-6"><p>Représenter un paramètre applicatif stocké en base.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Redirector.html"><abbr title="Redirector">Redirector</abbr></a>    </div>
+                <div class="col-md-6"><p>Centraliser les redirections HTTP.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Request.html"><abbr title="Request">Request</abbr></a>    </div>
+                <div class="col-md-6"><p>Encapsuler les données de requête HTTP.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Response.html"><abbr title="Response">Response</abbr></a>    </div>
+                <div class="col-md-6"><p>Construire et envoyer une réponse HTTP.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Session.html"><abbr title="Session">Session</abbr></a>    </div>
+                <div class="col-md-6"><p>Gérer la session PHP.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="System.html"><abbr title="System">System</abbr></a>    </div>
+                <div class="col-md-6"><p>Centraliser les clés système utilisées par la configuration.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="TestController.html"><abbr title="TestController">TestController</abbr></a>    </div>
+                <div class="col-md-6"><p>Contrôleur de test.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="TwoFactorLog.html"><abbr title="TwoFactorLog">TwoFactorLog</abbr></a>    </div>
+                <div class="col-md-6"><p>Journaliser les événements liés à la 2FA.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Uploader.html"><abbr title="Uploader">Uploader</abbr></a>    </div>
+                <div class="col-md-6"><p>Gérer les uploads et suppressions de fichiers.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="User.html"><abbr title="User">User</abbr></a>    </div>
+                <div class="col-md-6"><p>Représenter un utilisateur applicatif.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Utility.html"><abbr title="Utility">Utility</abbr></a>    </div>
+                <div class="col-md-6"><p>Classe utilitaire.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Validation.html"><abbr title="Validation">Validation</abbr></a>    </div>
+                <div class="col-md-6"><p>Valider des données via un ensemble de règles.</p>
+</div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="View.html"><abbr title="View">View</abbr></a>    </div>
+                <div class="col-md-6"><p>Rendre les vues HTML/JSON.</p>
+</div>
+            </div>
+            </div>
+</div><div id="footer">
+        Généré par <a href="https://github.com/code-lts/doctum">Doctum, un générateur de documentation d'API, successeur de Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

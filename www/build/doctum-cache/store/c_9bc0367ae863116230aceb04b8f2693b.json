@@ -1,0 +1,831 @@
+{
+    "name": "NGine\\Html\\Link",
+    "line": 9,
+    "short_desc": "Repr\u00e9sente une balise <link>.",
+    "long_desc": "",
+    "hint": null,
+    "tags": [],
+    "namespace": "NGine\\Html",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/libraries\/NGine\/Html\/Link.php",
+    "relative_file": null,
+    "hash": "ab88d08ca6d385470f13454bbef5faf502865a6d",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": [],
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "getRel": {
+            "name": "getRel",
+            "line": 96,
+            "short_desc": "R\u00e9cup\u00e9rer la relation du lien (rel).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur rel.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setRel": {
+            "name": "setRel",
+            "line": 108,
+            "short_desc": "D\u00e9finir la relation du lien (rel).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "rel": {
+                    "name": "rel",
+                    "line": 108,
+                    "short_desc": "Valeur rel.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getType": {
+            "name": "getType",
+            "line": 120,
+            "short_desc": "R\u00e9cup\u00e9rer le type MIME.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Type MIME.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setType": {
+            "name": "setType",
+            "line": 132,
+            "short_desc": "D\u00e9finir le type MIME.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "type": {
+                    "name": "type",
+                    "line": 132,
+                    "short_desc": "Type MIME.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getHref": {
+            "name": "getHref",
+            "line": 144,
+            "short_desc": "R\u00e9cup\u00e9rer l'URL cible.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "URL.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setHref": {
+            "name": "setHref",
+            "line": 156,
+            "short_desc": "D\u00e9finir l'URL cible.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "href": {
+                    "name": "href",
+                    "line": 156,
+                    "short_desc": "URL.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getSizes": {
+            "name": "getSizes",
+            "line": 168,
+            "short_desc": "R\u00e9cup\u00e9rer les tailles associ\u00e9es.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Tailles.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setSizes": {
+            "name": "setSizes",
+            "line": 180,
+            "short_desc": "D\u00e9finir les tailles associ\u00e9es.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "sizes": {
+                    "name": "sizes",
+                    "line": 180,
+                    "short_desc": "Tailles.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getMedia": {
+            "name": "getMedia",
+            "line": 192,
+            "short_desc": "R\u00e9cup\u00e9rer la media query.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Media query.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setMedia": {
+            "name": "setMedia",
+            "line": 204,
+            "short_desc": "D\u00e9finir la media query.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "media": {
+                    "name": "media",
+                    "line": 204,
+                    "short_desc": "Media query.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getCrossorigin": {
+            "name": "getCrossorigin",
+            "line": 216,
+            "short_desc": "R\u00e9cup\u00e9rer l'attribut crossorigin.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur crossorigin.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setCrossorigin": {
+            "name": "setCrossorigin",
+            "line": 228,
+            "short_desc": "D\u00e9finir l'attribut crossorigin.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "crossorigin": {
+                    "name": "crossorigin",
+                    "line": 228,
+                    "short_desc": "Valeur crossorigin.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getAs": {
+            "name": "getAs",
+            "line": 240,
+            "short_desc": "R\u00e9cup\u00e9rer l'attribut as.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur as.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setAs": {
+            "name": "setAs",
+            "line": 252,
+            "short_desc": "D\u00e9finir l'attribut as.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "as": {
+                    "name": "as",
+                    "line": 252,
+                    "short_desc": "Valeur as.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getDisabled": {
+            "name": "getDisabled",
+            "line": 264,
+            "short_desc": "R\u00e9cup\u00e9rer l'\u00e9tat disabled.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur disabled.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setDisabled": {
+            "name": "setDisabled",
+            "line": 276,
+            "short_desc": "D\u00e9finir l'\u00e9tat disabled.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "disabled": {
+                    "name": "disabled",
+                    "line": 276,
+                    "short_desc": "Valeur disabled.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getHreflang": {
+            "name": "getHreflang",
+            "line": 288,
+            "short_desc": "R\u00e9cup\u00e9rer le hreflang.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur hreflang.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setHreflang": {
+            "name": "setHreflang",
+            "line": 300,
+            "short_desc": "D\u00e9finir le hreflang.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "hreflang": {
+                    "name": "hreflang",
+                    "line": 300,
+                    "short_desc": "Valeur hreflang.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getImportance": {
+            "name": "getImportance",
+            "line": 312,
+            "short_desc": "R\u00e9cup\u00e9rer l'importance.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur importance.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setImportance": {
+            "name": "setImportance",
+            "line": 324,
+            "short_desc": "D\u00e9finir l'importance.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "importance": {
+                    "name": "importance",
+                    "line": 324,
+                    "short_desc": "Valeur importance.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getIntegrity": {
+            "name": "getIntegrity",
+            "line": 336,
+            "short_desc": "R\u00e9cup\u00e9rer la valeur d'int\u00e9grit\u00e9 (SRI).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur integrity.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setIntegrity": {
+            "name": "setIntegrity",
+            "line": 348,
+            "short_desc": "D\u00e9finir la valeur d'int\u00e9grit\u00e9 (SRI).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "integrity": {
+                    "name": "integrity",
+                    "line": 348,
+                    "short_desc": "Valeur integrity.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getReferrerpolicy": {
+            "name": "getReferrerpolicy",
+            "line": 360,
+            "short_desc": "R\u00e9cup\u00e9rer la politique de r\u00e9f\u00e9rent.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur referrerpolicy.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setReferrerpolicy": {
+            "name": "setReferrerpolicy",
+            "line": 372,
+            "short_desc": "D\u00e9finir la politique de r\u00e9f\u00e9rent.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "referrerpolicy": {
+                    "name": "referrerpolicy",
+                    "line": 372,
+                    "short_desc": "Valeur referrerpolicy.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getTitle": {
+            "name": "getTitle",
+            "line": 384,
+            "short_desc": "R\u00e9cup\u00e9rer le titre du lien.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Titre.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setTitle": {
+            "name": "setTitle",
+            "line": 396,
+            "short_desc": "D\u00e9finir le titre du lien.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Html\\Link",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "title": {
+                    "name": "title",
+                    "line": 396,
+                    "short_desc": "Titre.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

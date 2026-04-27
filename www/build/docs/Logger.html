@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Logger | Template App – API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="doctum.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script async defer src="js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Logger" data-root-path="" data-search-index-url="doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Rechercher"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Afficher le menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Template App – API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="namespaces.html">Namespaces</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Sommaire</a></li>
+                    <li><a href="search.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+    <div class="page-header">
+        <h1>Logger    
+            </h1>
+    </div>
+
+    
+    <p>        classe
+    <strong>Logger</strong>
+</p>
+
+        
+        
+    
+        
+
+            <div class="description">
+            <p><p>Journaliser les événements applicatifs.</p>
+</p>            <p><p>Centralise l'enregistrement en base, fichier et email des erreurs,
+exceptions et événements de sécurité.</p>
+</p>        </div>
+            
+        
+    
+    
+            <h2>Méthodes</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_debug">debug</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string $message, bool $withInfos = true, string|null $file = null, int|null $line = null)
+        
+                                            <p><p>Enregistrer un log de niveau DEBUG.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_notice">notice</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string $message, bool $withInfos = true, string|null $file = null, int|null $line = null)
+        
+                                            <p><p>Enregistrer un log de niveau NOTICE.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_warning">warning</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string $message, bool $withInfos = true, string|null $file = null, int|null $line = null)
+        
+                                            <p><p>Enregistrer un log de niveau WARNING.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_error">error</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string $message, bool $withInfos = true, string|null $file = null, int|null $line = null, int|null $level = null)
+        
+                                            <p><p>Enregistrer un log de niveau ERROR.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_critical">critical</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string $message, bool $withInfos = true, string|null $file = null, int|null $line = null)
+        
+                                            <p><p>Enregistrer un log de niveau CRITICAL.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_security">security</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string $message, bool $withInfos = true, string|null $file = null, int|null $line = null)
+        
+                                            <p><p>Enregistrer un log de niveau SECURITY.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_security2FA">security2FA</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string $message, <a href="User.html">User</a> $user, int $lockMinutes, bool $withInfos = true, string|null $file = null, int|null $line = null)
+        
+                                            <p><p>Enregistrer un log SECURITY lié au blocage 2FA.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadBDD">loadBDD</a>(mixed $nb, mixed $level = &#039;DEBUG&#039;)
+        
+                                            <p><p>Charger les logs depuis la base</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_countByTypeToday">countByTypeToday</a>()
+        
+                                            <p><p>Compter les logs par type pour aujourd'hui.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIp">getIp</a>()
+        
+                                            <p><p>Récupérer l'IP enregistrée.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setIp">setIp</a>(string|null $ip)
+        
+                                            <p><p>Définir l'IP enregistrée.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMessage">getMessage</a>()
+        
+                                            <p><p>Récupérer le message de log.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setMessage">setMessage</a>(string $message)
+        
+                                            <p><p>Définir le message de log.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFile">getFile</a>()
+        
+                                            <p><p>Récupérer le fichier source.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setFile">setFile</a>(string|null $file)
+        
+                                            <p><p>Définir le fichier source.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLine">getLine</a>()
+        
+                                            <p><p>Récupérer la ligne source.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setLine">setLine</a>(int|null $line)
+        
+                                            <p><p>Définir la ligne source.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTrace">getTrace</a>()
+        
+                                            <p><p>Récupérer la trace.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setTrace">setTrace</a>(string|null $trace)
+        
+                                            <p><p>Définir la trace.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getInfo">getInfo</a>()
+        
+                                            <p><p>Récupérer les informations additionnelles.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setInfo">setInfo</a>(string $info)
+        
+                                            <p><p>Définir les informations additionnelles.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLevel">getLevel</a>()
+        
+                                            <p><p>Récupérer le niveau courant.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setLevel">setLevel</a>(int $level)
+        
+                                            <p><p>Définir le niveau courant.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDate">getDate</a>()
+        
+                                            <p><p>Récupérer la date de log.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setDate">setDate</a>(string $date)
+        
+                                            <p><p>Définir la date de log.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRequest">getRequest</a>()
+        
+                                            <p><p>Récupérer la requête enregistrée.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setRequest">setRequest</a>(string $request)
+        
+                                            <p><p>Définir la requête enregistrée.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Détails</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_debug">
+        <div class="location">à la ligne 168</div>
+        <code>        static            void
+    <strong>debug</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string $message, bool $withInfos = true, string|null $file = null, int|null $line = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Enregistrer un log de niveau DEBUG.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string</td>
+                <td>$message</td>
+                <td><p>Message ou exception.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$withInfos</td>
+                <td><p>Inclure les infos de requête.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$file</td>
+                <td><p>Fichier source.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$line</td>
+                <td><p>Ligne source.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_notice">
+        <div class="location">à la ligne 197</div>
+        <code>        static            void
+    <strong>notice</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string $message, bool $withInfos = true, string|null $file = null, int|null $line = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Enregistrer un log de niveau NOTICE.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string</td>
+                <td>$message</td>
+                <td><p>Message ou exception.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$withInfos</td>
+                <td><p>Inclure les infos de requête.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$file</td>
+                <td><p>Fichier source.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$line</td>
+                <td><p>Ligne source.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_warning">
+        <div class="location">à la ligne 224</div>
+        <code>        static            void
+    <strong>warning</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string $message, bool $withInfos = true, string|null $file = null, int|null $line = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Enregistrer un log de niveau WARNING.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string</td>
+                <td>$message</td>
+                <td><p>Message ou exception.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$withInfos</td>
+                <td><p>Inclure les infos de requête.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$file</td>
+                <td><p>Fichier source.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$line</td>
+                <td><p>Ligne source.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_error">
+        <div class="location">à la ligne 253</div>
+        <code>        static            void
+    <strong>error</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string $message, bool $withInfos = true, string|null $file = null, int|null $line = null, int|null $level = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Enregistrer un log de niveau ERROR.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string</td>
+                <td>$message</td>
+                <td><p>Message ou exception.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$withInfos</td>
+                <td><p>Inclure les infos de requête.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$file</td>
+                <td><p>Fichier source.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$line</td>
+                <td><p>Ligne source.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$level</td>
+                <td><p>Niveau d'erreur PHP optionnel.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_critical">
+        <div class="location">à la ligne 285</div>
+        <code>        static            void
+    <strong>critical</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string $message, bool $withInfos = true, string|null $file = null, int|null $line = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Enregistrer un log de niveau CRITICAL.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string</td>
+                <td>$message</td>
+                <td><p>Message ou exception.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$withInfos</td>
+                <td><p>Inclure les infos de requête.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$file</td>
+                <td><p>Fichier source.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$line</td>
+                <td><p>Ligne source.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_security">
+        <div class="location">à la ligne 314</div>
+        <code>        static            void
+    <strong>security</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string $message, bool $withInfos = true, string|null $file = null, int|null $line = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Enregistrer un log de niveau SECURITY.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string</td>
+                <td>$message</td>
+                <td><p>Message ou exception.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$withInfos</td>
+                <td><p>Inclure les infos de requête.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$file</td>
+                <td><p>Fichier source.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$line</td>
+                <td><p>Ligne source.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_security2FA">
+        <div class="location">à la ligne 346</div>
+        <code>        static            void
+    <strong>security2FA</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string $message, <a href="User.html">User</a> $user, int $lockMinutes, bool $withInfos = true, string|null $file = null, int|null $line = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Enregistrer un log SECURITY lié au blocage 2FA.</p>
+</p>                <p><p>Effets de bord : peut envoyer un email de notification.</p>
+</p>        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>|string</td>
+                <td>$message</td>
+                <td><p>Message ou exception.</p>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="User.html">User</a></td>
+                <td>$user</td>
+                <td><p>Utilisateur concerné.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$lockMinutes</td>
+                <td><p>Durée de blocage.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$withInfos</td>
+                <td><p>Inclure les infos de requête.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$file</td>
+                <td><p>Fichier source.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$line</td>
+                <td><p>Ligne source.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadBDD">
+        <div class="location">à la ligne 442</div>
+        <code>        static            array
+    <strong>loadBDD</strong>(mixed $nb, mixed $level = &#039;DEBUG&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Charger les logs depuis la base</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$nb</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$level</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_countByTypeToday">
+        <div class="location">à la ligne 715</div>
+        <code>        static            array
+    <strong>countByTypeToday</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Compter les logs par type pour aujourd'hui.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Tableau avec les comptes par type.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIp">
+        <div class="location">à la ligne 758</div>
+        <code>        static            string|null
+    <strong>getIp</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer l'IP enregistrée.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>IP.</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setIp">
+        <div class="location">à la ligne 770</div>
+        <code>        static            void
+    <strong>setIp</strong>(string|null $ip)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir l'IP enregistrée.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$ip</td>
+                <td>IP.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMessage">
+        <div class="location">à la ligne 781</div>
+        <code>        static            string|null
+    <strong>getMessage</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer le message de log.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Message.</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMessage">
+        <div class="location">à la ligne 793</div>
+        <code>        static            void
+    <strong>setMessage</strong>(string $message)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir le message de log.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>Message.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFile">
+        <div class="location">à la ligne 803</div>
+        <code>        static            string|null
+    <strong>getFile</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer le fichier source.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Fichier.</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFile">
+        <div class="location">à la ligne 815</div>
+        <code>        static            void
+    <strong>setFile</strong>(string|null $file)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir le fichier source.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$file</td>
+                <td>Fichier.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLine">
+        <div class="location">à la ligne 825</div>
+        <code>        static            int|null
+    <strong>getLine</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer la ligne source.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|null</td>
+            <td>Ligne.</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setLine">
+        <div class="location">à la ligne 837</div>
+        <code>        static            void
+    <strong>setLine</strong>(int|null $line)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir la ligne source.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|null</td>
+                <td>$line</td>
+                <td>Ligne.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTrace">
+        <div class="location">à la ligne 848</div>
+        <code>        static            string|null
+    <strong>getTrace</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer la trace.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Trace.</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTrace">
+        <div class="location">à la ligne 860</div>
+        <code>        static            void
+    <strong>setTrace</strong>(string|null $trace)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir la trace.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$trace</td>
+                <td>Trace.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInfo">
+        <div class="location">à la ligne 871</div>
+        <code>        static            string
+    <strong>getInfo</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer les informations additionnelles.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Informations de requête.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setInfo">
+        <div class="location">à la ligne 884</div>
+        <code>        static            void
+    <strong>setInfo</strong>(string $info)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir les informations additionnelles.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$info</td>
+                <td>Informations.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLevel">
+        <div class="location">à la ligne 895</div>
+        <code>        static            int
+    <strong>getLevel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer le niveau courant.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>Niveau.</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setLevel">
+        <div class="location">à la ligne 907</div>
+        <code>        static            void
+    <strong>setLevel</strong>(int $level)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir le niveau courant.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$level</td>
+                <td>Niveau.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDate">
+        <div class="location">à la ligne 917</div>
+        <code>        static            string|null
+    <strong>getDate</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer la date de log.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Date.</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDate">
+        <div class="location">à la ligne 929</div>
+        <code>        static            void
+    <strong>setDate</strong>(string $date)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir la date de log.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td>Date.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequest">
+        <div class="location">à la ligne 940</div>
+        <code>        static            string|null
+    <strong>getRequest</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer la requête enregistrée.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Requête.</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRequest">
+        <div class="location">à la ligne 952</div>
+        <code>        static            void
+    <strong>setRequest</strong>(string $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir la requête enregistrée.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$request</td>
+                <td>Requête.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Généré par <a href="https://github.com/code-lts/doctum">Doctum, un générateur de documentation d'API, successeur de Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

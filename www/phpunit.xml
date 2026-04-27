@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php" colors="true" backupGlobals="false">
+    <php>
+        <const name="ENV" value="LOCAL"/>
+        <const name="DOMAIN" value="localhost"/>
+    </php>
+    <testsuites>
+        <testsuite name="Application Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

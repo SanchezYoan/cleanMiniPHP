@@ -1,0 +1,71 @@
+{
+    "name": "System",
+    "line": 6,
+    "short_desc": "Centraliser les cl\u00e9s syst\u00e8me utilis\u00e9es par la configuration.",
+    "long_desc": "",
+    "hint": null,
+    "tags": [],
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/models\/System.php",
+    "relative_file": null,
+    "hash": "6443868a4850219cf57f3e3af142551768ba0a35",
+    "parent": "Model",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb",
+        "JsonResponseHandler": "Whoops\\Handler\\JsonResponseHandler",
+        "Run": "Whoops\\Run",
+        "ImageResize": "Gumlet\\ImageResize",
+        "ImageResizeException": "Gumlet\\ImageResizeException",
+        "UploadException": "ManagerException\\UploadException",
+        "Google2FA": "PragmaRX\\Google2FA\\Google2FA",
+        "Writer": "BaconQrCode\\Writer",
+        "SvgImageBackEnd": "BaconQrCode\\Renderer\\Image\\SvgImageBackEnd",
+        "RendererStyle": "BaconQrCode\\Renderer\\RendererStyle\\RendererStyle",
+        "ImageRenderer": "BaconQrCode\\Renderer\\ImageRenderer"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": [],
+    "constants": {
+        "_IOS_CURRENT_VERSION_": {
+            "name": "_IOS_CURRENT_VERSION_",
+            "line": 11,
+            "short_desc": "Cl\u00e9 de version iOS courante.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "_IOS_MINIMUM_VERSION_": {
+            "name": "_IOS_MINIMUM_VERSION_",
+            "line": 16,
+            "short_desc": "Cl\u00e9 de version iOS minimale.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "_ANDROID_CURRENT_VERSION_": {
+            "name": "_ANDROID_CURRENT_VERSION_",
+            "line": 21,
+            "short_desc": "Cl\u00e9 de version Android courante.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "_ANDROID_MINIMUM_VERSION_": {
+            "name": "_ANDROID_MINIMUM_VERSION_",
+            "line": 26,
+            "short_desc": "Cl\u00e9 de version Android minimale.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        }
+    }
+}

@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>NGine\Html\Link | Template App – API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:NGine_Html_Link" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Rechercher"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Afficher le menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Template App – API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Sommaire</a></li>
+                    <li><a href="../../search.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">classe</span></li>
+                        <li><a href="../../NGine.html">NGine</a></li><li class="backslash">\</li><li><a href="../../NGine/Html.html">Html</a></li><li class="backslash">\</li><li>Link</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Link    
+            </h1>
+    </div>
+
+    
+    <p>        classe
+    <strong>Link</strong>
+</p>
+
+        
+        
+    
+        
+
+            <div class="description">
+            <p><p>Représente une balise <link>.</p>
+</p>                    </div>
+            
+        
+    
+    
+            <h2>Méthodes</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRel">getRel</a>()
+        
+                                            <p><p>Récupérer la relation du lien (rel).</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setRel">setRel</a>(mixed $rel)
+        
+                                            <p><p>Définir la relation du lien (rel).</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getType">getType</a>()
+        
+                                            <p><p>Récupérer le type MIME.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setType">setType</a>(mixed $type)
+        
+                                            <p><p>Définir le type MIME.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHref">getHref</a>()
+        
+                                            <p><p>Récupérer l'URL cible.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setHref">setHref</a>(mixed $href)
+        
+                                            <p><p>Définir l'URL cible.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSizes">getSizes</a>()
+        
+                                            <p><p>Récupérer les tailles associées.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setSizes">setSizes</a>(mixed $sizes)
+        
+                                            <p><p>Définir les tailles associées.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMedia">getMedia</a>()
+        
+                                            <p><p>Récupérer la media query.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setMedia">setMedia</a>(mixed $media)
+        
+                                            <p><p>Définir la media query.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCrossorigin">getCrossorigin</a>()
+        
+                                            <p><p>Récupérer l'attribut crossorigin.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setCrossorigin">setCrossorigin</a>(mixed $crossorigin)
+        
+                                            <p><p>Définir l'attribut crossorigin.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAs">getAs</a>()
+        
+                                            <p><p>Récupérer l'attribut as.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setAs">setAs</a>(mixed $as)
+        
+                                            <p><p>Définir l'attribut as.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDisabled">getDisabled</a>()
+        
+                                            <p><p>Récupérer l'état disabled.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setDisabled">setDisabled</a>(mixed $disabled)
+        
+                                            <p><p>Définir l'état disabled.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHreflang">getHreflang</a>()
+        
+                                            <p><p>Récupérer le hreflang.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setHreflang">setHreflang</a>(mixed $hreflang)
+        
+                                            <p><p>Définir le hreflang.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getImportance">getImportance</a>()
+        
+                                            <p><p>Récupérer l'importance.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setImportance">setImportance</a>(mixed $importance)
+        
+                                            <p><p>Définir l'importance.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIntegrity">getIntegrity</a>()
+        
+                                            <p><p>Récupérer la valeur d'intégrité (SRI).</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setIntegrity">setIntegrity</a>(mixed $integrity)
+        
+                                            <p><p>Définir la valeur d'intégrité (SRI).</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getReferrerpolicy">getReferrerpolicy</a>()
+        
+                                            <p><p>Récupérer la politique de référent.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setReferrerpolicy">setReferrerpolicy</a>(mixed $referrerpolicy)
+        
+                                            <p><p>Définir la politique de référent.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTitle">getTitle</a>()
+        
+                                            <p><p>Récupérer le titre du lien.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setTitle">setTitle</a>(mixed $title)
+        
+                                            <p><p>Définir le titre du lien.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Détails</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getRel">
+        <div class="location">à la ligne 96</div>
+        <code>                    mixed
+    <strong>getRel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer la relation du lien (rel).</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Valeur rel.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRel">
+        <div class="location">à la ligne 108</div>
+        <code>                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+    <strong>setRel</strong>(mixed $rel)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir la relation du lien (rel).</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$rel</td>
+                <td><p>Valeur rel.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getType">
+        <div class="location">à la ligne 120</div>
+        <code>                    mixed
+    <strong>getType</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer le type MIME.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Type MIME.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setType">
+        <div class="location">à la ligne 132</div>
+        <code>                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+    <strong>setType</strong>(mixed $type)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir le type MIME.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$type</td>
+                <td><p>Type MIME.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHref">
+        <div class="location">à la ligne 144</div>
+        <code>                    mixed
+    <strong>getHref</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer l'URL cible.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>URL.</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHref">
+        <div class="location">à la ligne 156</div>
+        <code>                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+    <strong>setHref</strong>(mixed $href)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir l'URL cible.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$href</td>
+                <td>URL.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSizes">
+        <div class="location">à la ligne 168</div>
+        <code>                    mixed
+    <strong>getSizes</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer les tailles associées.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>Tailles.</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSizes">
+        <div class="location">à la ligne 180</div>
+        <code>                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+    <strong>setSizes</strong>(mixed $sizes)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir les tailles associées.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$sizes</td>
+                <td>Tailles.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMedia">
+        <div class="location">à la ligne 192</div>
+        <code>                    mixed
+    <strong>getMedia</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer la media query.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Media query.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMedia">
+        <div class="location">à la ligne 204</div>
+        <code>                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+    <strong>setMedia</strong>(mixed $media)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir la media query.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$media</td>
+                <td><p>Media query.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCrossorigin">
+        <div class="location">à la ligne 216</div>
+        <code>                    mixed
+    <strong>getCrossorigin</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer l'attribut crossorigin.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Valeur crossorigin.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCrossorigin">
+        <div class="location">à la ligne 228</div>
+        <code>                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+    <strong>setCrossorigin</strong>(mixed $crossorigin)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir l'attribut crossorigin.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$crossorigin</td>
+                <td><p>Valeur crossorigin.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAs">
+        <div class="location">à la ligne 240</div>
+        <code>                    mixed
+    <strong>getAs</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer l'attribut as.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Valeur as.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAs">
+        <div class="location">à la ligne 252</div>
+        <code>                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+    <strong>setAs</strong>(mixed $as)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir l'attribut as.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$as</td>
+                <td><p>Valeur as.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDisabled">
+        <div class="location">à la ligne 264</div>
+        <code>                    mixed
+    <strong>getDisabled</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer l'état disabled.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Valeur disabled.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDisabled">
+        <div class="location">à la ligne 276</div>
+        <code>                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+    <strong>setDisabled</strong>(mixed $disabled)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir l'état disabled.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$disabled</td>
+                <td><p>Valeur disabled.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHreflang">
+        <div class="location">à la ligne 288</div>
+        <code>                    mixed
+    <strong>getHreflang</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer le hreflang.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Valeur hreflang.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHreflang">
+        <div class="location">à la ligne 300</div>
+        <code>                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+    <strong>setHreflang</strong>(mixed $hreflang)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir le hreflang.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$hreflang</td>
+                <td><p>Valeur hreflang.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getImportance">
+        <div class="location">à la ligne 312</div>
+        <code>                    mixed
+    <strong>getImportance</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer l'importance.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Valeur importance.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setImportance">
+        <div class="location">à la ligne 324</div>
+        <code>                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+    <strong>setImportance</strong>(mixed $importance)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir l'importance.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$importance</td>
+                <td><p>Valeur importance.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIntegrity">
+        <div class="location">à la ligne 336</div>
+        <code>                    mixed
+    <strong>getIntegrity</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer la valeur d'intégrité (SRI).</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Valeur integrity.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setIntegrity">
+        <div class="location">à la ligne 348</div>
+        <code>                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+    <strong>setIntegrity</strong>(mixed $integrity)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir la valeur d'intégrité (SRI).</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$integrity</td>
+                <td><p>Valeur integrity.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getReferrerpolicy">
+        <div class="location">à la ligne 360</div>
+        <code>                    mixed
+    <strong>getReferrerpolicy</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer la politique de référent.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Valeur referrerpolicy.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setReferrerpolicy">
+        <div class="location">à la ligne 372</div>
+        <code>                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+    <strong>setReferrerpolicy</strong>(mixed $referrerpolicy)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir la politique de référent.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$referrerpolicy</td>
+                <td><p>Valeur referrerpolicy.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTitle">
+        <div class="location">à la ligne 384</div>
+        <code>                    mixed
+    <strong>getTitle</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer le titre du lien.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>Titre.</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTitle">
+        <div class="location">à la ligne 396</div>
+        <code>                    <a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a>
+    <strong>setTitle</strong>(mixed $title)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir le titre du lien.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$title</td>
+                <td>Titre.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../NGine/Html/Link.html"><abbr title="NGine\Html\Link">Link</abbr></a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Généré par <a href="https://github.com/code-lts/doctum">Doctum, un générateur de documentation d'API, successeur de Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

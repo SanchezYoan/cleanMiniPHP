@@ -1,0 +1,21 @@
+{
+  "name": "NouveauProjet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cedric CALISTI",
+  "license": "MIT",
+  "dependencies": {
+    "@tabler/core": "^1.4.0",
+    "apexcharts": "^5.3.6",
+    "choices.js": "^11.1.0",
+    "chosen-js": "^1.8.7",
+    "dropzone": "^6.0.0-beta.2",
+    "flatpickr": "^4.6.13",
+    "swagger-ui-dist": "^5.31.0",
+    "vanilla-cookieconsent": "^3.1.0"
+  }
+}

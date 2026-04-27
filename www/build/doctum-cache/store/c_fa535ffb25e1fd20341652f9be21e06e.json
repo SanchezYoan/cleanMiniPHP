@@ -1,0 +1,289 @@
+{
+    "name": "Config",
+    "line": 10,
+    "short_desc": "G\u00e9rer la configuration applicative.",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "license": [
+            [
+                "http:\/\/opensource.org\/licenses\/MIT",
+                "The",
+                "MIT",
+                "License",
+                "(MIT)"
+            ]
+        ],
+        "author": [
+            [
+                "Omar",
+                "El",
+                "Gabry",
+                "<omar.elgabry.93@gmail.com>"
+            ]
+        ]
+    },
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/core\/Config.php",
+    "relative_file": null,
+    "hash": "06c9a1874d05c33bc85575f48e18384e140a129c",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb",
+        "JsonResponseHandler": "Whoops\\Handler\\JsonResponseHandler",
+        "Run": "Whoops\\Run",
+        "ImageResize": "Gumlet\\ImageResize",
+        "ImageResizeException": "Gumlet\\ImageResizeException",
+        "UploadException": "ManagerException\\UploadException"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": {
+        "config": {
+            "name": "config",
+            "line": 18,
+            "short_desc": "Tableau des configurations charg\u00e9es.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\array<string,mixed>",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 9,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 18,
+                    "startTokenPos": 22,
+                    "startFilePos": 343,
+                    "endLine": 18,
+                    "endTokenPos": 23,
+                    "endFilePos": 344,
+                    "kind": 2
+                },
+                "items": []
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "jsConfig": {
+            "name": "jsConfig",
+            "line": 25,
+            "short_desc": "Tableau des configurations JavaScript.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\array<string,mixed>",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 9,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 25,
+                    "startTokenPos": 38,
+                    "startFilePos": 490,
+                    "endLine": 25,
+                    "endTokenPos": 39,
+                    "endFilePos": 491,
+                    "kind": 2
+                },
+                "items": []
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        }
+    },
+    "methods": {
+        "get": {
+            "name": "get",
+            "line": 34,
+            "short_desc": "R\u00e9cup\u00e9rer une valeur de configuration.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "false",
+                    false
+                ],
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur ou false en cas d'erreur.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 34,
+                    "short_desc": "Cl\u00e9 dot\u00e9e (ex: \"DB.HOST\").",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getJsConfig": {
+            "name": "getJsConfig",
+            "line": 81,
+            "short_desc": "R\u00e9cup\u00e9rer une configuration JavaScript.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur ou tableau complet.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\PHPMailer\\PHPMailer\\Exception",
+                    "Si le fichier de configuration est introuvable."
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 81,
+                    "short_desc": "Cl\u00e9 de configuration ou vide pour tout retourner.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "\"\"",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "addJsConfig": {
+            "name": "addJsConfig",
+            "line": 127,
+            "short_desc": "Ajouter une configuration JavaScript.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\PHPMailer\\PHPMailer\\Exception",
+                    "Si le fichier de configuration est introuvable."
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 127,
+                    "short_desc": "Cl\u00e9 de configuration.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "value": {
+                    "name": "value",
+                    "line": 127,
+                    "short_desc": "Valeur \u00e0 exposer.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

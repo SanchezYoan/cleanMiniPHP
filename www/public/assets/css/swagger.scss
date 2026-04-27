@@ -1,0 +1,22 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../node_modules/bootstrap/scss/mixins/container";
+@import "../node_modules/bootstrap/scss/mixins/grid";
+@import "../node_modules/bootstrap/scss/mixins/utilities";
+#swagger-ui table tbody tr td.parameters-col_name{
+    min-width: 15em;
+    @include media-breakpoint-down(sm){
+        min-width: 8em;
+    }
+}
+
+.swagger-ui .wrapper {
+    max-width: 980px;
+}
+
+.swagger-ui pre {
+    background: none;
+}

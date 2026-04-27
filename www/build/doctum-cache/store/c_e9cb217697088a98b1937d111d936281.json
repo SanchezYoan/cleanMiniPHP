@@ -1,0 +1,710 @@
+{
+    "name": "Attachment",
+    "line": 8,
+    "short_desc": "Repr\u00e9senter une pi\u00e8ce jointe persist\u00e9e.",
+    "long_desc": "G\u00e8re les m\u00e9tadonn\u00e9es en base et la manipulation du fichier associ\u00e9 sur disque.",
+    "hint": null,
+    "tags": [],
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/models\/Attachment.php",
+    "relative_file": null,
+    "hash": "8222d3165821c3ef93d618ddaa5f637b949fe764",
+    "parent": "Model",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb",
+        "JsonResponseHandler": "Whoops\\Handler\\JsonResponseHandler",
+        "Run": "Whoops\\Run",
+        "ImageResize": "Gumlet\\ImageResize",
+        "ImageResizeException": "Gumlet\\ImageResizeException",
+        "UploadException": "ManagerException\\UploadException",
+        "Google2FA": "PragmaRX\\Google2FA\\Google2FA",
+        "Writer": "BaconQrCode\\Writer",
+        "SvgImageBackEnd": "BaconQrCode\\Renderer\\Image\\SvgImageBackEnd",
+        "RendererStyle": "BaconQrCode\\Renderer\\RendererStyle\\RendererStyle",
+        "ImageRenderer": "BaconQrCode\\Renderer\\ImageRenderer"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 51,
+            "short_desc": "Initialiser l'attachment et charger l'enregistrement si l'id est fourni.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 51,
+                    "short_desc": "Identifiant \u00e0 charger.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "null",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "toArrayMobile": {
+            "name": "toArrayMobile",
+            "line": 94,
+            "short_desc": "Exporter les m\u00e9tadonn\u00e9es utiles pour un usage mobile.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getGmtCreate": {
+            "name": "getGmtCreate",
+            "line": 110,
+            "short_desc": "R\u00e9cup\u00e9rer la date de cr\u00e9ation GMT.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\DateTime",
+                    false
+                ]
+            ],
+            "hint_desc": "Date de cr\u00e9ation.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setGmtCreate": {
+            "name": "setGmtCreate",
+            "line": 122,
+            "short_desc": "D\u00e9finir la date de cr\u00e9ation GMT.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Attachment",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "gmt_create": {
+                    "name": "gmt_create",
+                    "line": 122,
+                    "short_desc": "Date \u00e0 enregistrer.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\DateTime",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "existLocalFile": {
+            "name": "existLocalFile",
+            "line": 135,
+            "short_desc": "V\u00e9rifier si le fichier local existe.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si le fichier existe.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "messagePath": {
+                    "name": "messagePath",
+                    "line": 135,
+                    "short_desc": "Chemin du dossier du message.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getLocalFile": {
+            "name": "getLocalFile",
+            "line": 148,
+            "short_desc": "Construire le chemin du fichier local de l'attachment.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Chemin complet du fichier.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "messagePath": {
+                    "name": "messagePath",
+                    "line": 148,
+                    "short_desc": "Chemin du dossier du message.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getId": {
+            "name": "getId",
+            "line": 159,
+            "short_desc": "R\u00e9cup\u00e9rer l'identifiant de l'attachment.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Identifiant ou null.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setId": {
+            "name": "setId",
+            "line": 171,
+            "short_desc": "D\u00e9finir l'identifiant de l'attachment.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Attachment",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 171,
+                    "short_desc": "Identifiant.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "save": {
+            "name": "save",
+            "line": 188,
+            "short_desc": "Sauvegarder l'attachment en base et sur disque.",
+            "long_desc": "\u00c9crit en base (transaction) puis copie le fichier temporaire vers le dossier\ndu message. En cas d'\u00e9chec sur le disque, la transaction est annul\u00e9e.",
+            "hint": [
+                [
+                    "Attachment",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance recharg\u00e9e apr\u00e8s insertion.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "messagePath": {
+                    "name": "messagePath",
+                    "line": 188,
+                    "short_desc": "Chemin du dossier du message.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "tmpPath": {
+                    "name": "tmpPath",
+                    "line": 188,
+                    "short_desc": "Chemin du fichier temporaire.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getFkMessagesId": {
+            "name": "getFkMessagesId",
+            "line": 234,
+            "short_desc": "R\u00e9cup\u00e9rer l'identifiant du message li\u00e9.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "Identifiant du message.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setFkMessagesId": {
+            "name": "setFkMessagesId",
+            "line": 246,
+            "short_desc": "D\u00e9finir l'identifiant du message li\u00e9.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Attachment",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "fk_messages_id": {
+                    "name": "fk_messages_id",
+                    "line": 246,
+                    "short_desc": "Identifiant du message.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getFilename": {
+            "name": "getFilename",
+            "line": 257,
+            "short_desc": "R\u00e9cup\u00e9rer le nom du fichier.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Nom du fichier.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setFilename": {
+            "name": "setFilename",
+            "line": 269,
+            "short_desc": "D\u00e9finir le nom du fichier.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Attachment",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "filename": {
+                    "name": "filename",
+                    "line": 269,
+                    "short_desc": "Nom du fichier.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getExtension": {
+            "name": "getExtension",
+            "line": 280,
+            "short_desc": "R\u00e9cup\u00e9rer l'extension du fichier.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Extension.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setExtension": {
+            "name": "setExtension",
+            "line": 292,
+            "short_desc": "D\u00e9finir l'extension du fichier.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Attachment",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "extension": {
+                    "name": "extension",
+                    "line": 292,
+                    "short_desc": "Extension.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getFilesize": {
+            "name": "getFilesize",
+            "line": 303,
+            "short_desc": "R\u00e9cup\u00e9rer la taille du fichier.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "Taille en octets.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setFilesize": {
+            "name": "setFilesize",
+            "line": 315,
+            "short_desc": "D\u00e9finir la taille du fichier.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Attachment",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "filesize": {
+                    "name": "filesize",
+                    "line": 315,
+                    "short_desc": "Taille en octets.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getFilenameWithoutExtension": {
+            "name": "getFilenameWithoutExtension",
+            "line": 326,
+            "short_desc": "R\u00e9cup\u00e9rer le nom de fichier sans extension.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Nom de base.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "delete": {
+            "name": "delete",
+            "line": 341,
+            "short_desc": "Supprimer l'attachment en base et sur disque.",
+            "long_desc": "Effets de bord : suppression en base et suppression du fichier local.",
+            "hint": [
+                [
+                    "Attachment",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "messagePath": {
+                    "name": "messagePath",
+                    "line": 341,
+                    "short_desc": "Chemin du dossier du message.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "getUrlDownload": {
+            "name": "getUrlDownload",
+            "line": 366,
+            "short_desc": "Construire l'URL de t\u00e9l\u00e9chargement de l'attachment.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "URL relative de t\u00e9l\u00e9chargement.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": {
+        "PATH_DOWNLOAD": {
+            "name": "PATH_DOWNLOAD",
+            "line": 13,
+            "short_desc": "Racine de t\u00e9l\u00e9chargement (URL relative).",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        }
+    }
+}

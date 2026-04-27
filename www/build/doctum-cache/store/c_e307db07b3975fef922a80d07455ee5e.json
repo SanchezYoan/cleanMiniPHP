@@ -1,0 +1,875 @@
+{
+    "name": "Database",
+    "line": 12,
+    "short_desc": "Fournir un acc\u00e8s simplifi\u00e9 \u00e0 PDO via un singleton.",
+    "long_desc": "Centralise la pr\u00e9paration, le binding, l'ex\u00e9cution et les helpers de fetch.\nEffets de bord : ouvre des connexions et ex\u00e9cute des requ\u00eates SQL.",
+    "hint": null,
+    "tags": {
+        "license": [
+            [
+                "http:\/\/opensource.org\/licenses\/MIT",
+                "The",
+                "MIT",
+                "License",
+                "(MIT)"
+            ]
+        ],
+        "author": [
+            [
+                "Omar",
+                "El",
+                "Gabry",
+                "<omar.elgabry.93@gmail.com>"
+            ]
+        ]
+    },
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/core\/Database.php",
+    "relative_file": null,
+    "hash": "b699636fc927af8904bc09339f2817177872f75f",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb",
+        "JsonResponseHandler": "Whoops\\Handler\\JsonResponseHandler",
+        "Run": "Whoops\\Run"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "hasTable": {
+            "name": "hasTable",
+            "line": 86,
+            "short_desc": "V\u00e9rifier l'existence d'une table.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si la table existe.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "name": {
+                    "name": "name",
+                    "line": 86,
+                    "short_desc": "Nom de table.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "hasColumn": {
+            "name": "hasColumn",
+            "line": 99,
+            "short_desc": "V\u00e9rifier l'existence d'une colonne.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si la colonne existe.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "table": {
+                    "name": "table",
+                    "line": 99,
+                    "short_desc": "Nom de table.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "column": {
+                    "name": "column",
+                    "line": 99,
+                    "short_desc": "Nom de colonne.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "openConnection": {
+            "name": "openConnection",
+            "line": 111,
+            "short_desc": "Obtenir l'instance singleton de la base.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Database",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance unique.",
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "prepare": {
+            "name": "prepare",
+            "line": 128,
+            "short_desc": "Pr\u00e9parer une requ\u00eate SQL.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Database",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "query": {
+                    "name": "query",
+                    "line": 128,
+                    "short_desc": "Requ\u00eate SQL.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "execute": {
+            "name": "execute",
+            "line": 150,
+            "short_desc": "Ex\u00e9cuter un statement pr\u00e9par\u00e9.",
+            "long_desc": "Effets de bord : ex\u00e9cution SQL et \u00e9criture du log SQL si activ\u00e9.",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si succ\u00e8s.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\PDOException",
+                    "Si l'ex\u00e9cution \u00e9choue."
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "arr": {
+                    "name": "arr",
+                    "line": 150,
+                    "short_desc": "Param\u00e8tres de bind optionnels.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\array<string,mixed>",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "null",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "bindValue": {
+            "name": "bindValue",
+            "line": 186,
+            "short_desc": "Binder une valeur sur un param\u00e8tre SQL.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Database",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "param": {
+                    "name": "param",
+                    "line": 186,
+                    "short_desc": "Nom du param\u00e8tre.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "value": {
+                    "name": "value",
+                    "line": 186,
+                    "short_desc": "Valeur \u00e0 binder.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "type": {
+                    "name": "type",
+                    "line": 186,
+                    "short_desc": "Type PDO explicite.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "null",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "bindParam": {
+            "name": "bindParam",
+            "line": 203,
+            "short_desc": "Binder une variable par r\u00e9f\u00e9rence.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Database",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance courante.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "param": {
+                    "name": "param",
+                    "line": 203,
+                    "short_desc": "Nom du param\u00e8tre.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "var": {
+                    "name": "var",
+                    "line": 203,
+                    "short_desc": "Variable \u00e0 binder.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": true,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "setLang": {
+            "name": "setLang",
+            "line": 216,
+            "short_desc": "D\u00e9finir la locale SQL pour les dates.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "debug": {
+            "name": "debug",
+            "line": 232,
+            "short_desc": "Obtenir la requ\u00eate SQL avec param\u00e8tres interpol\u00e9s.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Requ\u00eate SQL lisible.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "errorInfo": {
+            "name": "errorInfo",
+            "line": 260,
+            "short_desc": "R\u00e9cup\u00e9rer les informations d'erreur du statement.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Tableau errorInfo PDO.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "fetchItem": {
+            "name": "fetchItem",
+            "line": 271,
+            "short_desc": "R\u00e9cup\u00e9rer la premi\u00e8re valeur de la premi\u00e8re colonne.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeur ou false si vide.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "fetchColumn": {
+            "name": "fetchColumn",
+            "line": 281,
+            "short_desc": "R\u00e9cup\u00e9rer une colonne compl\u00e8te.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Valeurs de colonne.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "fetchAllAssociative": {
+            "name": "fetchAllAssociative",
+            "line": 291,
+            "short_desc": "R\u00e9cup\u00e9rer toutes les lignes en associatif.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Liste de lignes.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "fetchAssociative": {
+            "name": "fetchAssociative",
+            "line": 301,
+            "short_desc": "R\u00e9cup\u00e9rer la prochaine ligne en associatif.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\array<string,mixed>",
+                    false
+                ],
+                [
+                    "false",
+                    false
+                ]
+            ],
+            "hint_desc": "Ligne ou false si vide.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "fetchAllObject": {
+            "name": "fetchAllObject",
+            "line": 311,
+            "short_desc": "R\u00e9cup\u00e9rer toutes les lignes en objets.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Liste d'objets.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "fetchObject": {
+            "name": "fetchObject",
+            "line": 321,
+            "short_desc": "R\u00e9cup\u00e9rer la prochaine ligne en objet.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "object",
+                    false
+                ]
+            ],
+            "hint_desc": "Objet ou false si vide.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "fetchAllBoth": {
+            "name": "fetchAllBoth",
+            "line": 331,
+            "short_desc": "R\u00e9cup\u00e9rer toutes les lignes en tableau mixte (num\u00e9rique + associatif).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Liste de lignes.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "fetchBoth": {
+            "name": "fetchBoth",
+            "line": 341,
+            "short_desc": "R\u00e9cup\u00e9rer la prochaine ligne en tableau mixte.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Ligne ou false si vide.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "lastInsertedId": {
+            "name": "lastInsertedId",
+            "line": 352,
+            "short_desc": "R\u00e9cup\u00e9rer l'identifiant auto-incr\u00e9ment\u00e9 de la derni\u00e8re insertion.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "Identifiant ins\u00e9r\u00e9.",
+            "tags": {
+                "see": [
+                    [
+                        "http:\/\/php.net\/manual\/en\/pdo.lastinsertid.php"
+                    ]
+                ]
+            },
+            "see": [
+                [
+                    "http:\/\/php.net\/manual\/en\/pdo.lastinsertid.php",
+                    "",
+                    false,
+                    false,
+                    "http:\/\/php.net\/manual\/en\/pdo.lastinsertid.php"
+                ]
+            ],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "beginTransaction": {
+            "name": "beginTransaction",
+            "line": 363,
+            "short_desc": "D\u00e9marrer une transaction.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "see": [
+                    [
+                        "http:\/\/php.net\/manual\/en\/pdo.begintransaction.php"
+                    ]
+                ]
+            },
+            "see": [
+                [
+                    "http:\/\/php.net\/manual\/en\/pdo.begintransaction.php",
+                    "",
+                    false,
+                    false,
+                    "http:\/\/php.net\/manual\/en\/pdo.begintransaction.php"
+                ]
+            ],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "commit": {
+            "name": "commit",
+            "line": 374,
+            "short_desc": "Valider une transaction.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "see": [
+                    [
+                        "http:\/\/php.net\/manual\/en\/pdo.commit.php"
+                    ]
+                ]
+            },
+            "see": [
+                [
+                    "http:\/\/php.net\/manual\/en\/pdo.commit.php",
+                    "",
+                    false,
+                    false,
+                    "http:\/\/php.net\/manual\/en\/pdo.commit.php"
+                ]
+            ],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "rollBack": {
+            "name": "rollBack",
+            "line": 385,
+            "short_desc": "Annuler une transaction.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "see": [
+                    [
+                        "http:\/\/php.net\/manual\/en\/pdo.rollback.php"
+                    ]
+                ]
+            },
+            "see": [
+                [
+                    "http:\/\/php.net\/manual\/en\/pdo.rollback.php",
+                    "",
+                    false,
+                    false,
+                    "http:\/\/php.net\/manual\/en\/pdo.rollback.php"
+                ]
+            ],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "countRows": {
+            "name": "countRows",
+            "line": 396,
+            "short_desc": "Obtenir le nombre de lignes affect\u00e9es.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "Nombre de lignes affect\u00e9es.",
+            "tags": {
+                "see": [
+                    [
+                        "http:\/\/php.net\/manual\/en\/pdostatement.rowcount.php"
+                    ]
+                ]
+            },
+            "see": [
+                [
+                    "http:\/\/php.net\/manual\/en\/pdostatement.rowcount.php",
+                    "",
+                    false,
+                    false,
+                    "http:\/\/php.net\/manual\/en\/pdostatement.rowcount.php"
+                ]
+            ],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "closeConnection": {
+            "name": "closeConnection",
+            "line": 428,
+            "short_desc": "Fermer la connexion PDO.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "see": [
+                    [
+                        "http:\/\/php.net\/manual\/en\/pdo.connections.php"
+                    ]
+                ]
+            },
+            "see": [
+                [
+                    "http:\/\/php.net\/manual\/en\/pdo.connections.php",
+                    "",
+                    false,
+                    false,
+                    "http:\/\/php.net\/manual\/en\/pdo.connections.php"
+                ]
+            ],
+            "modifiers": 9,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getPdo": {
+            "name": "getPdo",
+            "line": 441,
+            "short_desc": "Exposer l'instance PDO.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\PDO",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Connexion active.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

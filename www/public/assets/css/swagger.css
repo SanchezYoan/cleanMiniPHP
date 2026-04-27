@@ -1,0 +1,18 @@
+#swagger-ui table tbody tr td.parameters-col_name {
+  min-width: 15em;
+}
+@media (max-width: 575.98px) {
+  #swagger-ui table tbody tr td.parameters-col_name {
+    min-width: 8em;
+  }
+}
+
+.swagger-ui .wrapper {
+  max-width: 980px;
+}
+
+.swagger-ui pre {
+  background: none;
+}
+
+/*# sourceMappingURL=swagger.css.map */

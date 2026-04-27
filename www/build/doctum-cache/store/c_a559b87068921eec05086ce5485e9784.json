@@ -1,0 +1,721 @@
+{
+    "name": "Model",
+    "line": 13,
+    "short_desc": "Classe de base des mod\u00e8les applicatifs.",
+    "long_desc": "Fournit la gestion d'erreurs commune et quelques helpers de requ\u00eates simples\npour les classes m\u00e9tiers sp\u00e9cialis\u00e9es.",
+    "hint": null,
+    "tags": {
+        "license": [
+            [
+                "http:\/\/opensource.org\/licenses\/MIT",
+                "The",
+                "MIT",
+                "License",
+                "(MIT)"
+            ]
+        ],
+        "author": [
+            [
+                "Omar",
+                "El",
+                "Gabry",
+                "<omar.elgabry.93@gmail.com>"
+            ]
+        ]
+    },
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/models\/Model.php",
+    "relative_file": null,
+    "hash": "72c36c14bdf3d68094b1cbe29b015d42a6a26159",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb",
+        "JsonResponseHandler": "Whoops\\Handler\\JsonResponseHandler",
+        "Run": "Whoops\\Run",
+        "ImageResize": "Gumlet\\ImageResize",
+        "ImageResizeException": "Gumlet\\ImageResizeException",
+        "UploadException": "ManagerException\\UploadException",
+        "Google2FA": "PragmaRX\\Google2FA\\Google2FA",
+        "Writer": "BaconQrCode\\Writer",
+        "SvgImageBackEnd": "BaconQrCode\\Renderer\\Image\\SvgImageBackEnd",
+        "RendererStyle": "BaconQrCode\\Renderer\\RendererStyle\\RendererStyle",
+        "ImageRenderer": "BaconQrCode\\Renderer\\ImageRenderer"
+    },
+    "errors": [],
+    "interfaces": {
+        "jsonSerializable": "jsonSerializable"
+    },
+    "traits": [],
+    "properties": {
+        "ALLOWED_COLUMNS": {
+            "name": "ALLOWED_COLUMNS",
+            "line": 20,
+            "short_desc": "Colonnes autoris\u00e9es pour les filtres g\u00e9n\u00e9riques.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\list<string>",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 10,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 20,
+                    "startTokenPos": 26,
+                    "startFilePos": 517,
+                    "endLine": 20,
+                    "endTokenPos": 37,
+                    "endFilePos": 549,
+                    "kind": 2
+                },
+                "items": [
+                    {
+                        "nodeType": "ArrayItem",
+                        "attributes": {
+                            "startLine": 20,
+                            "startTokenPos": 27,
+                            "startFilePos": 518,
+                            "endLine": 20,
+                            "endTokenPos": 27,
+                            "endFilePos": 521
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 20,
+                                "startTokenPos": 27,
+                                "startFilePos": 518,
+                                "endLine": 20,
+                                "endTokenPos": 27,
+                                "endFilePos": 521,
+                                "kind": 2,
+                                "rawValue": "\"id\""
+                            },
+                            "value": "id"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "ArrayItem",
+                        "attributes": {
+                            "startLine": 20,
+                            "startTokenPos": 30,
+                            "startFilePos": 524,
+                            "endLine": 20,
+                            "endTokenPos": 30,
+                            "endFilePos": 530
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 20,
+                                "startTokenPos": 30,
+                                "startFilePos": 524,
+                                "endLine": 20,
+                                "endTokenPos": 30,
+                                "endFilePos": 530,
+                                "kind": 2,
+                                "rawValue": "\"email\""
+                            },
+                            "value": "email"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "ArrayItem",
+                        "attributes": {
+                            "startLine": 20,
+                            "startTokenPos": 33,
+                            "startFilePos": 533,
+                            "endLine": 20,
+                            "endTokenPos": 33,
+                            "endFilePos": 539
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 20,
+                                "startTokenPos": 33,
+                                "startFilePos": 533,
+                                "endLine": 20,
+                                "endTokenPos": 33,
+                                "endFilePos": 539,
+                                "kind": 2,
+                                "rawValue": "\"login\""
+                            },
+                            "value": "login"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "ArrayItem",
+                        "attributes": {
+                            "startLine": 20,
+                            "startTokenPos": 36,
+                            "startFilePos": 542,
+                            "endLine": 20,
+                            "endTokenPos": 36,
+                            "endFilePos": 548
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 20,
+                                "startTokenPos": 36,
+                                "startFilePos": 542,
+                                "endLine": 20,
+                                "endTokenPos": 36,
+                                "endFilePos": 548,
+                                "kind": 2,
+                                "rawValue": "\"level\""
+                            },
+                            "value": "level"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    }
+                ]
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "ALLOWED_OPERATORS": {
+            "name": "ALLOWED_OPERATORS",
+            "line": 27,
+            "short_desc": "Op\u00e9rateurs SQL autoris\u00e9s dans les filtres g\u00e9n\u00e9riques.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\list<string>",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 10,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 27,
+                    "startTokenPos": 52,
+                    "startFilePos": 714,
+                    "endLine": 27,
+                    "endTokenPos": 63,
+                    "endFilePos": 736,
+                    "kind": 2
+                },
+                "items": [
+                    {
+                        "nodeType": "ArrayItem",
+                        "attributes": {
+                            "startLine": 27,
+                            "startTokenPos": 53,
+                            "startFilePos": 715,
+                            "endLine": 27,
+                            "endTokenPos": 53,
+                            "endFilePos": 717
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 27,
+                                "startTokenPos": 53,
+                                "startFilePos": 715,
+                                "endLine": 27,
+                                "endTokenPos": 53,
+                                "endFilePos": 717,
+                                "kind": 2,
+                                "rawValue": "\"=\""
+                            },
+                            "value": "="
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "ArrayItem",
+                        "attributes": {
+                            "startLine": 27,
+                            "startTokenPos": 56,
+                            "startFilePos": 720,
+                            "endLine": 27,
+                            "endTokenPos": 56,
+                            "endFilePos": 722
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 27,
+                                "startTokenPos": 56,
+                                "startFilePos": 720,
+                                "endLine": 27,
+                                "endTokenPos": 56,
+                                "endFilePos": 722,
+                                "kind": 2,
+                                "rawValue": "\">\""
+                            },
+                            "value": ">"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "ArrayItem",
+                        "attributes": {
+                            "startLine": 27,
+                            "startTokenPos": 59,
+                            "startFilePos": 725,
+                            "endLine": 27,
+                            "endTokenPos": 59,
+                            "endFilePos": 727
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 27,
+                                "startTokenPos": 59,
+                                "startFilePos": 725,
+                                "endLine": 27,
+                                "endTokenPos": 59,
+                                "endFilePos": 727,
+                                "kind": 2,
+                                "rawValue": "\"<\""
+                            },
+                            "value": "<"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "ArrayItem",
+                        "attributes": {
+                            "startLine": 27,
+                            "startTokenPos": 62,
+                            "startFilePos": 730,
+                            "endLine": 27,
+                            "endTokenPos": 62,
+                            "endFilePos": 735
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 27,
+                                "startTokenPos": 62,
+                                "startFilePos": 730,
+                                "endLine": 27,
+                                "endTokenPos": 62,
+                                "endFilePos": 735,
+                                "kind": 2,
+                                "rawValue": "\"LIKE\""
+                            },
+                            "value": "LIKE"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    }
+                ]
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "errors": {
+            "name": "errors",
+            "line": 34,
+            "short_desc": "Liste des erreurs de validation ou de traitement.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\list<string>",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 34,
+                    "startTokenPos": 76,
+                    "startFilePos": 875,
+                    "endLine": 34,
+                    "endTokenPos": 77,
+                    "endFilePos": 876,
+                    "kind": 2
+                },
+                "items": []
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "table": {
+            "name": "table",
+            "line": 39,
+            "short_desc": "Nom de la table associ\u00e9e au mod\u00e8le concret.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_String",
+                "attributes": {
+                    "startLine": 39,
+                    "startTokenPos": 90,
+                    "startFilePos": 983,
+                    "endLine": 39,
+                    "endTokenPos": 90,
+                    "endFilePos": 984,
+                    "kind": 2,
+                    "rawValue": "\"\""
+                },
+                "value": ""
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        }
+    },
+    "methods": {
+        "getAllFilterBy": {
+            "name": "getAllFilterBy",
+            "line": 52,
+            "short_desc": "R\u00e9cup\u00e9rer toutes les lignes filtr\u00e9es par colonne\/valeur autoris\u00e9es.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Liste d'enregistrements en objets stdClass.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\InvalidArgumentException",
+                    "Si la colonne ou l'op\u00e9rateur n'est pas autoris\u00e9."
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "column": {
+                    "name": "column",
+                    "line": 52,
+                    "short_desc": "Colonne autoris\u00e9e (id, email, login, level).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "\"\"",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "operator": {
+                    "name": "operator",
+                    "line": 52,
+                    "short_desc": "Op\u00e9rateur SQL autoris\u00e9 (=, >, <, LIKE).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "\"\"",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "value": {
+                    "name": "value",
+                    "line": 52,
+                    "short_desc": "Valeur de comparaison.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "\"\"",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "__construct": {
+            "name": "__construct",
+            "line": 73,
+            "short_desc": "Initialiser le mod\u00e8le.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "errors": {
+            "name": "errors",
+            "line": 82,
+            "short_desc": "R\u00e9cup\u00e9rer les erreurs courantes.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "erreurs recens\u00e9es.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "errorsAsString": {
+            "name": "errorsAsString",
+            "line": 92,
+            "short_desc": "Renvoyer les erreurs concat\u00e9n\u00e9es.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Cha\u00eene format\u00e9e des erreurs.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "hasErrors": {
+            "name": "hasErrors",
+            "line": 106,
+            "short_desc": "V\u00e9rifier la pr\u00e9sence d'au moins une erreur.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si des erreurs existent.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "addError": {
+            "name": "addError",
+            "line": 119,
+            "short_desc": "Ajouter une erreur et journaliser l'information.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "error": {
+                    "name": "error",
+                    "line": 119,
+                    "short_desc": "Message d'erreur.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "sendMail": {
+                    "name": "sendMail",
+                    "line": 119,
+                    "short_desc": "Indique si le logger doit notifier par mail.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "false",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "addErrors": {
+            "name": "addErrors",
+            "line": 133,
+            "short_desc": "Remplacer la liste d'erreurs par un lot donn\u00e9.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "errors": {
+                    "name": "errors",
+                    "line": 133,
+                    "short_desc": "Erreurs \u00e0 enregistrer.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "jsonSerialize": {
+            "name": "jsonSerialize",
+            "line": 148,
+            "short_desc": "S\u00e9rialiser le mod\u00e8le au format JSON.",
+            "long_desc": "Les mod\u00e8les concrets doivent surcharger cette m\u00e9thode.",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Donn\u00e9es s\u00e9rialis\u00e9es.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "load": {
+            "name": "load",
+            "line": 158,
+            "short_desc": "Charger les donn\u00e9es du mod\u00e8le.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Model",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance actuelle.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

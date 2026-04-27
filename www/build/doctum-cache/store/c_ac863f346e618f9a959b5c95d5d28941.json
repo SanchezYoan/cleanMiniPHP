@@ -1,0 +1,114 @@
+{
+    "name": "App",
+    "line": 13,
+    "short_desc": "Diriger la requ\u00eate entrante vers le contr\u00f4leur appropri\u00e9.",
+    "long_desc": "La classe instancie la Request\/Response, r\u00e9sout le contr\u00f4leur et d\u00e9clenche\nl'action cibl\u00e9e en tenant compte du sous-domaine et de l'URL.",
+    "hint": null,
+    "tags": {
+        "license": [
+            [
+                "http:\/\/opensource.org\/licenses\/MIT",
+                "The",
+                "MIT",
+                "License",
+                "(MIT)"
+            ]
+        ],
+        "author": [
+            [
+                "Omar",
+                "El",
+                "Gabry",
+                "<omar.elgabry.93@gmail.com>"
+            ]
+        ]
+    },
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/core\/App.php",
+    "relative_file": null,
+    "hash": "c0cd9e410f6635559345d6a7caeb2ed6511059da",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 52,
+            "short_desc": "Construire l'application et initialiser Request\/Response.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "run": {
+            "name": "run",
+            "line": 71,
+            "short_desc": "Ex\u00e9cuter la r\u00e9solution du contr\u00f4leur et de l'action cible.",
+            "long_desc": "D\u00e9finit le contr\u00f4leur par d\u00e9faut selon le sous-domaine, parse l'URL puis\ninvoque l'action. La r\u00e9ponse HTTP est renvoy\u00e9e ou directement envoy\u00e9e.",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ],
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Corps de r\u00e9ponse ou instance Response envoy\u00e9e.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\PHPMailer\\PHPMailer\\Exception",
+                    "Si l'instanciation du contr\u00f4leur \u00e9choue."
+                ]
+            ],
+            "errors": [],
+            "parameters": []
+        },
+        "splitUrl": {
+            "name": "splitUrl",
+            "line": 142,
+            "short_desc": "D\u00e9couper l'URL courante et d\u00e9duire contr\u00f4leur, action et arguments.",
+            "long_desc": "D\u00e9termine le contr\u00f4leur en fonction du sous-domaine (BO\/APP\/EDITOR) et\nrenseigne API_VERSION pour l'\u00e9diteur. Les segments restants alimentent\nla liste d'arguments.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

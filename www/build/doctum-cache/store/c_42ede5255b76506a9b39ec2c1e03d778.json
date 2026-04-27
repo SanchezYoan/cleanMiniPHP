@@ -1,0 +1,225 @@
+{
+    "name": "BoController",
+    "line": 15,
+    "short_desc": "Contr\u00f4leur des routes publiques et back-office.",
+    "long_desc": "",
+    "hint": null,
+    "tags": [],
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/controllers\/BoController.php",
+    "relative_file": null,
+    "hash": "dac4db29d61a53d0d9261aa58b5092e68f676c1e",
+    "parent": "Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Html": "NGine\\Html\\Html",
+        "GeoHelper": "NGine\\GeoHelper\\GeoHelper"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "beforeAction": {
+            "name": "beforeAction",
+            "line": 86,
+            "short_desc": "Ex\u00e9cuter la logique avant l'action du contr\u00f4leur.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "R\u00e9ponse imm\u00e9diate ou null pour poursuivre.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "index": {
+            "name": "index",
+            "line": 168,
+            "short_desc": "Router les requ\u00eates entrantes vers l'action correspondante.",
+            "long_desc": "R\u00e9sout la route la plus longue compatible avec le r\u00f4le courant, applique\nles contr\u00f4les d'authentification et redirige vers l'action cible avec les\nparam\u00e8tres restants.",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ],
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\Exception",
+                    ""
+                ]
+            ],
+            "errors": [],
+            "parameters": []
+        },
+        "ajaxLogin": {
+            "name": "ajaxLogin",
+            "line": 273,
+            "short_desc": "Traiter la demande de connexion via AJAX.",
+            "long_desc": "Effets de bord : \u00e9crit en session, cr\u00e9e\/renouvelle le flux 2FA et journalise.",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "R\u00e9ponse JSON.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "login": {
+            "name": "login",
+            "line": 431,
+            "short_desc": "Afficher l'\u00e9cran de connexion.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "HTML rendu.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "logout": {
+            "name": "logout",
+            "line": 447,
+            "short_desc": "D\u00e9connecter l'utilisateur.",
+            "long_desc": "Effets de bord : purge la session et les cookies.",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "Redirection.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "geolocate": {
+            "name": "geolocate",
+            "line": 459,
+            "short_desc": "G\u00e9olocaliser une adresse via le helper GeoHelper.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "R\u00e9ponse JSON de g\u00e9olocalisation.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "finalizeLogin": {
+            "name": "finalizeLogin",
+            "line": 1007,
+            "short_desc": "Finaliser la connexion apr\u00e8s authentification.",
+            "long_desc": "Effets de bord : \u00e9crit en session et met \u00e0 jour le cookie \"remember me\".",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "Aucune valeur de retour.",
+            "tags": [],
+            "see": [],
+            "modifiers": 2,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "user": {
+                    "name": "user",
+                    "line": 1007,
+                    "short_desc": "Utilisateur authentifi\u00e9.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\User",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": {
+        "ROUTES": {
+            "name": "ROUTES",
+            "line": 22,
+            "short_desc": "Routes reconnues par le BO.",
+            "long_desc": "",
+            "modifiers": 4,
+            "tags": []
+        },
+        "ROUTE_ROLES": {
+            "name": "ROUTE_ROLES",
+            "line": 68,
+            "short_desc": "Correspondance des groupes de routes et r\u00f4les requis.",
+            "long_desc": "",
+            "modifiers": 4,
+            "tags": []
+        }
+    }
+}

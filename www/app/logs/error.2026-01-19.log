@@ -1,0 +1,132 @@
+[#] /ajax/login (2026-01-19 19:02:18) | Class "PragmaRX\Google2FA\Google2FA" not found
+#0 E:\projets\developpement\cleanminiphp\www\app\controllers\BoController.php(341): Google2FaManager->__construct()
+#1 E:\projets\developpement\cleanminiphp\www\app\controllers\BoController.php(247): BoController->ajaxLogin()
+#2 E:\projets\developpement\cleanminiphp\www\app\core\App.php(198): BoController->index('ajax', 'login')
+#3 E:\projets\developpement\cleanminiphp\www\app\core\App.php(87): App->invoke('BoController', 'index', Array)
+#4 E:\projets\developpement\cleanminiphp\www\public\index.php(63): App->run()
+#5 {main} in E:\projets\developpement\cleanminiphp\www\app\managers\Google2FaManager.php at 25
+REQUEST:
+array (
+  'HTTP_HOST' => 'cleanminiphp.local',
+  'REQUEST_URI' => '/ajax/login',
+  'SERVER_NAME' => 'cleanminiphp.local',
+  'REQUEST_METHOD' => 'POST',
+  'HTTP_REFERER' => 'NC',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'HEADERS' => 
+  array (
+    'Host' => 'cleanminiphp.local',
+    'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+    'Accept' => '*/*',
+    'Accept-Language' => 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+    'Accept-Encoding' => 'gzip, deflate, br, zstd',
+    'X-Requested-With' => 'XMLHttpRequest',
+    'X-CSRF-Token' => '0d3354b68abafbd62962d7e4e90d501e5324776f340ebdc368f599adc78abea0',
+    'Content-Type' => 'application/json',
+    'Content-Length' => '138',
+    'Origin' => 'https://cleanminiphp.local',
+    'DNT' => '1',
+    'Sec-GPC' => '1',
+    'Connection' => 'keep-alive',
+    'Cookie' => 'PHPSESSID=hr1udlhr8rvam1h9epqsdn4ks6',
+    'Sec-Fetch-Dest' => 'empty',
+    'Sec-Fetch-Mode' => 'cors',
+    'Sec-Fetch-Site' => 'same-origin',
+    'Priority' => 'u=0',
+    'Cache-Control' => 'max-age=0',
+  ),
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+  'POST' => 
+  array (
+  ),
+  'PHP INPUT' => '{"login":"yoan30470@hotmail.fr","password":"Ardkordu.30*","csrf_token":"0d3354b68abafbd62962d7e4e90d501e5324776f340ebdc368f599adc78abea0"}',
+)
+
+[#] /ajax/login (2026-01-19 19:02:57) | Class "PragmaRX\Google2FA\Google2FA" not found
+#0 E:\projets\developpement\cleanminiphp\www\app\controllers\BoController.php(341): Google2FaManager->__construct()
+#1 E:\projets\developpement\cleanminiphp\www\app\controllers\BoController.php(247): BoController->ajaxLogin()
+#2 E:\projets\developpement\cleanminiphp\www\app\core\App.php(198): BoController->index('ajax', 'login')
+#3 E:\projets\developpement\cleanminiphp\www\app\core\App.php(87): App->invoke('BoController', 'index', Array)
+#4 E:\projets\developpement\cleanminiphp\www\public\index.php(63): App->run()
+#5 {main} in E:\projets\developpement\cleanminiphp\www\app\managers\Google2FaManager.php at 25
+REQUEST:
+array (
+  'HTTP_HOST' => 'cleanminiphp.local',
+  'REQUEST_URI' => '/ajax/login',
+  'SERVER_NAME' => 'cleanminiphp.local',
+  'REQUEST_METHOD' => 'POST',
+  'HTTP_REFERER' => 'NC',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'HEADERS' => 
+  array (
+    'Host' => 'cleanminiphp.local',
+    'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+    'Accept' => '*/*',
+    'Accept-Language' => 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+    'Accept-Encoding' => 'gzip, deflate, br, zstd',
+    'X-Requested-With' => 'XMLHttpRequest',
+    'X-CSRF-Token' => 'da9d643b56ff33288d03b4d9930add3b30540bc1f65f481428156747e37fa1d0',
+    'Content-Type' => 'application/json',
+    'Content-Length' => '138',
+    'Origin' => 'https://cleanminiphp.local',
+    'DNT' => '1',
+    'Sec-GPC' => '1',
+    'Connection' => 'keep-alive',
+    'Cookie' => 'PHPSESSID=hr1udlhr8rvam1h9epqsdn4ks6',
+    'Sec-Fetch-Dest' => 'empty',
+    'Sec-Fetch-Mode' => 'cors',
+    'Sec-Fetch-Site' => 'same-origin',
+    'Priority' => 'u=0',
+    'Cache-Control' => 'max-age=0',
+  ),
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+  'POST' => 
+  array (
+  ),
+  'PHP INPUT' => '{"login":"yoan30470@hotmail.fr","password":"Ardkordu.30*","csrf_token":"da9d643b56ff33288d03b4d9930add3b30540bc1f65f481428156747e37fa1d0"}',
+)
+
+[#] /ajax/login (2026-01-19 19:04:15) | Class "PragmaRX\Google2FA\Google2FA" not found
+#0 E:\projets\developpement\cleanminiphp\www\app\controllers\BoController.php(341): Google2FaManager->__construct()
+#1 E:\projets\developpement\cleanminiphp\www\app\controllers\BoController.php(247): BoController->ajaxLogin()
+#2 E:\projets\developpement\cleanminiphp\www\app\core\App.php(198): BoController->index('ajax', 'login')
+#3 E:\projets\developpement\cleanminiphp\www\app\core\App.php(87): App->invoke('BoController', 'index', Array)
+#4 E:\projets\developpement\cleanminiphp\www\public\index.php(63): App->run()
+#5 {main} in E:\projets\developpement\cleanminiphp\www\app\managers\Google2FaManager.php at 25
+REQUEST:
+array (
+  'HTTP_HOST' => 'cleanminiphp.local',
+  'REQUEST_URI' => '/ajax/login',
+  'SERVER_NAME' => 'cleanminiphp.local',
+  'REQUEST_METHOD' => 'POST',
+  'HTTP_REFERER' => 'NC',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'HEADERS' => 
+  array (
+    'Host' => 'cleanminiphp.local',
+    'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+    'Accept' => '*/*',
+    'Accept-Language' => 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+    'Accept-Encoding' => 'gzip, deflate, br, zstd',
+    'X-Requested-With' => 'XMLHttpRequest',
+    'X-CSRF-Token' => '6221a2f7d0897157e047f11325ec70927ffee1b90dbaa90a9862297512db5e4f',
+    'Content-Type' => 'application/json',
+    'Content-Length' => '138',
+    'Origin' => 'https://cleanminiphp.local',
+    'DNT' => '1',
+    'Sec-GPC' => '1',
+    'Connection' => 'keep-alive',
+    'Cookie' => 'PHPSESSID=hr1udlhr8rvam1h9epqsdn4ks6',
+    'Sec-Fetch-Dest' => 'empty',
+    'Sec-Fetch-Mode' => 'cors',
+    'Sec-Fetch-Site' => 'same-origin',
+    'Priority' => 'u=0',
+    'Cache-Control' => 'max-age=0',
+  ),
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+  'POST' => 
+  array (
+  ),
+  'PHP INPUT' => '{"login":"yoan30470@hotmail.fr","password":"Ardkordu.30*","csrf_token":"6221a2f7d0897157e047f11325ec70927ffee1b90dbaa90a9862297512db5e4f"}',
+)
+

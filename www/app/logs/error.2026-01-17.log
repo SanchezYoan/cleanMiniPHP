@@ -1,0 +1,144 @@
+[#] /ajax/createAccount (2026-01-17 21:41:51) | ERROR 403 : array (
+  'error' => 'CSRF token invalide',
+)
+REQUEST:
+array (
+  'HTTP_HOST' => 'cleanminiphp.local',
+  'REQUEST_URI' => '/ajax/createAccount',
+  'SERVER_NAME' => 'cleanminiphp.local',
+  'REQUEST_METHOD' => 'POST',
+  'HTTP_REFERER' => 'NC',
+  'REMOTE_ADDR' => '::1',
+  'HEADERS' => 
+  array (
+    'Host' => 'cleanminiphp.local',
+    'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+    'Accept' => '*/*',
+    'Accept-Language' => 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+    'Accept-Encoding' => 'gzip, deflate',
+    'X-Requested-With' => 'XMLHttpRequest',
+    'X-CSRF-Token' => '34245cbf72e1a4660d9ee5aab196ab6b4d6f8ef472fd6a6ed6657ef1522f0ded',
+    'Content-Type' => 'application/json',
+    'Content-Length' => '141',
+    'Origin' => 'http://cleanminiphp.local',
+    'DNT' => '1',
+    'Sec-GPC' => '1',
+    'Connection' => 'keep-alive',
+    'Priority' => 'u=0',
+    'Cache-Control' => 'max-age=0',
+  ),
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+  'POST' => 
+  array (
+  ),
+  'PHP INPUT' => '{"login":"yoan","email":"yoan30470@hotmail.fr","password":"","csrf_token":"34245cbf72e1a4660d9ee5aab196ab6b4d6f8ef472fd6a6ed6657ef1522f0ded"}',
+)
+
+[#] /ajax/createAccount (2026-01-17 22:06:30) | ERROR 403 : array (
+  'error' => 'CSRF token invalide',
+)
+REQUEST:
+array (
+  'HTTP_HOST' => 'cleanminiphp.local',
+  'REQUEST_URI' => '/ajax/createAccount',
+  'SERVER_NAME' => 'cleanminiphp.local',
+  'REQUEST_METHOD' => 'POST',
+  'HTTP_REFERER' => 'NC',
+  'REMOTE_ADDR' => '::1',
+  'HEADERS' => 
+  array (
+    'Host' => 'cleanminiphp.local',
+    'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+    'Accept' => '*/*',
+    'Accept-Language' => 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+    'Accept-Encoding' => 'gzip, deflate',
+    'X-Requested-With' => 'XMLHttpRequest',
+    'X-CSRF-Token' => 'aea3f96b2ca44046cdb1c087d34839da218c302c7d79438c869b44a236a1c2ce',
+    'Content-Type' => 'application/json',
+    'Content-Length' => '141',
+    'Origin' => 'http://cleanminiphp.local',
+    'DNT' => '1',
+    'Sec-GPC' => '1',
+    'Connection' => 'keep-alive',
+    'Priority' => 'u=0',
+    'Cache-Control' => 'max-age=0',
+  ),
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+  'POST' => 
+  array (
+  ),
+  'PHP INPUT' => '{"login":"Yoan","email":"yoan30470@hotmail.fr","password":"","csrf_token":"aea3f96b2ca44046cdb1c087d34839da218c302c7d79438c869b44a236a1c2ce"}',
+)
+
+[#] /ajax/createAccount (2026-01-17 22:13:58) | ERROR 403 : array (
+  'error' => 'CSRF token invalide',
+)
+REQUEST:
+array (
+  'HTTP_HOST' => 'cleanminiphp.local',
+  'REQUEST_URI' => '/ajax/createAccount',
+  'SERVER_NAME' => 'cleanminiphp.local',
+  'REQUEST_METHOD' => 'POST',
+  'HTTP_REFERER' => 'NC',
+  'REMOTE_ADDR' => '::1',
+  'HEADERS' => 
+  array (
+    'Host' => 'cleanminiphp.local',
+    'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+    'Accept' => '*/*',
+    'Accept-Language' => 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+    'Accept-Encoding' => 'gzip, deflate',
+    'X-Requested-With' => 'XMLHttpRequest',
+    'X-CSRF-Token' => 'a9377af1f213e70f5309bba3f48685618d60479ec4a59eb785c63885b5f49c2f',
+    'Content-Type' => 'application/json',
+    'Content-Length' => '141',
+    'Origin' => 'http://cleanminiphp.local',
+    'DNT' => '1',
+    'Sec-GPC' => '1',
+    'Connection' => 'keep-alive',
+    'Priority' => 'u=0',
+    'Cache-Control' => 'max-age=0',
+  ),
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+  'POST' => 
+  array (
+  ),
+  'PHP INPUT' => '{"login":"yoan","email":"yoan30470@hotmail.fr","password":"","csrf_token":"a9377af1f213e70f5309bba3f48685618d60479ec4a59eb785c63885b5f49c2f"}',
+)
+
+[#] /ajax/createAccount (2026-01-17 22:16:35) | ERROR 403 : array (
+  'error' => 'CSRF token invalide',
+)
+REQUEST:
+array (
+  'HTTP_HOST' => 'cleanminiphp.local',
+  'REQUEST_URI' => '/ajax/createAccount',
+  'SERVER_NAME' => 'cleanminiphp.local',
+  'REQUEST_METHOD' => 'POST',
+  'HTTP_REFERER' => 'NC',
+  'REMOTE_ADDR' => '::1',
+  'HEADERS' => 
+  array (
+    'Host' => 'cleanminiphp.local',
+    'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+    'Accept' => '*/*',
+    'Accept-Language' => 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+    'Accept-Encoding' => 'gzip, deflate',
+    'X-Requested-With' => 'XMLHttpRequest',
+    'X-CSRF-Token' => '128a3e80aa9fbf6da2d686d3b4e8836f7255ba5a5545921328775d0ae16a2849',
+    'Content-Type' => 'application/json',
+    'Content-Length' => '133',
+    'Origin' => 'http://cleanminiphp.local',
+    'DNT' => '1',
+    'Sec-GPC' => '1',
+    'Connection' => 'keep-alive',
+    'Priority' => 'u=0',
+    'Cache-Control' => 'max-age=0',
+  ),
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+  'POST' => 
+  array (
+  ),
+  'PHP INPUT' => '{"login":"yoan","email":"yoan30470@ho","password":"","csrf_token":"128a3e80aa9fbf6da2d686d3b4e8836f7255ba5a5545921328775d0ae16a2849"}',
+)
+

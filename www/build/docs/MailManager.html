@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>MailManager | Template App – API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="doctum.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script async defer src="js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:MailManager" data-root-path="" data-search-index-url="doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Rechercher"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Afficher le menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Template App – API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="namespaces.html">Namespaces</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Sommaire</a></li>
+                    <li><a href="search.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+    <div class="page-header">
+        <h1>MailManager    
+            </h1>
+    </div>
+
+    
+    <p>        classe
+    <strong>MailManager</strong>        étends <a href="Manager.html">Manager</a>
+</p>
+
+        
+        
+    
+        
+
+            <div class="description">
+            <p><p>Orchestrer l'envoi d'emails via PHPMailer.</p>
+</p>            <p><p>Prépare les sujets, formatages HTML et ajoute les destinataires selon
+différents types d'utilisateurs/structures.</p>
+</p>        </div>
+            
+        
+    
+            <h2>Propriétés</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_errors">
+                                        protected                                        list&lt;string&gt;
+                                                                                
+                                    </td>
+                <td>$errors</td>
+                <td class="last"><p>Liste des erreurs collectées lors des opérations métier.</p>
+</td>
+                <td><small>depuis&nbsp;<a href="Manager.html#property_errors">
+Manager</a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Méthodes</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validate">validate</a>(array $data)
+        
+                                            <p><p>Valider des données métier (à implémenter dans les classes filles).</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Manager.html#method_validate">
+Manager</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_errors">errors</a>()
+        
+                                            <p><p>Récupérer la liste des erreurs courantes.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Manager.html#method_errors">
+Manager</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasErrors">hasErrors</a>()
+        
+                                            <p><p>Vérifier la présence d'au moins une erreur.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Manager.html#method_hasErrors">
+Manager</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addError">addError</a>(string $error, bool $sendMail = false)
+        
+                                            <p><p>Ajouter une erreur et logger l'information.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Manager.html#method_addError">
+Manager</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addErrors">addErrors</a>(array $errors, bool $sendMail = false)
+        
+                                            <p><p>Ajouter plusieurs erreurs et les journaliser.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Manager.html#method_addErrors">
+Manager</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_errorsAsString">errorsAsString</a>()
+        
+                                            <p><p>Retourner les erreurs concaténées.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Manager.html#method_errorsAsString">
+Manager</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resetErrors">resetErrors</a>()
+        
+                                            <p><p>Réinitialiser complètement l'état des erreurs.</p>
+</p>                </div>
+                <div class="col-md-2"><small>depuis&nbsp;<a href="Manager.html#method_resetErrors">
+Manager</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_formateSubject">formateSubject</a>(string $subject = &#039;&#039;)
+        
+                                            <p><p>Préfixer le sujet par l'environnement courant si nécessaire.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_sendMail">sendMail</a>(string $subject, string $body, array $destinataires, bool $duplicateSubjet = true)
+        
+                                            <p><p>Envoyer un email HTML à une liste de destinataires.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="PHPMailer\PHPMailer\PHPMailer">PHPMailer</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createMailer">createMailer</a>()
+        
+                                            <p><p>Fournir une instance PHPMailer (point d'extension pour tests).</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_sendForgotPassword">sendForgotPassword</a>(<a href="User.html">User</a> $user, string $token)
+        
+                                            <p><p>Envoyer un email de réinitialisation du mot de passe.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Détails</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_validate">
+        <div class="location">dans <a href="Manager.html#method_validate">
+Manager</a> à la ligne 26</div>
+        <code>                    bool
+    <strong>validate</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Valider des données métier (à implémenter dans les classes filles).</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td><p>Jeu de données à contrôler.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true si les données sont valides.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_errors">
+        <div class="location">dans <a href="Manager.html#method_errors">
+Manager</a> à la ligne 36</div>
+        <code>                    array
+    <strong>errors</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Récupérer la liste des erreurs courantes.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>erreurs recensées.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasErrors">
+        <div class="location">dans <a href="Manager.html#method_hasErrors">
+Manager</a> à la ligne 44</div>
+        <code>                    bool
+    <strong>hasErrors</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Vérifier la présence d'au moins une erreur.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addError">
+        <div class="location">dans <a href="Manager.html#method_addError">
+Manager</a> à la ligne 55</div>
+        <code>                    void
+    <strong>addError</strong>(string $error, bool $sendMail = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Ajouter une erreur et logger l'information.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$error</td>
+                <td><p>Message d'erreur.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$sendMail</td>
+                <td><p>Indique si le logger doit notifier par mail.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addErrors">
+        <div class="location">dans <a href="Manager.html#method_addErrors">
+Manager</a> à la ligne 72</div>
+        <code>                    void
+    <strong>addErrors</strong>(array $errors, bool $sendMail = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Ajouter plusieurs erreurs et les journaliser.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$errors</td>
+                <td><p>Messages d'erreur à ajouter.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$sendMail</td>
+                <td><p>Indique si le logger doit notifier par mail.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_errorsAsString">
+        <div class="location">dans <a href="Manager.html#method_errorsAsString">
+Manager</a> à la ligne 83</div>
+        <code>                    string
+    <strong>errorsAsString</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retourner les erreurs concaténées.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetErrors">
+        <div class="location">dans <a href="Manager.html#method_resetErrors">
+Manager</a> à la ligne 95</div>
+        <code>                    void
+    <strong>resetErrors</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Réinitialiser complètement l'état des erreurs.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formateSubject">
+        <div class="location">à la ligne 40</div>
+        <code>        static            string
+    <strong>formateSubject</strong>(string $subject = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Préfixer le sujet par l'environnement courant si nécessaire.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td><p>Sujet original.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Sujet prêt à être envoyé.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendMail">
+        <div class="location">à la ligne 56</div>
+        <code>                    bool
+    <strong>sendMail</strong>(string $subject, string $body, array $destinataires, bool $duplicateSubjet = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Envoyer un email HTML à une liste de destinataires.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td><p>Sujet du message.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$body</td>
+                <td><p>Corps HTML.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$destinataires</td>
+                <td>Destinataires.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$duplicateSubjet</td>
+                <td><p>Ajoute le sujet en en-tête du body.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true si l'envoi est réussi.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createMailer">
+        <div class="location">à la ligne 109</div>
+        <code>            protected        <abbr title="PHPMailer\PHPMailer\PHPMailer">PHPMailer</abbr>
+    <strong>createMailer</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fournir une instance PHPMailer (point d'extension pour tests).</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="PHPMailer\PHPMailer\PHPMailer">PHPMailer</abbr></td>
+            <td><p>Instance configurée.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendForgotPassword">
+        <div class="location">à la ligne 122</div>
+        <code>                    bool
+    <strong>sendForgotPassword</strong>(<a href="User.html">User</a> $user, string $token)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Envoyer un email de réinitialisation du mot de passe.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="User.html">User</a></td>
+                <td>$user</td>
+                <td><p>Utilisateur cible.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td><p>Jeton de réinitialisation.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true si l'email est envoyé.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Généré par <a href="https://github.com/code-lts/doctum">Doctum, un générateur de documentation d'API, successeur de Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

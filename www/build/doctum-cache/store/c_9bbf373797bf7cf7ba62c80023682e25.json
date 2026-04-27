@@ -1,0 +1,820 @@
+{
+    "name": "Controller",
+    "line": 12,
+    "short_desc": "Fournir la base des contr\u00f4leurs applicatifs.",
+    "long_desc": "Centralise la requ\u00eate, la r\u00e9ponse, la validation et les helpers communs.",
+    "hint": null,
+    "tags": {
+        "license": [
+            [
+                "http:\/\/opensource.org\/licenses\/MIT",
+                "The",
+                "MIT",
+                "License",
+                "(MIT)"
+            ]
+        ],
+        "author": [
+            [
+                "Omar",
+                "El",
+                "Gabry",
+                "<omar.elgabry.93@gmail.com>"
+            ]
+        ]
+    },
+    "namespace": "",
+    "file": "\/Users\/vle\/Documents\/Projets\/cleanMiniPHP\/www\/app\/core\/Controller.php",
+    "relative_file": null,
+    "hash": "271e4be68862e91ce2fff51dd5d43727383aeee6",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "PHPMailer": "PHPMailer\\PHPMailer\\PHPMailer",
+        "Exception": "PHPMailer\\PHPMailer\\Exception",
+        "Breadcrumb": "NGine\\Breadcrumb\\Breadcrumb"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": {
+        "breadcrumb": {
+            "name": "breadcrumb",
+            "line": 65,
+            "short_desc": "Fil d'Ariane du contr\u00f4leur.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\NGine\\Breadcrumb\\Breadcrumb",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": {
+                "nodeType": "Expr_ConstFetch",
+                "attributes": {
+                    "startLine": 65,
+                    "startTokenPos": 190,
+                    "startFilePos": 1490,
+                    "endLine": 65,
+                    "endTokenPos": 190,
+                    "endFilePos": 1493
+                },
+                "name": {
+                    "nodeType": "Name_FullyQualified",
+                    "attributes": {
+                        "startLine": 65,
+                        "startTokenPos": 190,
+                        "startFilePos": 1490,
+                        "endLine": 65,
+                        "endTokenPos": 190,
+                        "endFilePos": 1493
+                    },
+                    "name": "null"
+                }
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "user": {
+            "name": "user",
+            "line": 69,
+            "short_desc": "Utilisateur courant (API\/app).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": {
+                "nodeType": "Expr_ConstFetch",
+                "attributes": {
+                    "startLine": 69,
+                    "startTokenPos": 204,
+                    "startFilePos": 1575,
+                    "endLine": 69,
+                    "endTokenPos": 204,
+                    "endFilePos": 1578
+                },
+                "name": {
+                    "nodeType": "Name_FullyQualified",
+                    "attributes": {
+                        "startLine": 69,
+                        "startTokenPos": 204,
+                        "startFilePos": 1575,
+                        "endLine": 69,
+                        "endTokenPos": 204,
+                        "endFilePos": 1578
+                    },
+                    "name": "null"
+                }
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "admin": {
+            "name": "admin",
+            "line": 73,
+            "short_desc": "Administrateur courant (BO).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\User",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": {
+                "nodeType": "Expr_ConstFetch",
+                "attributes": {
+                    "startLine": 73,
+                    "startTokenPos": 218,
+                    "startFilePos": 1659,
+                    "endLine": 73,
+                    "endTokenPos": 218,
+                    "endFilePos": 1662
+                },
+                "name": {
+                    "nodeType": "Name_FullyQualified",
+                    "attributes": {
+                        "startLine": 73,
+                        "startTokenPos": 218,
+                        "startFilePos": 1659,
+                        "endLine": 73,
+                        "endTokenPos": 218,
+                        "endFilePos": 1662
+                    },
+                    "name": "null"
+                }
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "device": {
+            "name": "device",
+            "line": 77,
+            "short_desc": "Appareil courant (API\/app).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Device",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": {
+                "nodeType": "Expr_ConstFetch",
+                "attributes": {
+                    "startLine": 77,
+                    "startTokenPos": 232,
+                    "startFilePos": 1745,
+                    "endLine": 77,
+                    "endTokenPos": 232,
+                    "endFilePos": 1748
+                },
+                "name": {
+                    "nodeType": "Name_FullyQualified",
+                    "attributes": {
+                        "startLine": 77,
+                        "startTokenPos": 232,
+                        "startFilePos": 1745,
+                        "endLine": 77,
+                        "endTokenPos": 232,
+                        "endFilePos": 1748
+                    },
+                    "name": "null"
+                }
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "validator": {
+            "name": "validator",
+            "line": 81,
+            "short_desc": "Validateur de champs.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Validation",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "lang": {
+            "name": "lang",
+            "line": 85,
+            "short_desc": "Langue courante (ISO 639-1).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": {
+                "nodeType": "Scalar_String",
+                "attributes": {
+                    "startLine": 85,
+                    "startTokenPos": 254,
+                    "startFilePos": 1908,
+                    "endLine": 85,
+                    "endTokenPos": 254,
+                    "endFilePos": 1911,
+                    "kind": 2,
+                    "rawValue": "\"fr\""
+                },
+                "value": "fr"
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "request": {
+            "name": "request",
+            "line": 91,
+            "short_desc": "Requ\u00eate HTTP en cours.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Request",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "response": {
+            "name": "response",
+            "line": 97,
+            "short_desc": "R\u00e9ponse HTTP en cours.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "components": {
+            "name": "components",
+            "line": 103,
+            "short_desc": "Composants charg\u00e9s.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 103,
+                    "startTokenPos": 285,
+                    "startFilePos": 2223,
+                    "endLine": 103,
+                    "endTokenPos": 286,
+                    "endFilePos": 2224,
+                    "kind": 2
+                },
+                "items": []
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "view": {
+            "name": "view",
+            "line": 109,
+            "short_desc": "Vue associ\u00e9e au contr\u00f4leur.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        }
+    },
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 119,
+            "short_desc": "Construire un contr\u00f4leur et hydrater les d\u00e9pendances.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\PHPMailer\\PHPMailer\\Exception",
+                    "Si l'initialisation \u00e9choue."
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 119,
+                    "short_desc": "Requ\u00eate inject\u00e9e (optionnelle).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Request",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "null",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "response": {
+                    "name": "response",
+                    "line": 119,
+                    "short_desc": "R\u00e9ponse inject\u00e9e (optionnelle).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Response",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "null",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "startupProcess": {
+            "name": "startupProcess",
+            "line": 142,
+            "short_desc": "Ex\u00e9cuter la phase de d\u00e9marrage du contr\u00f4leur.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "R\u00e9ponse imm\u00e9diate ou null pour continuer.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\PHPMailer\\PHPMailer\\Exception",
+                    "Si l'initialisation \u00e9choue."
+                ]
+            ],
+            "errors": [],
+            "parameters": []
+        },
+        "beforeAction": {
+            "name": "beforeAction",
+            "line": 158,
+            "short_desc": "Ex\u00e9cuter la logique avant l'action du contr\u00f4leur.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "R\u00e9ponse imm\u00e9diate ou null pour poursuivre.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "error": {
+            "name": "error",
+            "line": 172,
+            "short_desc": "Rendre une page d'erreur HTML.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "R\u00e9ponse HTML.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "code": {
+                    "name": "code",
+                    "line": 172,
+                    "short_desc": "Code HTTP.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "message": {
+                    "name": "message",
+                    "line": 172,
+                    "short_desc": "Message \u00e0 afficher.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "__get": {
+            "name": "__get",
+            "line": 191,
+            "short_desc": "Charger dynamiquement un mod\u00e8le par son nom.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "object",
+                    false
+                ]
+            ],
+            "hint_desc": "Instance cr\u00e9\u00e9e.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "name": {
+                    "name": "name",
+                    "line": 191,
+                    "short_desc": "Nom de propri\u00e9t\u00e9 demand\u00e9.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "__set": {
+            "name": "__set",
+            "line": 211,
+            "short_desc": "Affecter dynamiquement une propri\u00e9t\u00e9.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "Aucune valeur de retour.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "name": {
+                    "name": "name",
+                    "line": 211,
+                    "short_desc": "Nom de propri\u00e9t\u00e9.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "value": {
+                    "name": "value",
+                    "line": 211,
+                    "short_desc": "Valeur \u00e0 stocker.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "object",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "__isset": {
+            "name": "__isset",
+            "line": 224,
+            "short_desc": "V\u00e9rifier si une propri\u00e9t\u00e9 dynamique existe.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true si d\u00e9finie.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "name": {
+                    "name": "name",
+                    "line": 224,
+                    "short_desc": "Nom de propri\u00e9t\u00e9.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "forceSSL": {
+            "name": "forceSSL",
+            "line": 235,
+            "short_desc": "Forcer une requ\u00eate HTTPS.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "Aucune valeur de retour.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": {
+        "SUCCESS": {
+            "name": "SUCCESS",
+            "line": 17,
+            "short_desc": "Code HTTP OK.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "ERR_INVALID_REQUEST": {
+            "name": "ERR_INVALID_REQUEST",
+            "line": 21,
+            "short_desc": "Requ\u00eate invalide.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "ERR_UNAUTHORIZED": {
+            "name": "ERR_UNAUTHORIZED",
+            "line": 25,
+            "short_desc": "Non autoris\u00e9.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "ERROR_FORBIDDEN": {
+            "name": "ERROR_FORBIDDEN",
+            "line": 29,
+            "short_desc": "Acc\u00e8s interdit.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "ERR_NOT_FOUND": {
+            "name": "ERR_NOT_FOUND",
+            "line": 33,
+            "short_desc": "Non trouv\u00e9.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "ERR_VALIDATION": {
+            "name": "ERR_VALIDATION",
+            "line": 37,
+            "short_desc": "Erreur de validation.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "ERR_BAD_PARAMS": {
+            "name": "ERR_BAD_PARAMS",
+            "line": 41,
+            "short_desc": "Param\u00e8tres invalides.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "ERR_EXPIRED": {
+            "name": "ERR_EXPIRED",
+            "line": 45,
+            "short_desc": "Session expir\u00e9e.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "ERR_UNKNOWN_DEVICE": {
+            "name": "ERR_UNKNOWN_DEVICE",
+            "line": 49,
+            "short_desc": "Appareil inconnu.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "ERR_UNKNOWN_USER": {
+            "name": "ERR_UNKNOWN_USER",
+            "line": 53,
+            "short_desc": "Utilisateur inconnu.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "ERR_INTERNAL_ERROR": {
+            "name": "ERR_INTERNAL_ERROR",
+            "line": 57,
+            "short_desc": "Erreur interne.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        },
+        "ERR_CUSTOM": {
+            "name": "ERR_CUSTOM",
+            "line": 61,
+            "short_desc": "Erreur serveur personnalis\u00e9e.",
+            "long_desc": "",
+            "modifiers": 1,
+            "tags": []
+        }
+    }
+}

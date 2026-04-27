@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>View | Template App – API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="doctum.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script async defer src="js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:View" data-root-path="" data-search-index-url="doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Rechercher"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Afficher le menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Template App – API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="namespaces.html">Namespaces</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Sommaire</a></li>
+                    <li><a href="search.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+    <div class="page-header">
+        <h1>View    
+            </h1>
+    </div>
+
+    
+    <p>        classe
+    <strong>View</strong>
+</p>
+
+        
+        
+    
+        
+
+            <div class="description">
+            <p><p>Rendre les vues HTML/JSON.</p>
+</p>                    </div>
+            
+        
+    
+            <h2>Propriétés</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_admin">
+                                                                                <a href="User.html">User</a>|null
+                                                                                
+                                    </td>
+                <td>$admin</td>
+                <td class="last"><p>Administrateur courant.</p>
+</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_controller">
+                                                                                <a href="Controller.html">Controller</a>
+                                                                                
+                                    </td>
+                <td>$controller</td>
+                <td class="last"><p>Contrôleur associé.</p>
+</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_html">
+                                                                                <a href="NGine/Html/Html.html"><abbr title="NGine\Html\Html">Html</abbr></a>|null
+                                                                                
+                                    </td>
+                <td>$html</td>
+                <td class="last"><p>Helper HTML.</p>
+</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isMobile">
+                                                                                bool
+                                                                                
+                                    </td>
+                <td>$isMobile</td>
+                <td class="last"><p>Indique si le client est mobile.</p>
+</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_referencementSEO">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$referencementSEO</td>
+                <td class="last"><p>Contenu SEO additionnel.</p>
+</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Méthodes</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="Controller.html">Controller</a> $controller)
+        
+                                            <p><p>Construire une vue.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_renderFile">renderFile</a>(string $filePath, array|null $data = null)
+        
+                                            <p><p>Rendre un fichier PHP en HTML.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="View.html">View</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setHeaders">setHeaders</a>(array $headers)
+        
+                                            <p><p>Définir les en-têtes de rendu.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="View.html">View</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addJS">addJS</a>(array $links)
+        
+                                            <p><p>Ajouter des scripts JS optionnels.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="View.html">View</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addCSS">addCSS</a>(array $links)
+        
+                                            <p><p>Ajouter des feuilles CSS optionnelles.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_renderCSS">renderCSS</a>()
+        
+                                            <p><p>Générer les balises CSS optionnelles.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_renderJS">renderJS</a>()
+        
+                                            <p><p>Générer les balises JS optionnelles.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_renderWithLayouts">renderWithLayouts</a>(string $layoutDir, string $filePath, array&lt;string,mixed&gt;|null $data = null)
+        
+                                            <p><p>Rendre une vue avec layout (header/footer).</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_renderRedirect">renderRedirect</a>(string $url)
+        
+                                            <p><p>Renvoyer un JSON de redirection.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_renderJson">renderJson</a>(array|null $data = null)
+        
+                                            <p><p>Rendre un JSON et l'injecter dans Response.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_jsonEncode">jsonEncode</a>(array $data)
+        
+                                            <p><p>Sérialiser un tableau en JSON.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_renderErrors">renderErrors</a>(string|array&lt;int,string&gt; $errors, int $status = 200)
+        
+                                            <p><p>Rendre une erreur (HTML ou JSON selon contexte).</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_render">render</a>(string $filePath, array|null $data = null)
+        
+                                            <p><p>Rendre un fichier PHP en HTML.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_renderSuccess">renderSuccess</a>(string|array&lt;int,string&gt; $message)
+        
+                                            <p><p>Rendre un message de succès.</p>
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Détails</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">à la ligne 58</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="Controller.html">Controller</a> $controller)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Construire une vue.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Controller.html">Controller</a></td>
+                <td>$controller</td>
+                <td><p>Contrôleur associé.</p>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderFile">
+        <div class="location">à la ligne 94</div>
+        <code>        static            string
+    <strong>renderFile</strong>(string $filePath, array|null $data = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Rendre un fichier PHP en HTML.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filePath</td>
+                <td><p>Chemin du fichier.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>array|null</td>
+                <td>$data</td>
+                <td><p>Données extraites dans la vue.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>HTML rendu.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHeaders">
+        <div class="location">à la ligne 115</div>
+        <code>                    <a href="View.html">View</a>
+    <strong>setHeaders</strong>(array $headers)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Définir les en-têtes de rendu.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td><p>En-têtes à injecter.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="View.html">View</a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addJS">
+        <div class="location">à la ligne 128</div>
+        <code>                    <a href="View.html">View</a>
+    <strong>addJS</strong>(array $links)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Ajouter des scripts JS optionnels.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$links</td>
+                <td><p>Scripts à ajouter.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="View.html">View</a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addCSS">
+        <div class="location">à la ligne 142</div>
+        <code>                    <a href="View.html">View</a>
+    <strong>addCSS</strong>(array $links)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Ajouter des feuilles CSS optionnelles.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$links</td>
+                <td><p>Liens CSS.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="View.html">View</a></td>
+            <td><p>Instance courante.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderCSS">
+        <div class="location">à la ligne 155</div>
+        <code>                    string
+    <strong>renderCSS</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Générer les balises CSS optionnelles.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>HTML des balises.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderJS">
+        <div class="location">à la ligne 179</div>
+        <code>                    string
+    <strong>renderJS</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Générer les balises JS optionnelles.</p>
+</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>HTML des scripts.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderWithLayouts">
+        <div class="location">à la ligne 211</div>
+        <code>                    string
+    <strong>renderWithLayouts</strong>(string $layoutDir, string $filePath, array&lt;string,mixed&gt;|null $data = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Rendre une vue avec layout (header/footer).</p>
+</p>                <p><p>Effets de bord : écrit le contenu dans Response.</p>
+</p>        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$layoutDir</td>
+                <td><p>Répertoire de layout.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$filePath</td>
+                <td><p>Vue à rendre.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>array&lt;string,mixed&gt;|null</td>
+                <td>$data</td>
+                <td><p>Données injectées.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>HTML rendu.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderRedirect">
+        <div class="location">à la ligne 241</div>
+        <code>                    string
+    <strong>renderRedirect</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Renvoyer un JSON de redirection.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL cible.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>JSON rendu.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderJson">
+        <div class="location">à la ligne 253</div>
+        <code>                    string
+    <strong>renderJson</strong>(array|null $data = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Rendre un JSON et l'injecter dans Response.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|null</td>
+                <td>$data</td>
+                <td>Données.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>JSON rendu.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_jsonEncode">
+        <div class="location">à la ligne 269</div>
+        <code>                    string
+    <strong>jsonEncode</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sérialiser un tableau en JSON.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td>Données.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>JSON rendu.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderErrors">
+        <div class="location">à la ligne 284</div>
+        <code>                    string
+    <strong>renderErrors</strong>(string|array&lt;int,string&gt; $errors, int $status = 200)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Rendre une erreur (HTML ou JSON selon contexte).</p>
+</p>                <p><p>Effets de bord : modifie le statut de Response.</p>
+</p>        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array&lt;int,string&gt;</td>
+                <td>$errors</td>
+                <td><p>Erreurs à afficher.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td><p>Code HTTP.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>HTML ou JSON rendu.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location">à la ligne 312</div>
+        <code>                    string
+    <strong>render</strong>(string $filePath, array|null $data = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Rendre un fichier PHP en HTML.</p>
+</p>                <p><p>Effets de bord : écrit le contenu dans Response.</p>
+</p>        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filePath</td>
+                <td><p>Chemin du fichier.</p>
+</td>
+            </tr>
+                    <tr>
+                <td>array|null</td>
+                <td>$data</td>
+                <td><p>Données injectées.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>HTML rendu.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderSuccess">
+        <div class="location">à la ligne 338</div>
+        <code>                    string
+    <strong>renderSuccess</strong>(string|array&lt;int,string&gt; $message)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Rendre un message de succès.</p>
+</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Paramètres</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array&lt;int,string&gt;</td>
+                <td>$message</td>
+                <td><p>Message à afficher.</p>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Valeur de retour</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>HTML ou JSON rendu.</p>
+</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Généré par <a href="https://github.com/code-lts/doctum">Doctum, un générateur de documentation d'API, successeur de Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>
